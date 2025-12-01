@@ -1,12 +1,16 @@
 import { Routes, Route } from "react-router";
 import TestDataPage from "./pages/testDataPage";
 import ImageTestPage from "./pages/imageTestPage";
+import AuthPage from "./pages/AuthPage";
+import UpdatePasswordPage from "./pages/UpdatePasswordPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/testdata" element={<TestDataPage />} />
       <Route path="/imagetest" element={<ImageTestPage />} />
+      <Route path="/auth" element={<AuthPage />} />
+      <Route path="/update-password" element={<UpdatePasswordPage />} />
       <Route path="*" element={<h1>Välkommen till GrowPlan 🌿</h1>} />
     </Routes>
   );
