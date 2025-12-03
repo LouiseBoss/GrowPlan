@@ -12,33 +12,28 @@ function AuthPage() {
         let data;
 
         if (isSignUp) {
-            // 1. REGISTRERA ANVÄNDAREN i Supabase Auth
             ({ data, error } = await supabase.auth.signUp({ email, password }));
         } else {
-            // 1. LOGGA IN ANVÄNDAREN
             ({ data, error } = await supabase.auth.signInWithPassword({ email, password }));
         }
 
         if (error) {
             alert(`Fel: ${error.message}`);
         } else if (data.user && isSignUp) {
-            // 2. SKAPA PROFILRAD (om det är registrering)
             await supabase.from("profiles").upsert({
                 id: data.user.id,
-                full_name: email.split('@')[0] // Använd emailens första del som default namn
+                full_name: email.split('@')[0] 
             });
             alert("Registrering klar! Du kan nu logga in.");
         } else if (data.user && !isSignUp) {
             alert("Inloggad!");
         } else {
-            // Detta händer oftast vid signUp om e-postbekräftelse krävs
             alert("Kolla din e-post (och skräppost) för bekräftelselänk.");
         }
 
         setLoading(false);
     };
 
-    // I src/pages/LoginPage.tsx
 
     const handlePasswordReset = async () => {
         if (!email) {
@@ -46,10 +41,7 @@ function AuthPage() {
             return;
         }
 
-        // Använd Supabase metoden för återställning
         const { error } = await supabase.auth.resetPasswordForEmail(email, {
-            // OBS: Du måste ange vart användaren ska landa efter att de klickat på länken i e-posten.
-            // Ofta en sida där de direkt kan ange sitt nya lösenord, t.ex. '/update-password'
             redirectTo: `${window.location.origin}/update-password`
         });
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { supabase } from "../lib/supabaseClient";
 
 function UpdatePasswordPage() {
@@ -9,8 +9,6 @@ function UpdatePasswordPage() {
     const handleUpdatePassword = async () => {
         setLoading(true);
 
-        // Använder Supabase metoden för att uppdatera lösenordet för den
-        // nuvarande sessionen (som Supabase just skapat via e-postlänken)
         const { error } = await supabase.auth.updateUser({
             password: newPassword
         });
@@ -19,7 +17,7 @@ function UpdatePasswordPage() {
             setMessage(`Kunde inte uppdatera: ${error.message}`);
         } else {
             setMessage("Lösenordet uppdaterat! Du kan nu logga in.");
-            setNewPassword(""); // Rensa fältet
+            setNewPassword(""); 
         }
         setLoading(false);
     };

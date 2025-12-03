@@ -6,8 +6,8 @@
     "category": "blomma",
     "type": "sommarblomma",
     "description": "Pelargon är en växt som passar i svenska förhållanden.",
-    "image": "https://www.wexthuset.com/fakta-och-rad/skotselrad-om-vaxter-i-kruka-och-tradgard/odlingstips-pelargoner/pelargonens-olika-blommor",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "pelargon.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "april",
@@ -63,8 +63,8 @@
     "category": "ört",
     "type": "ört & kryddväxt",
     "description": "Lavendel är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Lavendel",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "lavendel.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "april",
@@ -120,8 +120,8 @@
     "category": "ört",
     "type": "ört & kryddväxt",
     "description": "Ros är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Ros",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "ros.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "november",
@@ -172,13 +172,13 @@
   },
   {
     "id": 4,
-    "name": "Tulpan Aurea",
+    "name": "Tulpan",
     "latin_name": "",
     "category": "träd",
     "type": "träd",
     "description": "Tulpan Aurea är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Tulpan+Aurea",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "tulpan.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "september"
@@ -233,8 +233,8 @@
     "category": "utomhus",
     "type": "utomhusväxt",
     "description": "Påsklilja är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Påsklilja",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "pasklilja.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "april",
@@ -285,13 +285,13 @@
   },
   {
     "id": 6,
-    "name": "Krokus Compacta",
+    "name": "Krokus",
     "latin_name": "",
     "category": "växt",
     "type": "växt",
     "description": "Krokus Compacta är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Krokus+Compacta",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "krokus.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "april",
@@ -342,13 +342,13 @@
   },
   {
     "id": 7,
-    "name": "Solros Nana",
+    "name": "Solros",
     "latin_name": "",
     "category": "inomhus",
     "type": "inomhusväxt",
     "description": "Solros Nana är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Solros+Nana",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "solros.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "augusti",
@@ -401,13 +401,13 @@
   },
   {
     "id": 8,
-    "name": "Ringblomma Aurea",
+    "name": "Ringblomma",
     "latin_name": "",
     "category": "träd",
     "type": "träd",
     "description": "Ringblomma Aurea är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Ringblomma+Aurea",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "ringblomma.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "oktober"
@@ -457,13 +457,13 @@
   },
   {
     "id": 9,
-    "name": "Lilja Compacta",
+    "name": "Lilja",
     "latin_name": "",
     "category": "växt",
     "type": "växt",
     "description": "Lilja Compacta är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Lilja+Compacta",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "lilja.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "april",
@@ -514,13 +514,13 @@
   },
   {
     "id": 10,
-    "name": "Pion Minor",
+    "name": "Pion",
     "latin_name": "",
     "category": "träd",
     "type": "träd",
     "description": "Pion Minor är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Pion+Minor",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "pion.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "januari",
@@ -579,8 +579,8 @@
     "category": "inomhus",
     "type": "inomhusväxt",
     "description": "Margerit är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Margerit",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "mergerit.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "mars"
@@ -629,13 +629,13 @@
   },
   {
     "id": 12,
-    "name": "Syren Elegant",
+    "name": "Syren",
     "latin_name": "",
     "category": "inomhus",
     "type": "inomhusväxt",
     "description": "Syren Elegant är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Syren+Elegant",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "syren.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "mars",
@@ -688,13 +688,13 @@
   },
   {
     "id": 13,
-    "name": "Hortensia Regia",
+    "name": "Hortensia",
     "latin_name": "",
     "category": "träd",
     "type": "träd",
     "description": "Hortensia Regia är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Hortensia+Regia",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "hortensia.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "januari",
@@ -748,13 +748,13 @@
   },
   {
     "id": 14,
-    "name": "Dahlia Florex",
+    "name": "Dahlia",
     "latin_name": "",
     "category": "inomhus",
     "type": "inomhusväxt",
     "description": "Dahlia Florex är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Dahlia+Florex",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "dahlia.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "juni",
@@ -805,13 +805,13 @@
   },
   {
     "id": 15,
-    "name": "Blåklocka Variegata",
+    "name": "Blåklocka",
     "latin_name": "",
     "category": "inomhus",
     "type": "inomhusväxt",
     "description": "Blåklocka Variegata är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Blåklocka+Variegata",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "blaklocka.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "september",
@@ -862,13 +862,13 @@
   },
   {
     "id": 16,
-    "name": "Gullviva Elegant",
+    "name": "Gullviva",
     "latin_name": "",
     "category": "inomhus",
     "type": "inomhusväxt",
     "description": "Gullviva Elegant är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Gullviva+Elegant",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "gullviva.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "mars",
@@ -921,13 +921,13 @@
   },
   {
     "id": 17,
-    "name": "Anemon Elegant",
+    "name": "Anemon",
     "latin_name": "",
     "category": "växt",
     "type": "växt",
     "description": "Anemon Elegant är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Anemon+Elegant",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "anemon.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "mars",
@@ -980,11 +980,11 @@
     "id": 18,
     "name": "Fingerborgsblomma",
     "latin_name": "",
-    "category": "träd",
-    "type": "träd",
+    "category": "blomma",
+    "type": "sommarblomma",
     "description": "Fingerborgsblomma är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Fingerborgsblomma",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "fingerborgsblomma.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "oktober",
@@ -1036,13 +1036,13 @@
   },
   {
     "id": 19,
-    "name": "Ljung Aurea",
+    "name": "Ljung",
     "latin_name": "",
     "category": "ört",
     "type": "ört & kryddväxt",
     "description": "Ljung Aurea är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Ljung+Aurea",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "ljung.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "november"
@@ -1091,13 +1091,13 @@
   },
   {
     "id": 20,
-    "name": "Klematis Purpurea",
+    "name": "Klematis",
     "latin_name": "",
     "category": "blomma",
     "type": "sommarblomma",
     "description": "Klematis Purpurea är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Klematis+Purpurea",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "klematis.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "juni",
@@ -1148,13 +1148,13 @@
   },
   {
     "id": 21,
-    "name": "Rhododendron Silver",
+    "name": "Rhododendron",
     "latin_name": "",
-    "category": "inomhus",
-    "type": "inomhusväxt",
+    "category": "utomhus",
+    "type": "buske",
     "description": "Rhododendron Silver är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Rhododendron+Silver",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "rhododendron.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "mars",
@@ -1207,11 +1207,11 @@
     "id": 22,
     "name": "Äppelträd",
     "latin_name": "",
-    "category": "blomma",
-    "type": "sommarblomma",
+    "category": "utomhus",
+    "type": "träd",
     "description": "Äppelträd är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Äppelträd",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "appeltrad.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "juni"
@@ -1260,13 +1260,13 @@
   },
   {
     "id": 23,
-    "name": "Päronträd Rubra",
+    "name": "Päronträd",
     "latin_name": "",
     "category": "utomhus",
-    "type": "utomhusväxt",
-    "description": "Päronträd Rubra är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Päronträd+Rubra",
-    "image_source": "Wikimedia Commons (sök)",
+    "type": "träd",
+    "description": "Päronträd är en växt som passar i svenska förhållanden.",
+    "image": "parontrad.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "oktober",
@@ -1317,13 +1317,13 @@
   },
   {
     "id": 24,
-    "name": "Körsbärsträd Aurea",
+    "name": "Körsbärsträd",
     "latin_name": "",
-    "category": "inomhus",
-    "type": "inomhusväxt",
+    "category": "utomhus",
+    "type": "träd",
     "description": "Körsbärsträd Aurea är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Körsbärsträd+Aurea",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "korsbarstrad.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "april",
@@ -1374,13 +1374,13 @@
   },
   {
     "id": 25,
-    "name": "Plommonträd Regia",
+    "name": "Plommonträd",
     "latin_name": "",
-    "category": "buske",
-    "type": "buske",
+    "category": "utomhus",
+    "type": "träd",
     "description": "Plommonträd Regia är en växt som passar i svenska förhållanden.",
-    "image": "https://commons.wikimedia.org/w/index.php?search=Plommonträd+Regia",
-    "image_source": "Wikimedia Commons (sök)",
+    "image": "plommontrad.jpg",
+    "image_source": "Lokal fil",
     "watering": {
       "months": [
         "juli"
