@@ -22,7 +22,7 @@ const ImageTestPage = () => {
 
     return (
         <div style={{ padding: "2rem" }}>
-            <h1>Testar Bilder (Korrigerad)</h1>
+            <h1>Testar Bilder</h1>
 
             {plants.slice(0, 30).map((p) => (
                 <div key={p.id} style={{ marginBottom: "20px" }}>

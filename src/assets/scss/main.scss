@@ -1,0 +1,17 @@
+
+// Base styles
+@import "base/globals";
+
+// Components
+@import "components/navbar";
+@import "components/footer";
+@import "components/plantCard";
+@import "components/pagination";
+
+// Pages
+@import "pages/home";
+@import "pages/plantList";
+
+@import "pages/calendar";
+@import "pages/profile";
+@import "pages/wishlist";

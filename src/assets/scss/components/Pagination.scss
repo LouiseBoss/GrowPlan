@@ -1,0 +1,16 @@
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+
+  button {
+    min-width: 130px;
+  }
+}
+
+.pagination-status {
+  font-size: 1rem;
+  color: #333;
+}

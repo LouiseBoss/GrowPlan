@@ -6,6 +6,7 @@ import UpdatePasswordPage from "./pages/UpdatePasswordPage";
 import { useAuth } from './hooks/useAuth';
 import OverviewPage from "./pages/OverviewPage";
 import HomePage from "./pages/HomePage";
+import PlantListPage from "./pages/PlantListPage";
 
 function App() {
   const { user, loading } = useAuth();
@@ -20,12 +21,14 @@ function App() {
 
       <Route path="/testdata" element={<TestDataPage />} />
       <Route path="/imagetest" element={<ImageTestPage />} />
+      <Route path="/plants" element={<PlantListPage />} />
 
-      {/* 2. Authentication/Inloggningssidor */}
+
+      {/* Authentication/Inloggningssidor */}
       <Route path="/auth" element={<AuthPage />} />
       <Route path="/update-password" element={<UpdatePasswordPage />} />
 
-      {/* 3. Skyddad Översikt (Används efter inloggning) */}
+      {/* Skyddad Översikt (Används efter inloggning) */}
       {/* Om inloggad: Visa OverviewPage. Om utloggad: Skicka tillbaka till AuthPage/Login */}
       <Route path="/overview" element={user ? <OverviewPage /> : <AuthPage />}
       />
