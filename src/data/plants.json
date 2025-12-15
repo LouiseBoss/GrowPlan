@@ -257,7 +257,7 @@
     "type": "lökväxt",
     "description": "Påskliljan är en klassisk symbol för våren, känd för sina gula eller vita blommor med trumpetformad bikrona. Likt tulpanen planteras lökarna på hösten. Påskliljan är mycket härdig, lättodlad och återkommer troget år efter år. Dessutom naturligt giftig, vilket skyddar mot sork och rådjur.",
     "usage": "Rent dekorativ i trädgårdar, rabatter och som snittblomma. Hela växten, särskilt löken, är giftig och bör ej förtäras.",
-    "image": "påsklilja.jpg",
+    "image": "pasklilja.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -609,7 +609,7 @@
     "type": "sommarblomma (ofta ettårig i Sverige)",
     "description": "Margeriten är en av de mest klassiska sommarblommorna, känd för sina prästkragelika blommor i vitt, rosa eller gult. Den är en flitig blommare från vår till höst och trivs bäst i kruka eller balkonglåda i soligt läge. I Sverige odlas den vanligen som ettårig.",
     "usage": "Rent dekorativ i krukor, amplar och rabatter.",
-    "image": "margerit.jpg",
+    "image": "mergerit.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -1827,11 +1827,11 @@
   },
   {
     "id": 31,
-    "name": "Lind 'Aurea'",
-    "latin_name": "Tilia europaea 'Pallida' (eller 'Aurea'-liknande sort)",
+    "name": "Lind",
+    "latin_name": "Tilia europaea",
     "category": "träd",
     "type": "lövträd",
-    "description": "Lind 'Aurea' är en sort av lind, troligen Vinterlind eller Parklind, som kännetecknas av sin vackra, gyllengula färg på årsskotten under vintern. Lindar är klassiska park- och alléträd, uppskattade för sin täta krona, hjärtformade blad och doftande blommor på sommaren. Dessa träd är mycket tåliga och kan bli mycket gamla. Den är lämplig för beskärning (hamling) och tål stadsmiljö bra.",
+    "description": "Lind är en sort av lind, troligen Vinterlind eller Parklind, som kännetecknas av sin vackra, gyllengula färg på årsskotten under vintern. Lindar är klassiska park- och alléträd, uppskattade för sin täta krona, hjärtformade blad och doftande blommor på sommaren. Dessa träd är mycket tåliga och kan bli mycket gamla. Den är lämplig för beskärning (hamling) och tål stadsmiljö bra.",
     "usage": "Huvudsakligt alléträd, parkträd och skuggträd. De doftande blommorna används för att göra lindblomste. Passar bra i formklippta häckar eller som hamlade träd.",
     "image": "lind.jpg",
     "image_source": "Lokal fil",
@@ -1894,7 +1894,7 @@
     "type": "lövträd",
     "description": "Rödeken (Quercus rubra, Rubra betyder röd) är ett snabbväxande och ståtligt lövträd som är mycket populärt för sin fantastiska rödbruna höstfärg. Den har stora, flikiga blad och ger en bred, skuggig krona. Den är tålig mot stadsklimat och salt, men rötterna är känsliga för kompaktering. Arten Ek Rubra syftar troligen på denna sort.",
     "usage": "Utmärkt solitär (ensamväxande) träd i stora parker, golfbanor eller som skuggträd i stora trädgårdar. Används främst för dess dekorativa höstfärg.",
-    "image": "rodek.jpg",
+    "image": "rodek.png",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -1947,11 +1947,11 @@
   },
   {
     "id": 33,
-    "name": "Blodbok 'Maxima'",
-    "latin_name": "Fagus sylvatica 'Purpurea Maxima'",
+    "name": "Blodbok",
+    "latin_name": "Fagus sylvatica",
     "category": "träd",
     "type": "lövträd",
-    "description": "Blodbok 'Maxima' är en storvuxen variant av Blodbok, ett majestätiskt lövträd som kännetecknas av sitt mörkt röda till purpurfärgade bladverk som behåller sin färg väl under hela säsongen. Bladen kan sitta kvar under vintern (kallas marcescens), vilket ger struktur och insynsskydd även under den kalla årstiden. Den kräver väldränerad, kalkrik jord och blir ett mycket stort träd.",
+    "description": "Blodbok är en storvuxen variant av Blodbok, ett majestätiskt lövträd som kännetecknas av sitt mörkt röda till purpurfärgade bladverk som behåller sin färg väl under hela säsongen. Bladen kan sitta kvar under vintern (kallas marcescens), vilket ger struktur och insynsskydd även under den kalla årstiden. Den kräver väldränerad, kalkrik jord och blir ett mycket stort träd.",
     "usage": "Utmärkt som solitärträd (ensamväxande) i stora trädgårdar och parker. Dess täta växtsätt gör den också idealisk för formklippta, höga häckar och avskärmningar.",
     "image": "blodbok.jpg",
     "image_source": "Lokal fil",
@@ -2064,11 +2064,11 @@
   },
   {
     "id": 35,
-    "name": "Hybrid-Asp 'Maximus'",
-    "latin_name": "Populus tremula x Populus tremuloides",
+    "name": "Hybrid-Asp",
+    "latin_name": "Populus tremula tremuloides",
     "category": "träd",
     "type": "lövträd",
-    "description": "Hybrid-Asp 'Maximus' är en snabbväxande, starkväxande hybrid mellan europeisk och nordamerikansk asp, optimerad för att växa snabbt och rakt. Den får de karaktäristiska lövbladen som 'darrar' i vinden och får vackra gula höstfärger. Dess snabba tillväxt och förmåga att etablera sig snabbt gör den populär inom skogsindustrin, men den skjuter också rikligt med rotskott.",
+    "description": "Hybrid-Asp är en snabbväxande, starkväxande hybrid mellan europeisk och nordamerikansk asp, optimerad för att växa snabbt och rakt. Den får de karaktäristiska lövbladen som 'darrar' i vinden och får vackra gula höstfärger. Dess snabba tillväxt och förmåga att etablera sig snabbt gör den populär inom skogsindustrin, men den skjuter också rikligt med rotskott.",
     "usage": "Odlas för biomassa och virkesproduktion. Används i landskapsplanering som snabbväxande skärmväxt eller vindskydd på stora ytor. Ej lämplig för små trädgårdar på grund av rotskottsbildningen.",
     "image": "hybridasp.jpg",
     "image_source": "Lokal fil",
@@ -2123,12 +2123,12 @@
   {
     "id": 36,
     "name": "Rödblommig Hästkastanj",
-    "latin_name": "Aesculus x carnea 'Briotii'",
+    "latin_name": "Aesculus x carnea",
     "category": "träd",
     "type": "lövträd",
-    "description": "Rödblommig Hästkastanj 'Briotii' är en hybrid som är medelstor och har ett elegant, utbrett växtsätt. Den är känd för sina stora, pyramidformade blomklasar i mörkrött till rosa. Till skillnad från vanlig kastanj drabbas den sällan av kastanjebladsmal, vilket gör den till ett friskare alléträd. Den får sällan ätliga kastanjer.",
+    "description": "Rödblommig Hästkastanj är en hybrid som är medelstor och har ett elegant, utbrett växtsätt. Den är känd för sina stora, pyramidformade blomklasar i mörkrött till rosa. Till skillnad från vanlig kastanj drabbas den sällan av kastanjebladsmal, vilket gör den till ett friskare alléträd. Den får sällan ätliga kastanjer.",
     "usage": "Utmärkt alléträd och parkträd tack vare sin robusthet och spektakulära blomning under försommaren. Används ofta som solitär i stora trädgårdar.",
-    "image": "rodkastanj.jpg",
+    "image": "rodblommighastkastanj.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -2367,7 +2367,7 @@
     "type": "buske/klätterväxt",
     "description": "Jasmin är en stor grupp av växter, men Vinterjasmin (*J. nudiflorum*) är den vanligaste utomhus i södra Sverige. Den kännetecknas av att blomma mitt i vintern (om klimatet tillåter) med små, gula blommor på kala grenar. Trädgårdsjasmin (*Philadelphus spp.*) är en annan vanlig buske som odlas för doft i Sverige. Denna växt behöver oftast en spaljé eller vägg att klättra på, eller odlas som en marktäckande buske.",
     "usage": "Prydnadsbuske/klätterväxt, uppskattad för sin extremt tidiga eller sena blomning. Odlas för doft (särskilt *J. officinale*) och används då ofta nära uteplatser eller entréer.",
-    "image": "vinterjasmin.jpg",
+    "image": "vinterjasmin.avif",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -2739,7 +2739,7 @@
     "type": "krukväxt/klätterväxt",
     "description": "Monstera 'Albo Variegata' är en eftertraktad variant av klassisk Monstera, känd för sina stora, flikiga blad med dekorativa vita (Albo) partier (variegation). Det är en klättrande växt som växer snabbt under rätt förhållanden och behöver stöd i form av en mosstock. Den vita delen av bladen kan lätt brännas i direkt solljus.",
     "usage": "Solitär krukväxt som inredningsdetalj. Anses vara en exklusiv samlarväxt. Kräver vertikalt stöd för att utveckla stora, flikiga blad.",
-    "image": "monsteraalba.jpg",
+    "image": "monsteraalbo.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -2804,7 +2804,7 @@
     "type": "krukväxt/palm",
     "description": "Guldpalmen är en av de mest populära palmerna inomhus. Den kännetecknas av sina många upprätta stammar och eleganta, fjäderlika, ljusgröna blad. Den är utmärkt för att rena luften och trivs med hög luftfuktighet. Torkade blad kan kapas nära basen.",
     "usage": "Inredningsväxt för att skapa en tropisk atmosfär. Passar bra i kontorsmiljöer och ljusa vardagsrum.",
-    "image": "guldpalm.jpg",
+    "image": "guldpalm.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -2868,7 +2868,7 @@
     "type": "suckulent/krukväxt",
     "description": "Svärmorstungan är en otroligt tålig och lättskött krukväxt som kännetecknas av sina styva, upprätta, svärd- eller tungformade blad. Den är en av de bästa luftrenande växterna och tål både mörka och ljusa placeringar. 'Maxima' kan syfta på en extra hög sort. Den är extremt känslig för övervattning, särskilt på vintern.",
     "usage": "Mycket populär krukväxt för hem och kontor. Fungerar utmärkt i badrum och sovrum där den renar luften.",
-    "image": "svarmorstunga.jpg",
+    "image": "svarmorstunga.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -2930,7 +2930,7 @@
     "type": "suckulent/krukväxt",
     "description": "Paradisträdet är en populär suckulent och klassisk krukväxt som kännetecknas av sina tjocka, ovala, glansiga blad och vedartade stam, som gör att den liknar ett miniatyrträd. Den är extremt torktålig, lättskött och kan bli mycket gammal. Den kan blomma med små, vita eller rosa blommor på vintern om den får mycket ljus.",
     "usage": "Krukväxt som ofta formas som bonsai. Perfekt för soliga fönsterbrädor, tål torka väl.",
-    "image": "paradistrad.jpg",
+    "image": "paradistrad.avif",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -3171,7 +3171,7 @@
     "type": "krukväxt",
     "description": "Fredskallan är en elegant, luftrenande krukväxt som kännetecknas av sina mörkt gröna, glansiga blad och vita, skedformade blomkolvar (spatha). Den är relativt lättskött och är mycket tydlig med sina behov – när den behöver vatten hänger bladen dramatiskt. Den gillar skugga och fuktig luft.",
     "usage": "Populär krukväxt för mörkare hörn och kontorsmiljöer. Utmärkt luftrenare.",
-    "image": "fredskalla.jpg",
+    "image": "fredskalla.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -3221,13 +3221,13 @@
   },
   {
     "id": 54,
-    "name": "Dracaena 'Marginata Variegata'",
-    "latin_name": "Dracaena marginata 'Tricolor'",
+    "name": "Dracaena",
+    "latin_name": "Dracaena marginata",
     "category": "inomhus",
     "type": "krukväxt",
     "description": "Dracaena 'Marginata Variegata' (ibland kallad 'Tricolor') är en populär krukväxt känd för sina smala, svärdsliknande blad med dekorativa vita/röda kanter. Den är tålig och anpassar sig väl till normal inomhusmiljö. Sorten är en utmärkt luftrenare och har ett elegant, palm-liknande utseende.",
     "usage": "Inredningsväxt för kontor och hem. Passar bra i hörn eller som golvväxt. Mycket bra luftrenande egenskaper.",
-    "image": "dracena.jpg",
+    "image": "dracena.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -3351,7 +3351,7 @@
     "type": "krukväxt",
     "description": "Ampelliljan är en av de mest klassiska och lättskötta krukväxterna. Den kännetecknas av sina bågformade, ofta vitrandiga blad och bildar småplantor ('spindlar') i slutet av stänglarna, vilket gör den perfekt för ampel. Den är en utmärkt luftrenare och är mycket tålig mot både torka och mörka placeringar.",
     "usage": "Ampelväxt eller fönsterväxt. Lätt att föröka via småplantorna. Utmärkt luftrenare.",
-    "image": "ampellilja.jpg",
+    "image": "ampellilja.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -3412,7 +3412,7 @@
     "type": "utplanteringsväxt/ampelväxt",
     "description": "Hängpelargonen är en av de mest omtyckta utplanteringsväxterna i Sverige, älskad för sin rikliga blomning och sitt hängande växtsätt. 'Variegata' har dessutom dekorativa, brokiga blad. Den är mycket tålig mot torka men är inte vinterhärdig och måste tas in innan frost. Den kräver mycket sol för att blomma maximalt.",
     "usage": "Ampelväxt för balkonger och uteplatser, fönsterlådor, eller i krukor utomhus. Måste tas in för övervintring.",
-    "image": "hangpelargon.jpg",
+    "image": "hangpelargon.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -3659,7 +3659,7 @@
     "type": "trädgårdsväxt/perenn",
     "description": "Näva (inte att förväxla med pelargon, som är *Pelargonium*) är en mycket populär och tålig perenn som är en grundsten i många trädgårdar. Den kännetecknas av sin långa blomningstid och sitt täta, marktäckande växtsätt. Nävor är generellt anspråkslösa och mycket vinterhärdiga i svenska klimat.",
     "usage": "Kantväxt, marktäckare, fyllnadsväxt i rabatter. Vissa arter är utmärkta under buskar och träd. Lockar bin.",
-    "image": "geranium.jpg",
+    "image": "nava.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -3777,7 +3777,7 @@
     "type": "prydnadsbuske/litet träd",
     "description": "Japansk lönn är en exklusiv prydnadsbuske eller ett litet träd, omtyckt för sina finklippta, eleganta blad och spektakulära höstfärger (ofta i rött, orange och gult). Den är känslig för sträng kyla och frost, samt starkt solljus som kan bränna bladen. Trivs bäst i skyddade lägen.",
     "usage": "Solitär i rabatter, prydnad i större krukor, japanska trädgårdar, uteplatser. Måste skyddas mot vind och stark sol.",
-    "image": "japansklonn.jpg",
+    "image": "japansklonn.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -3901,7 +3901,7 @@
     "type": "häck/prydnadsbuske",
     "description": "Tuja 'Compacta' är en tät, konformad barrväxt som är populär både som häckväxt och solitär. Det är en relativt långsamväxande variant av vanlig Tuja och behåller sin form väl. Liksom andra tujor är den känslig för att torka ut, särskilt på vintern, vilket kan leda till bruna barr.",
     "usage": "Oformell häck, solitär buske, insynsskydd. Klarar klippning väl.",
-    "image": "tuja.jpg",
+    "image": "tuja.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -3959,13 +3959,13 @@
   },
   {
     "id": 66,
-    "name": "En Purpurea",
+    "name": "En",
     "latin_name": "Juniperus communis 'Purpurea'",
     "category": "buske",
     "type": "buske",
-    "description": "En Purpurea är en odlingsvärd variant av En som utmärker sig med sina barr som får en vacker purpurfärgad ton under vintermånaderna. Den är mycket tålig och passar utmärkt i svenska trädgårdar, speciellt som solitär, i grupper eller som vinterfärg i rabatter. Växer upprätt och kompakt.",
+    "description": "En är en odlingsvärd variant av En som utmärker sig med sina barr som får en vacker purpurfärgad ton under vintermånaderna. Den är mycket tålig och passar utmärkt i svenska trädgårdar, speciellt som solitär, i grupper eller som vinterfärg i rabatter. Växer upprätt och kompakt.",
     "usage": "Prydnadsbuske, vinterfärg, häckväxt, klippt form.",
-    "image": "En Purpurea.jpg",
+    "image": "en.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4014,17 +4014,17 @@
       "januari"
     ],
     "height_cm": 388,
-    "care_guide": "En Purpurea trivs bäst i **sol till halvskugga**. Vattnas sparsamt, främst under etablering och långa torrperioder. Se till att jorden är väldränerad för att undvika rotröta."
+    "care_guide": "En trivs bäst i **sol till halvskugga**. Vattnas sparsamt, främst under etablering och långa torrperioder. Se till att jorden är väldränerad för att undvika rotröta."
   },
   {
     "id": 67,
-    "name": "Idegran Grandiflora",
+    "name": "Idegran",
     "latin_name": "Taxus baccata 'Grandiflora'",
     "category": "barrväxt",
     "type": "buske/träd",
-    "description": "Idegran Grandiflora är en storvuxen och robust sort av Idegran, känd för sitt täta, mörkgröna barrverk och sin förmåga att klara av djup skugga. En utmärkt häckväxt eller formklippt buske. **Observera att alla delar av Idegranen, förutom den röda frukten, är giftiga vid förtäring.**",
+    "description": "Idegran är en storvuxen och robust sort av Idegran, känd för sitt täta, mörkgröna barrverk och sin förmåga att klara av djup skugga. En utmärkt häckväxt eller formklippt buske. **Observera att alla delar av Idegranen, förutom den röda frukten, är giftiga vid förtäring.**",
     "usage": "Häck, formklippning, solitär, skuggplantering.",
-    "image": "Idegran Grandiflora.jpg",
+    "image": "idegran.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4073,17 +4073,17 @@
       "april"
     ],
     "height_cm": 267,
-    "care_guide": "Idegran Grandiflora trivs bäst i **skugga till halvskugga**. Håll jorden jämnt fuktig, speciellt under torka. Väldränerad jord är avgörande. Kan också användas som stor **inomhusväxt** under vintern i kallare klimat, men trivs bäst utomhus."
+    "care_guide": "Idegran trivs bäst i **skugga till halvskugga**. Håll jorden jämnt fuktig, speciellt under torka. Väldränerad jord är avgörande. Kan också användas som stor **inomhusväxt** under vintern i kallare klimat, men trivs bäst utomhus."
   },
   {
     "id": 68,
-    "name": "Stäppsalvia Nana",
+    "name": "Stäppsalvia",
     "latin_name": "Salvia nemorosa 'Nana'",
     "category": "perenn",
     "type": "perenn",
-    "description": "Stäppsalvia Nana är en kompakt och lågväxande perenn som blommar rikligt med intensivt violettblå, upprätta blomax. Den är mycket populär tack vare sin långa blomningstid och att den attraherar bin och fjärilar. Klipp ner efter första blomningen för en andra blomning senare på säsongen.",
+    "description": "Stäppsalvia är en kompakt och lågväxande perenn som blommar rikligt med intensivt violettblå, upprätta blomax. Den är mycket populär tack vare sin långa blomningstid och att den attraherar bin och fjärilar. Klipp ner efter första blomningen för en andra blomning senare på säsongen.",
     "usage": "Rabattväxt, kantväxt, stenparti, marktäckare.",
-    "image": "Stäppsalvia Nana.jpg",
+    "image": "stappsalvia.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4136,17 +4136,17 @@
       "september"
     ],
     "height_cm": 46,
-    "care_guide": "Stäppsalvia Nana trivs bäst i **full sol** och väldränerad jord. Den är torktålig när den väl är etablerad. Undvik att vattna för ofta – låt jorden torka upp mellan vattningarna."
+    "care_guide": "Stäppsalvia trivs bäst i **full sol** och väldränerad jord. Den är torktålig när den väl är etablerad. Undvik att vattna för ofta – låt jorden torka upp mellan vattningarna."
   },
   {
     "id": 69,
-    "name": "Stjärnflocka Minor",
+    "name": "Stjärnflocka",
     "latin_name": "Astrantia major 'Minor'",
     "category": "perenn",
     "type": "perenn",
-    "description": "Stjärnflocka Minor är en nätt, tålig och långblommande perenn med dekorativa, stjärnformade blommor i nyanser av rosa och vitt. Den är en utmärkt snittblomma och lockar fjärilar. Sorten 'Minor' är mindre och kompaktare än den vanliga Stjärnflockan.",
+    "description": "Stjärnflocka är en nätt, tålig och långblommande perenn med dekorativa, stjärnformade blommor i nyanser av rosa och vitt. Den är en utmärkt snittblomma och lockar fjärilar. Sorten 'Minor' är mindre och kompaktare än den vanliga Stjärnflockan.",
     "usage": "Perennrabatt, woodland, snittblomma.",
-    "image": "Stjärnflocka Minor.jpg",
+    "image": "stjarnflocka.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4196,17 +4196,17 @@
       "augusti"
     ],
     "height_cm": 24,
-    "care_guide": "Stjärnflocka Minor trivs bäst i **halvskugga till skugga**, men kan klara sol om marken hålls jämnt fuktig. Behöver regelbunden vattning vid torka, då den föredrar fuktighet."
+    "care_guide": "Stjärnflocka trivs bäst i **halvskugga till skugga**, men kan klara sol om marken hålls jämnt fuktig. Behöver regelbunden vattning vid torka, då den föredrar fuktighet."
   },
   {
     "id": 70,
-    "name": "Rudbeckia Minor",
+    "name": "Rudbeckia",
     "latin_name": "Rudbeckia hirta 'Minor'",
     "category": "perenn",
     "type": "perenn",
-    "description": "Rudbeckia Minor är en kompakt variant av Rudbeckia, känd för sina prästkragelika blommor i gula till orangea nyanser med en mörk mitt. Den blommar sent på säsongen och är en utmärkt färgklick i höstrabatten. Lockar pollinerare.",
+    "description": "Rudbeckia är en kompakt variant av Rudbeckia, känd för sina prästkragelika blommor i gula till orangea nyanser med en mörk mitt. Den blommar sent på säsongen och är en utmärkt färgklick i höstrabatten. Lockar pollinerare.",
     "usage": "Rabattväxt, snittblomma, höstfärg.",
-    "image": "Rudbeckia Minor.jpg",
+    "image": "rudbeckia.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4255,7 +4255,7 @@
       "oktober"
     ],
     "height_cm": 28,
-    "care_guide": "Rudbeckia Minor trivs bäst i **full sol**. Vattnas regelbundet under etablering och torkperioder. Kan användas som stor **inomhusväxt** över vintern i ett ljust fönster."
+    "care_guide": "Rudbeckia trivs bäst i **full sol**. Vattnas regelbundet under etablering och torkperioder. Kan användas som stor **inomhusväxt** över vintern i ett ljust fönster."
   },
   {
     "id": 71,
@@ -4265,7 +4265,7 @@
     "type": "perenn",
     "description": "Aster, i dess många sorter, är en av de viktigaste höstblommande perennerna. Den bjuder på ett hav av små, prästkragelika blommor i färger från vitt och rosa till blått och lila. Perfekt för att förlänga säsongen och ge mat till pollinerare sent på året.",
     "usage": "Rabattväxt, höstblomma, snittblomma.",
-    "image": "Aster.jpg",
+    "image": "aster.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4322,13 +4322,13 @@
   },
   {
     "id": 72,
-    "name": "Krysantemum Compacta",
+    "name": "Krysantemum",
     "latin_name": "Chrysanthemum 'Compacta'",
     "category": "perenn",
     "type": "perenn",
-    "description": "Krysantemum 'Compacta' är en lågväxande och tät sort av krysantemum, oftast odlad som utplanteringsväxt men kan vara perenn i mildare klimat. Blommar sent på hösten med fyllda blommor i många färger. Perfekt för krukor och höstplanteringar.",
+    "description": "Krysantemum är en lågväxande och tät sort av krysantemum, oftast odlad som utplanteringsväxt men kan vara perenn i mildare klimat. Blommar sent på hösten med fyllda blommor i många färger. Perfekt för krukor och höstplanteringar.",
     "usage": "Krukväxt, höstplantering, rabattfyllnad.",
-    "image": "Krysantemum Compacta.jpg",
+    "image": "krysantemum.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4379,17 +4379,17 @@
       "november"
     ],
     "height_cm": 19,
-    "care_guide": "Krysantemum Compacta trivs bäst i **soligt läge**. Håll jorden jämnt fuktig under blomning. Om den används som **ört/kryddväxt** är det främst de dekorativa bladen och blommorna som är i fokus (även om vissa sorter används för te)."
+    "care_guide": "Krysantemum trivs bäst i **soligt läge**. Håll jorden jämnt fuktig under blomning. Om den används som **ört/kryddväxt** är det främst de dekorativa bladen och blommorna som är i fokus (även om vissa sorter används för te)."
   },
   {
     "id": 73,
-    "name": "Malva Variegata",
+    "name": "Malva",
     "latin_name": "Malva moschata 'Variegata'",
     "category": "perenn",
     "type": "perenn",
-    "description": "Malva Variegata (Myskmalva) är en charmig perenn som kännetecknas av sina djupt flikiga, limegröna blad med vita eller gräddfärgade inslag ('Variegata' syftar på brokigheten). Blommar med ljust rosa, skålformade blommor under sommaren. Ett vackert inslag i rabatten, men behöver ofta stöd.",
+    "description": "Malva (Myskmalva) är en charmig perenn som kännetecknas av sina djupt flikiga, limegröna blad med vita eller gräddfärgade inslag ('Variegata' syftar på brokigheten). Blommar med ljust rosa, skålformade blommor under sommaren. Ett vackert inslag i rabatten, men behöver ofta stöd.",
     "usage": "Perennrabatt, snittblomma, bladverkets prydnadsvärde.",
-    "image": "Malva Variegata.jpg",
+    "image": "malva.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4441,17 +4441,17 @@
       "augusti"
     ],
     "height_cm": 126,
-    "care_guide": "Malva Variegata trivs bäst i **full sol** och väldränerad jord. Den är relativt torktålig när den väl är etablerad. Trots stor höjd **klassas den som perenn**, inte träd, även om den kan bli upp till 1.2 m hög."
+    "care_guide": "Malva trivs bäst i **full sol** och väldränerad jord. Den är relativt torktålig när den väl är etablerad. Trots stor höjd **klassas den som perenn**, inte träd, även om den kan bli upp till 1.2 m hög."
   },
   {
     "id": 74,
-    "name": "Akacia Compacta",
+    "name": "Akacia",
     "latin_name": "Acacia spp. 'Compacta'",
     "category": "inomhusväxt",
     "type": "inomhusväxt/buske",
-    "description": "Akacia 'Compacta' är en mindre, tätväxande variant av Akaciaträdet, anpassad för odling i kruka. Utomhus odlas den främst i milda klimat eller som utplanteringsväxt som flyttas in på vintern. Känd för sitt fina, fjäderlika bladverk och doftande, gula blommor.",
+    "description": "Akacia är en mindre, tätväxande variant av Akaciaträdet, anpassad för odling i kruka. Utomhus odlas den främst i milda klimat eller som utplanteringsväxt som flyttas in på vintern. Känd för sitt fina, fjäderlika bladverk och doftande, gula blommor.",
     "usage": "Krukväxt, uteplatsväxt, prydnadsväxt.",
-    "image": "Akacia Compacta.jpg",
+    "image": "akacia.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4506,7 +4506,7 @@
       "mars"
     ],
     "height_cm": 276,
-    "care_guide": "Akacia Compacta trivs bäst i **full sol** och väldränerad jord. Se till att den får mycket ljus även under vintern. Vattna måttligt under växtsäsongen och sparsamt under vintern. Kan användas som stor **inomhusväxt** året om i Sverige."
+    "care_guide": "Akacia trivs bäst i **full sol** och väldränerad jord. Se till att den får mycket ljus även under vintern. Vattna måttligt under växtsäsongen och sparsamt under vintern. Kan användas som stor **inomhusväxt** året om i Sverige."
   },
   {
     "id": 75,
@@ -4516,7 +4516,7 @@
     "type": "buske/träd",
     "description": "Hagtorn är ett mycket tåligt och robust träd/buske som är känt för sina vita blomklasar på våren och röda bär på hösten. Den är populär som skyddsväxt tack vare sina vassa taggar och är en viktig födokälla för fåglar och insekter. Tål klippning mycket väl.",
     "usage": "Häck, buskage, prydnadsträd, skyddsväxt.",
-    "image": "Hagtorn.jpg",
+    "image": "hagtorn.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4570,13 +4570,13 @@
   },
   {
     "id": 76,
-    "name": "Benved Compacta",
+    "name": "Benved",
     "latin_name": "Euonymus alatus 'Compactus'",
     "category": "buske",
     "type": "buske",
-    "description": "Benved 'Compactus' (Vingbenved) är en kompakt och lågväxande buske mest känd för sin spektakulära, djupröda höstfärg. Grenarna har karakteristiska, korkaktiga lister ('vingar'). Den får även små, dekorativa frukter som öppnar sig och visar orange frön på hösten. **Obs: Frukterna är giftiga.**",
+    "description": "Benved (Vingbenved) är en kompakt och lågväxande buske mest känd för sin spektakulära, djupröda höstfärg. Grenarna har karakteristiska, korkaktiga lister ('vingar'). Den får även små, dekorativa frukter som öppnar sig och visar orange frön på hösten. **Obs: Frukterna är giftiga.**",
     "usage": "Prydnadsbuske, höstfärg, solitär, grupp.",
-    "image": "Benved Compacta.jpg",
+    "image": "benved.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4625,17 +4625,17 @@
       "juni"
     ],
     "height_cm": 214,
-    "care_guide": "Benved Compacta får bäst höstfärg i **full sol**. Håll jorden fuktig under etablering. Täpp inte till rötterna med marktäckare."
+    "care_guide": "Benved får bäst höstfärg i **full sol**. Håll jorden fuktig under etablering. Täpp inte till rötterna med marktäckare."
   },
   {
     "id": 77,
-    "name": "Smultron Gigantea",
+    "name": "Smultron",
     "latin_name": "Fragaria vesca 'Gigantea'",
     "category": "bärväxt",
     "type": "bärväxt/perenn",
-    "description": "Smultron 'Gigantea' är en sort av skogssmultronet som ger större bär än de vilda varianterna. Den har en lång skördeperiod och sprider sig inte med revor, vilket gör den lättskött i rabatter och krukor. Bären är söta och aromatiska.",
+    "description": "Smultron är en sort av skogssmultronet som ger större bär än de vilda varianterna. Den har en lång skördeperiod och sprider sig inte med revor, vilket gör den lättskött i rabatter och krukor. Bären är söta och aromatiska.",
     "usage": "Bärproduktion, kantväxt, marktäckare, kruka.",
-    "image": "Smultron Gigantea.jpg",
+    "image": "smultron.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4686,17 +4686,17 @@
       "augusti"
     ],
     "height_cm": 15,
-    "care_guide": "Smultron Gigantea trivs bäst i **soligt läge till halvskugga**. Håll jorden jämnt fuktig, speciellt under blomning och fruktsättning. Trots höjdsiffran **klassas den som bärväxt/perenn**, inte träd."
+    "care_guide": "Smultron trivs bäst i **soligt läge till halvskugga**. Håll jorden jämnt fuktig, speciellt under blomning och fruktsättning. Trots höjdsiffran **klassas den som bärväxt/perenn**, inte träd."
   },
   {
     "id": 78,
-    "name": "Jordgubbe Silver",
-    "latin_name": "Fragaria spp. 'Silver'",
+    "name": "Jordgubbe",
+    "latin_name": "Fragaria",
     "category": "bärväxt",
     "type": "bärväxt/perenn",
-    "description": "Jordgubbe 'Silver' är en sort som odlas för både bär och sitt attraktiva, silvergröna bladverk. Bären är söta och utmärkta för färsk konsumtion. Det dekorativa bladverket gör den även lämplig som kantväxt eller i kruka.",
+    "description": "Jordgubbe är en sort som odlas för både bär och sitt attraktiva, silvergröna bladverk. Bären är söta och utmärkta för färsk konsumtion. Det dekorativa bladverket gör den även lämplig som kantväxt eller i kruka.",
     "usage": "Bärproduktion, marktäckare, prydnadsväxt, kruka.",
-    "image": "Jordgubbe Silver.jpg",
+    "image": "jordgubbe.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4746,7 +4746,7 @@
       "juni"
     ],
     "height_cm": 110,
-    "care_guide": "Jordgubbe Silver trivs bäst i **full sol**. Håll jorden jämnt fuktig, speciellt under fruktsättning. Behöver **vattnas oftare** än var 30:e dag under växtsäsongen."
+    "care_guide": "Jordgubbe trivs bäst i **full sol**. Håll jorden jämnt fuktig, speciellt under fruktsättning. Behöver **vattnas oftare** än var 30:e dag under växtsäsongen."
   },
   {
     "id": 79,
@@ -4756,7 +4756,7 @@
     "type": "bärväxt/buske",
     "description": "Hallon är en populär bärbuske som ger söta, aromatiska bär under sensommaren eller hösten, beroende på sort (sommar- eller hösthallon). De bildar rotskott och behöver ofta stöttas upp. Mycket uppskattade av både människor och pollinerare.",
     "usage": "Bärproduktion, häck, buskage.",
-    "image": "Hallon.jpg",
+    "image": "hallon.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4809,13 +4809,13 @@
   },
   {
     "id": 80,
-    "name": "Blåbär Nana",
-    "latin_name": "Vaccinium corymbosum 'Nana'",
+    "name": "Blåbär",
+    "latin_name": "Vaccinium corymbosum",
     "category": "bärväxt",
     "type": "bärväxt/buske",
-    "description": "Blåbär 'Nana' är en låg och kompakt variant av Amerikanskt Blåbär. Det är en utmärkt trädgårdsväxt för kruka eller som kantväxt i rabatten. Bären är söta, och busken har en vacker röd höstfärg. Behöver sur jord och korspollineras för bästa skörd.",
+    "description": "Blåbär är en låg och kompakt variant av Amerikanskt Blåbär. Det är en utmärkt trädgårdsväxt för kruka eller som kantväxt i rabatten. Bären är söta, och busken har en vacker röd höstfärg. Behöver sur jord och korspollineras för bästa skörd.",
     "usage": "Bärproduktion, krukväxt, kantväxt, prydnadsbuske.",
-    "image": "Blåbär Nana.jpg",
+    "image": "blabar.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4864,7 +4864,7 @@
       "juni"
     ],
     "height_cm": 80,
-    "care_guide": "Blåbär Nana trivs bäst i **full sol**. Måste ha sur jord och hållas jämnt fuktig. Använd kalkfritt vatten (regnvatten) vid bevattning."
+    "care_guide": "Blåbär trivs bäst i **full sol**. Måste ha sur jord och hållas jämnt fuktig. Använd kalkfritt vatten (regnvatten) vid bevattning."
   },
   {
     "id": 81,
@@ -4874,7 +4874,7 @@
     "type": "bärväxt/buske",
     "description": "Vinbär (svarta, röda eller vita) är en lättodlad bärbuske som ger rikligt med näringsrika bär. De är utmärkta för saft, sylt och gelé. Busken är tålig och klarar sig i de flesta jordar och lägen.",
     "usage": "Bärproduktion, buskage, häck.",
-    "image": "Vinbär.jpg",
+    "image": "vinbar.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4928,13 +4928,13 @@
   },
   {
     "id": 82,
-    "name": "Krusbär Compacta",
-    "latin_name": "Ribes uva-crispa 'Compacta'",
+    "name": "Krusbär",
+    "latin_name": "Ribes uva-crispa",
     "category": "bärväxt",
     "type": "bärväxt/buske",
-    "description": "Krusbär 'Compacta' är en tät och taggfri buske som ger stora, goda bär. Sorten är kompakt och passar bra i mindre trädgårdar eller i kruka. Bären är syrliga och passar utmärkt till paj och saft.",
+    "description": "Krusbär är en tät och taggfri buske som ger stora, goda bär. Sorten är kompakt och passar bra i mindre trädgårdar eller i kruka. Bären är syrliga och passar utmärkt till paj och saft.",
     "usage": "Bärproduktion, häck, krukväxt.",
-    "image": "Krusbär Compacta.jpg",
+    "image": "krusbar.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -4994,7 +4994,7 @@
     "type": "grönsak/ettårig",
     "description": "Tomatplantor ger välsmakande frukter och är en av de mest populära köksväxterna. De finns i många olika sorter med varierande storlek och smak. De flesta sorter kräver mycket sol och värme och odlas i Sverige bäst i växthus eller på skyddade platser.",
     "usage": "Grönsaksodling, sallad, matlagning.",
-    "image": "Tomatplanta.jpg",
+    "image": "tomatplanta.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5047,13 +5047,13 @@
   },
   {
     "id": 84,
-    "name": "Paprikaplanta Maxima",
-    "latin_name": "Capsicum annuum 'Maxima'",
+    "name": "Paprikaplanta",
+    "latin_name": "Capsicum annuum",
     "category": "grönsak",
     "type": "grönsak/ettårig",
-    "description": "Paprikaplanta 'Maxima' ger stora, söta paprikor. Den är relativt lättodlad men kräver mycket värme och skyddat läge, som växthus eller fönster i söderläge. Frukterna är gröna som omogna och övergår till gult, rött eller orange vid mognad.",
+    "description": "Paprikaplanta ger stora, söta paprikor. Den är relativt lättodlad men kräver mycket värme och skyddat läge, som växthus eller fönster i söderläge. Frukterna är gröna som omogna och övergår till gult, rött eller orange vid mognad.",
     "usage": "Grönsaksodling, sallad, matlagning.",
-    "image": "Paprikaplanta Maxima.jpg",
+    "image": "paprikaplanta.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5101,7 +5101,7 @@
       "augusti"
     ],
     "height_cm": 220,
-    "care_guide": "Paprikaplanta Maxima trivs bäst i **full sol** och mycket värme. Håll jorden jämnt fuktig, men undvik övervattning. Behöver näring regelbundet för att bilda stora frukter."
+    "care_guide": "Paprikaplanta trivs bäst i **full sol** och mycket värme. Håll jorden jämnt fuktig, men undvik övervattning. Behöver näring regelbundet för att bilda stora frukter."
   },
   {
     "id": 85,
@@ -5111,7 +5111,7 @@
     "type": "grönsak/ettårig",
     "description": "Chiliplantor ger frukter med varierande styrka och form. De är mycket värmeälskande och odlas i Sverige bäst i växthus eller inomhus på en varm, ljus plats. Populära för sin hetta och mångsidighet i matlagningen.",
     "usage": "Krydda, matlagning, prydnad (fruktens färg).",
-    "image": "Chili.jpg",
+    "image": "chiliplanta.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5167,7 +5167,7 @@
     "type": "Ettårig växt",
     "description": "Zucchini är en snabbväxande ettårig grönsak i familjen gurkväxter, känd för sina avlånga frukter. Den blommar med stora, gula ätbara blommor och trivs utmärkt i varma, soliga lägen. Zucchini är en produktiv gröda som passar bra för odling i de flesta svenska förhållanden, särskilt i södra och mellersta Sverige, med god tillgång till vatten.",
     "usage": "Grönsak; frukterna äts råa eller tillagade, blommorna är ätbara.",
-    "image": "Zucchini.jpg",
+    "image": "zucchini.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5219,13 +5219,13 @@
   },
   {
     "id": 87,
-    "name": "Pumpa Silver",
-    "latin_name": "Cucurbita maxima 'Silver'",
+    "name": "Pumpa",
+    "latin_name": "Cucurbita maxima",
     "category": "Grönsak",
     "type": "Ettårig växt",
-    "description": "Pumpa Silver (en variant av jättepumpa) är en rankande, ettårig växt som producerar stora, silverglänsande pumpor. Den kräver en lång och varm växtsäsong för att mogna ordentligt. Den passar bäst i zon 1-3, men kan odlas i skyddade lägen i högre zoner med förodling.",
+    "description": "Pumpa (en variant av jättepumpa) är en rankande, ettårig växt som producerar stora, silverglänsande pumpor. Den kräver en lång och varm växtsäsong för att mogna ordentligt. Den passar bäst i zon 1-3, men kan odlas i skyddade lägen i högre zoner med förodling.",
     "usage": "Dekorationspumpa, matlagning (köttet kan vara fiberrikt beroende på sort).",
-    "image": "Pumpa Silver.jpg",
+    "image": "pumpa.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5271,7 +5271,7 @@
       "augusti"
     ],
     "height_cm": 50,
-    "care_guide": "Pumpa Silver kräver **full sol** och **stor yta**. Vattna rikligt och djupt, särskilt vid torka. Se till att jorden är konstant fuktig, men inte blöt. Handpollinering kan öka fruktsättningen."
+    "care_guide": "Pumpa kräver **full sol** och **stor yta**. Vattna rikligt och djupt, särskilt vid torka. Se till att jorden är konstant fuktig, men inte blöt. Handpollinering kan öka fruktsättningen."
   },
   {
     "id": 88,
@@ -5281,7 +5281,7 @@
     "type": "Ettårig växt",
     "description": "Gurka är en klättrande eller krypande ettårig växt, känd för sina saftiga frukter. Den är värmekrävande och odlas ofta i växthus i kallare klimat, men kan även odlas på friland i skyddade lägen. Gurka har en relativt kort växtsäsong, vilket gör den populär i svenska trädgårdar.",
     "usage": "Grönsak; frukterna äts färska eller läggs in.",
-    "image": "Gurka.jpg",
+    "image": "gurka.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5331,13 +5331,13 @@
   },
   {
     "id": 89,
-    "name": "Ärtor Maxima",
-    "latin_name": "Pisum sativum 'Maxima'",
+    "name": "Ärtor",
+    "latin_name": "Pisum sativum",
     "category": "Grönsak",
     "type": "Ettårig växt",
-    "description": "Ärtor Maxima är en sockerärtssort känd för sina stora, krispiga baljor som äts hela. Det är en klättrande växt som behöver stöd, som spaljé eller ris. Den är tålig och en av de första grönsakerna som kan sås på våren i svenska klimat.",
+    "description": "Ärtor är en sockerärtssort känd för sina stora, krispiga baljor som äts hela. Det är en klättrande växt som behöver stöd, som spaljé eller ris. Den är tålig och en av de första grönsakerna som kan sås på våren i svenska klimat.",
     "usage": "Grönsak; baljorna äts färska, råa eller lätt kokta.",
-    "image": "Ärtor Maxima.jpg",
+    "image": "arta.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5382,17 +5382,17 @@
       "juli"
     ],
     "height_cm": 150,
-    "care_guide": "Ärtor Maxima trivs bäst i **sol till halvskugga**. Håll jorden fuktig, speciellt under blomning och fruktsättning. Ge stöd tidigt. Skörda sockerärtorna när baljorna är fullt utvecklade men fortfarande krispiga och platta."
+    "care_guide": "Ärtor trivs bäst i **sol till halvskugga**. Håll jorden fuktig, speciellt under blomning och fruktsättning. Ge stöd tidigt. Skörda sockerärtorna när baljorna är fullt utvecklade men fortfarande krispiga och platta."
   },
   {
     "id": 90,
-    "name": "Bönor Alba",
-    "latin_name": "Phaseolus vulgaris 'Alba'",
+    "name": "Bönor",
+    "latin_name": "Phaseolus vulgaris",
     "category": "Grönsak",
     "type": "Ettårig växt",
-    "description": "Bönor Alba är troligen en variant av störbönor (klättrande) eller buskbönor (självstödjande) som producerar vita bönor eller vitgröna baljor. Bönor är värmekrävande och får inte sås för tidigt i svenska förhållanden. De är näringsrika och lätta att odla när värmen väl kommit.",
+    "description": "Bönor är troligen en variant av störbönor (klättrande) eller buskbönor (självstödjande) som producerar vita bönor eller vitgröna baljor. Bönor är värmekrävande och får inte sås för tidigt i svenska förhållanden. De är näringsrika och lätta att odla när värmen väl kommit.",
     "usage": "Grönsak; baljorna (haricot verts) eller fröna (kokbönor) äts kokta.",
-    "image": "Bönor Alba.jpg",
+    "image": "bonor.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5435,17 +5435,17 @@
       "augusti"
     ],
     "height_cm": 40,
-    "care_guide": "Bönor Alba trivs bäst i **full sol** och skyddade lägen. Vattna regelbundet vid torka. **Viktigt:** Undvik att hantera plantorna när de är blöta för att minska spridning av sjukdomar. Skörda regelbundet."
+    "care_guide": "Bönor trivs bäst i **full sol** och skyddade lägen. Vattna regelbundet vid torka. **Viktigt:** Undvik att hantera plantorna när de är blöta för att minska spridning av sjukdomar. Skörda regelbundet."
   },
   {
     "id": 91,
-    "name": "Potatis Florex",
+    "name": "Potatis",
     "latin_name": "Solanum tuberosum 'Florex'",
     "category": "Grönsak",
     "type": "Ettårig växt",
-    "description": "Potatis Florex är en medeltidig, fast och gulköttig potatissort. Den är robust och ger god skörd. Potatis är en stapelgröda som odlas i nästan hela Sverige, men kräver jord som är lucker och näringsrik.",
+    "description": "Potatis är en medeltidig, fast och gulköttig potatissort. Den är robust och ger god skörd. Potatis är en stapelgröda som odlas i nästan hela Sverige, men kräver jord som är lucker och näringsrik.",
     "usage": "Grönsak/Rotfrukt; knölarna kokas, stekas, bakas eller friteras.",
-    "image": "Potatis Florex.jpg",
+    "image": "potatis.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5494,17 +5494,17 @@
       "juli"
     ],
     "height_cm": 60,
-    "care_guide": "Potatis Florex kräver **full sol** och djup, lucker jord. **Kupning** är avgörande för att skydda knölarna från ljus (grön potatis är giftig) och frost, samt för att öka skörden. Vattna vid torka, särskilt under knölbildningen."
+    "care_guide": "Potatis kräver **full sol** och djup, lucker jord. **Kupning** är avgörande för att skydda knölarna från ljus (grön potatis är giftig) och frost, samt för att öka skörden. Vattna vid torka, särskilt under knölbildningen."
   },
   {
     "id": 92,
-    "name": "Spenat Variegata",
-    "latin_name": "Spinacia oleracea 'Variegata'",
+    "name": "Spenat",
+    "latin_name": "Spinacia oleracea",
     "category": "Grönsak",
     "type": "Ettårig växt",
-    "description": "Spenat Variegata är en variant av spenat som kan ha brokiga (variegerade) blad. Spenat är en snabbväxande bladgrönsak som är tålig mot kyla och kan sås tidigt på våren och sent på hösten i svenska klimat. Den ger stora, näringsrika blad.",
+    "description": "Spenat är en variant av spenat som kan ha brokiga (variegerade) blad. Spenat är en snabbväxande bladgrönsak som är tålig mot kyla och kan sås tidigt på våren och sent på hösten i svenska klimat. Den ger stora, näringsrika blad.",
     "usage": "Grönsak; bladen används råa i sallader, kokta eller i stuvningar.",
-    "image": "Spenat Variegata.jpg",
+    "image": "spenat.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5554,13 +5554,13 @@
   },
   {
     "id": 93,
-    "name": "Mangold Purpurea",
-    "latin_name": "Beta vulgaris subsp. vulgaris 'Purpurea'",
+    "name": "Mangold",
+    "latin_name": "Beta vulgaris subsp. vulgaris",
     "category": "Grönsak",
     "type": "Tvåårig växt",
-    "description": "Mangold Purpurea är en mangoldsort med vackra purpurfärgade stjälkar och mörkgröna blad. Den är en tålig och lättodlad bladgrönsak som kan skördas under en lång period och ofta överlever milda vintrar som en tvåårig växt.",
+    "description": "Mangold är en mangoldsort med vackra purpurfärgade stjälkar och mörkgröna blad. Den är en tålig och lättodlad bladgrönsak som kan skördas under en lång period och ofta överlever milda vintrar som en tvåårig växt.",
     "usage": "Grönsak; bladen används som spenat, stjälkarna som sparris/selleri (tillagas).",
-    "image": "Mangold Purpurea.jpg",
+    "image": "mangold.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5615,17 +5615,17 @@
       "juli"
     ],
     "height_cm": 50,
-    "care_guide": "Mangold Purpurea trivs bäst i **sol till halvskugga**. Jämn vattning är viktig, annars kan bladen bli hårda. Dess färg gör den dekorativ även i blomrabatter."
+    "care_guide": "Mangold trivs bäst i **sol till halvskugga**. Jämn vattning är viktig, annars kan bladen bli hårda. Dess färg gör den dekorativ även i blomrabatter."
   },
   {
     "id": 94,
-    "name": "Sallad Nana",
-    "latin_name": "Lactuca sativa 'Nana'",
+    "name": "Sallad",
+    "latin_name": "Lactuca sativa",
     "category": "Grönsak",
     "type": "Ettårig växt",
-    "description": "Sallad Nana är förmodligen en kompakt, lågväxande sort av plocksallat eller huvudsallat. Sallad är en av de snabbaste grödorna att odla och kan sås i omgångar under hela säsongen. Den är populär i kruka och pallkrage.",
+    "description": "Sallad är förmodligen en kompakt, lågväxande sort av plocksallat eller huvudsallat. Sallad är en av de snabbaste grödorna att odla och kan sås i omgångar under hela säsongen. Den är populär i kruka och pallkrage.",
     "usage": "Grönsak; bladen används färska i sallader och som smörgåspålägg.",
-    "image": "Sallad Nana.jpg",
+    "image": "sallad.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5675,17 +5675,17 @@
       "augusti"
     ],
     "height_cm": 15,
-    "care_guide": "Sallad Nana trivs bäst i **sol till halvskugga**. Jämn och regelbunden vattning är avgörande för att förhindra bitter smak och stocklöpning."
+    "care_guide": "Sallad trivs bäst i **sol till halvskugga**. Jämn och regelbunden vattning är avgörande för att förhindra bitter smak och stocklöpning."
   },
   {
     "id": 95,
-    "name": "Gräslök Minor",
-    "latin_name": "Allium schoenoprasum 'Minor'",
+    "name": "Gräslök",
+    "latin_name": "Allium schoenoprasum",
     "category": "Ört",
     "type": "Perenn kryddväxt",
-    "description": "Gräslök Minor är en kompakt och vanlig sort av gräslök, en flerårig kryddväxt som bildar täta tuvor. Den är mycket tålig och en av de första örterna som dyker upp på våren. Passar utmärkt i kryddland och kruka.",
+    "description": "Gräslök är en kompakt och vanlig sort av gräslök, en flerårig kryddväxt som bildar täta tuvor. Den är mycket tålig och en av de första örterna som dyker upp på våren. Passar utmärkt i kryddland och kruka.",
     "usage": "Kryddväxt; de gröna stråna används färska för smaksättning.",
-    "image": "Gräslök Minor.jpg",
+    "image": "graslok.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5739,17 +5739,17 @@
       "juli"
     ],
     "height_cm": 30,
-    "care_guide": "Gräslök Minor trivs bäst i **full sol**. Klipp regelbundet (även om du inte använder allt) för att hålla plantan frodig och förhindra blomning som gör stjälkarna sega."
+    "care_guide": "Gräslök trivs bäst i **full sol**. Klipp regelbundet (även om du inte använder allt) för att hålla plantan frodig och förhindra blomning som gör stjälkarna sega."
   },
   {
     "id": 96,
-    "name": "Persilja Elegant",
-    "latin_name": "Petroselinum crispum 'Elegant'",
+    "name": "Persilja",
+    "latin_name": "Petroselinum crispum",
     "category": "Ört",
     "type": "Tvåårig kryddväxt",
-    "description": "Persilja Elegant är troligen en slätbladig persiljesort, känd för sin starka smak och stora, lättskördade blad. Persilja är en tvåårig växt, men odlas oftast som ettåring då smaken blir sämre andra året när den blommar.",
+    "description": "Persilja är troligen en slätbladig persiljesort, känd för sin starka smak och stora, lättskördade blad. Persilja är en tvåårig växt, men odlas oftast som ettåring då smaken blir sämre andra året när den blommar.",
     "usage": "Kryddväxt; används färsk eller torkad för smaksättning, garnityr och som bas i sallader.",
-    "image": "Persilja Elegant.jpg",
+    "image": "persilja.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5795,17 +5795,17 @@
     "care_interval_days": 3,
     "bloom_period": [],
     "height_cm": 30,
-    "care_guide": "Persilja Elegant trivs bäst i **halvskugga** men tål sol om jorden hålls fuktig. Kräver en jämn fuktighet, låt inte jorden torka ut. Vid torka kan den snabbt gå i blom."
+    "care_guide": "Persilja trivs bäst i **halvskugga** men tål sol om jorden hålls fuktig. Kräver en jämn fuktighet, låt inte jorden torka ut. Vid torka kan den snabbt gå i blom."
   },
   {
     "id": 97,
-    "name": "Dill Regia",
-    "latin_name": "Anethum graveolens 'Regia'",
+    "name": "Dill",
+    "latin_name": "Anethum graveolens",
     "category": "Ört",
     "type": "Ettårig kryddväxt",
-    "description": "Dill Regia är en bladdillsort som är mindre benägen att gå i blom (stocklöpning) än standarddill, vilket ger en längre skördetid för bladen. Dill är en av de mest älskade kryddorna i det svenska köket och är relativt enkel att odla.",
+    "description": "Dill är en bladdillsort som är mindre benägen att gå i blom (stocklöpning) än standarddill, vilket ger en längre skördetid för bladen. Dill är en av de mest älskade kryddorna i det svenska köket och är relativt enkel att odla.",
     "usage": "Kryddväxt; används färsk eller torkad (blad, blomskärmar/kronor, frö) till fisk, potatis och inläggningar.",
-    "image": "Dill Regia.jpg",
+    "image": "dill.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5851,17 +5851,17 @@
       "augusti"
     ],
     "height_cm": 60,
-    "care_guide": "Dill Regia trivs bäst i **full sol** och skyddat läge. Håll jorden lätt fuktig. Sorten 'Regia' har en långsam stocklöpning, vilket minskar risken att den går i blom för tidigt."
+    "care_guide": "Dill trivs bäst i **full sol** och skyddat läge. Håll jorden lätt fuktig. Sorten 'Regia' har en långsam stocklöpning, vilket minskar risken att den går i blom för tidigt."
   },
   {
     "id": 98,
-    "name": "Koriander Florex",
-    "latin_name": "Coriandrum sativum 'Florex'",
+    "name": "Koriander",
+    "latin_name": "Coriandrum sativum",
     "category": "Ört",
     "type": "Ettårig kryddväxt",
-    "description": "Koriander Florex är en sort som är framtagen för att producera mycket blad och ha en fördröjd blomning. Koriander är en ettårig kryddväxt där både bladen och fröna används i matlagning. Den trivs bäst i lite svalare temperaturer.",
+    "description": "Koriander är en sort som är framtagen för att producera mycket blad och ha en fördröjd blomning. Koriander är en ettårig kryddväxt där både bladen och fröna används i matlagning. Den trivs bäst i lite svalare temperaturer.",
     "usage": "Kryddväxt; bladen används färska (koriander) och fröna torkas (korianderfrö).",
-    "image": "Koriander Florex.jpg",
+    "image": "koriander.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5909,17 +5909,17 @@
       "augusti"
     ],
     "height_cm": 40,
-    "care_guide": "Koriander Florex trivs bäst i **halvskugga** under varma sommarmånader. Jämn vattning är viktig. Undvik stress (torka eller värme) då detta får plantan att gå i blom snabbt, vilket avslutar bladväxten."
+    "care_guide": "Koriander trivs bäst i **halvskugga** under varma sommarmånader. Jämn vattning är viktig. Undvik stress (torka eller värme) då detta får plantan att gå i blom snabbt, vilket avslutar bladväxten."
   },
   {
     "id": 99,
-    "name": "Mynta Silver",
-    "latin_name": "Mentha spicata 'Silver'",
+    "name": "Mynta",
+    "latin_name": "Mentha spicata",
     "category": "Ört",
     "type": "Perenn kryddväxt",
-    "description": "Mynta Silver är troligen en variant av spikmynta med ett silveraktigt eller luddigt bladverk. Mynta är en mycket lättodlad, flerårig ört som sprider sig aggressivt med utlöpare. Den är mycket härdig i större delen av Sverige.",
+    "description": "Mynta är troligen en variant av spikmynta med ett silveraktigt eller luddigt bladverk. Mynta är en mycket lättodlad, flerårig ört som sprider sig aggressivt med utlöpare. Den är mycket härdig i större delen av Sverige.",
     "usage": "Kryddväxt; bladen används till te, drinkar, sallader och matlagning.",
-    "image": "Mynta Silver.jpg",
+    "image": "mynta.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -5968,7 +5968,7 @@
       "september"
     ],
     "height_cm": 50,
-    "care_guide": "Mynta Silver trivs bäst i **halvskugga** men klarar sol om den vattnas regelbundet. Håll jorden fuktig. Var noga med att kontrollera spridningen, plantera i en behållare utan botten vid frilandsodling."
+    "care_guide": "Mynta trivs bäst i **halvskugga** men klarar sol om den vattnas regelbundet. Håll jorden fuktig. Var noga med att kontrollera spridningen, plantera i en behållare utan botten vid frilandsodling."
   },
   {
     "id": 100,
@@ -5978,7 +5978,7 @@
     "type": "Perenn kryddväxt",
     "description": "Citronmeliss är en tålig och flerårig kryddväxt i myntafamiljen, känd för sin friska doft av citrus. Den är mycket härdig, men kan sprida sig med frö. Bladen används färska för sin aromatiska smak.",
     "usage": "Kryddväxt; bladen används färska till te, desserter, sallader och fiskrätter.",
-    "image": "Citronmeliss.jpg",
+    "image": "citronmeliss.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6032,13 +6032,13 @@
   },
   {
     "id": 101,
-    "name": "Vitklöver Variegata",
-    "latin_name": "Trifolium repens 'Variegata'",
+    "name": "Vitklöver",
+    "latin_name": "Trifolium repens",
     "category": "Marktäckare/Perenn",
     "type": "Perenn",
-    "description": "Vitklöver Variegata är en lågväxande, flerårig marktäckare känd för sitt dekorativa brokiga (variegerade) bladverk, som är grön-vitt. Den är extremt tålig, sprider sig snabbt och blommar med små vita, runda blommor. Passar utmärkt som kantväxt, i stenpartier eller som gräsmättersättare på små ytor.",
+    "description": "Vitklöver är en lågväxande, flerårig marktäckare känd för sitt dekorativa brokiga (variegerade) bladverk, som är grön-vitt. Den är extremt tålig, sprider sig snabbt och blommar med små vita, runda blommor. Passar utmärkt som kantväxt, i stenpartier eller som gräsmättersättare på små ytor.",
     "usage": "Marktäckare, kantväxt, prydnadsväxt.",
-    "image": "Vitklöver Variegata.jpg",
+    "image": "vitklover.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6085,17 +6085,17 @@
       "augusti"
     ],
     "height_cm": 15,
-    "care_guide": "Vitklöver Variegata trivs bäst i **full sol** för att behålla sin brokiga färg. Tål torka när den väl är etablerad, men vattna vid långvarig torka under etableringsfasen."
+    "care_guide": "Vitklöver trivs bäst i **full sol** för att behålla sin brokiga färg. Tål torka när den väl är etablerad, men vattna vid långvarig torka under etableringsfasen."
   },
   {
     "id": 102,
-    "name": "Rödklöver Florex",
-    "latin_name": "Trifolium pratense 'Florex'",
+    "name": "Rödklöver",
+    "latin_name": "Trifolium pratense",
     "category": "Vildväxt/Perenn",
     "type": "Perenn",
-    "description": "Rödklöver Florex är en högväxande perenn som används både som fodergröda och i naturliga rabatter. Den har de klassiska treklöverbladen och blommar med täta, rödvioletta huvuden. Rödklöver är kvävefixerande och förbättrar jordhälsan.",
+    "description": "Rödklöver är en högväxande perenn som används både som fodergröda och i naturliga rabatter. Den har de klassiska treklöverbladen och blommar med täta, rödvioletta huvuden. Rödklöver är kvävefixerande och förbättrar jordhälsan.",
     "usage": "Fodergröda, vildblomsrabatter, jordförbättrare, te/örtmedicin (blommorna).",
-    "image": "Rödklöver Florex.jpg",
+    "image": "rodklover.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6136,7 +6136,7 @@
       "augusti"
     ],
     "height_cm": 40,
-    "care_guide": "Rödklöver Florex trivs bäst i **full sol** men tolererar lätt skugga. Behöver ingen särskild skötsel och är mycket torktålig när den är etablerad."
+    "care_guide": "Rödklöver trivs bäst i **full sol** men tolererar lätt skugga. Behöver ingen särskild skötsel och är mycket torktålig när den är etablerad."
   },
   {
     "id": 103,
@@ -6146,7 +6146,7 @@
     "type": "Perenn",
     "description": "Kärleksört är en populär, tålig och flerårig perenn som är känd för sitt köttiga bladverk och senblommande blomhuvuden. Den får rosa till mörkröda blommor sent på sommaren och hösten, vilket gör den viktig för bin och fjärilar. Blomställningarna står vackra även under vintern.",
     "usage": "Rabattväxt, stenparti, snittblomma, bikas. Den torkade blomställningen är dekorativ på vintern.",
-    "image": "Kärleksört.jpg",
+    "image": "karleksort.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6200,7 +6200,7 @@
     "type": "Perenn",
     "description": "Sedum (fetknopp) är ett stort släkte av suckulenta perenner, varav många är lågväxande marktäckare. De är extremt tåliga mot torka och sol, och kännetecknas av köttiga blad som lagrar vatten. De blommar ofta med små stjärnformade blommor, vita, gula eller rosa, och är utmärkta i stenpartier och gröna tak.",
     "usage": "Stenparti, gröna tak, marktäckare, kantväxt.",
-    "image": "Sedum.jpg",
+    "image": "sedum.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6253,7 +6253,7 @@
     "type": "Lövfällande buske",
     "description": "Hassel är en stor, flerstammig lövfällande buske som även kan växa till ett mindre träd. Den är välkänd för sina ätbara nötter (hasselnötter) och för att blomma tidigt på våren med gula hängen innan lövsprickningen. Det är en mycket robust och skuggtålig art.",
     "usage": "Prydnadsbuske, häck, nötproduktion, virke (vidja), vindskydd.",
-    "image": "Hassel.jpg",
+    "image": "hassel.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6302,13 +6302,13 @@
   },
   {
     "id": 106,
-    "name": "Valnötsträd Elegant",
-    "latin_name": "Juglans regia 'Elegant'",
+    "name": "Valnötsträd",
+    "latin_name": "Juglans regia",
     "category": "Träd",
     "type": "Lövfällande träd",
-    "description": "Valnötsträd Elegant är en sort av äkta valnöt som är känd för att vara mer härdig eller ha en finare form. Det är ett stort, lövfällande träd som producerar de ätbara valnötterna. Trädet har dekorativa parbladiga blad och passar bäst i de mildare delarna av Sverige.",
+    "description": "Valnötsträd är en sort av äkta valnöt som är känd för att vara mer härdig eller ha en finare form. Det är ett stort, lövfällande träd som producerar de ätbara valnötterna. Trädet har dekorativa parbladiga blad och passar bäst i de mildare delarna av Sverige.",
     "usage": "Prydnadsträd, nötproduktion, skugga. Träet är värdefullt.",
-    "image": "Valnötsträd Elegant.jpg",
+    "image": "valnotstrad.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6359,17 +6359,17 @@
       "maj"
     ],
     "height_cm": 1500,
-    "care_guide": "Valnötsträd Elegant kräver **full sol** och skydd från starka vindar. Håll jorden fuktig de första åren efter plantering. **Undvik beskärning på senvintern/våren** då det blöder kraftigt."
+    "care_guide": "Valnötsträd kräver **full sol** och skydd från starka vindar. Håll jorden fuktig de första åren efter plantering. **Undvik beskärning på senvintern/våren** då det blöder kraftigt."
   },
   {
     "id": 107,
-    "name": "Olivträd Maxima",
-    "latin_name": "Olea europaea 'Maxima'",
+    "name": "Olivträd",
+    "latin_name": "Olea europaea",
     "category": "Träd",
     "type": "Ständigrön/Krukväxt",
-    "description": "Olivträd Maxima är en robust olivsort som odlas i kruka i Sverige. Det är ett städsegrönt träd med silvergröna blad och knotig stam som ger en medelhavskänsla. Det producerar små oätliga blommor och eventuellt frukter under gynnsamma förhållanden.",
+    "description": "Olivträd är en robust olivsort som odlas i kruka i Sverige. Det är ett städsegrönt träd med silvergröna blad och knotig stam som ger en medelhavskänsla. Det producerar små oätliga blommor och eventuellt frukter under gynnsamma förhållanden.",
     "usage": "Krukväxt/Prydnadsträd för uteplats eller vinterträdgård. Producerar oliver (i gynnsamma klimat).",
-    "image": "Olivträd Maxima.jpg",
+    "image": "olivtrad.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6421,17 +6421,17 @@
       "juni"
     ],
     "height_cm": 250,
-    "care_guide": "Olivträd Maxima kräver **full sol** under sommaren. Se till att jorden torkar upp lätt mellan vattningarna. Undvik stående vatten. Vinterförvaringen är avgörande i Sverige."
+    "care_guide": "Olivträd kräver **full sol** under sommaren. Se till att jorden torkar upp lätt mellan vattningarna. Undvik stående vatten. Vinterförvaringen är avgörande i Sverige."
   },
   {
     "id": 108,
-    "name": "Fikonträd Nana",
-    "latin_name": "Ficus carica 'Nana'",
+    "name": "Fikonträd",
+    "latin_name": "Ficus carica",
     "category": "Buske/Träd",
     "type": "Lövfällande buske",
-    "description": "Fikonträd Nana är en kompakt och dvärgväxande sort av fikon, perfekt för krukodling eller plantering på en mycket skyddad plats. Den producerar ätbara frukter under gynnsamma förhållanden. Fikon är lövfällande och behöver en viloperiod under vintern.",
+    "description": "Fikonträd är en kompakt och dvärgväxande sort av fikon, perfekt för krukodling eller plantering på en mycket skyddad plats. Den producerar ätbara frukter under gynnsamma förhållanden. Fikon är lövfällande och behöver en viloperiod under vintern.",
     "usage": "Krukväxt/Prydnadsträd för uteplats. Fruktproduktion.",
-    "image": "Fikonträd Nana.jpg",
+    "image": "fikontrad.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6481,17 +6481,17 @@
       "juni"
     ],
     "height_cm": 150,
-    "care_guide": "Fikonträd Nana kräver **full sol** under växtsäsongen. Vattna rikligt under sommaren, men se till att jorden torkar upp mellan vattningarna. Övervintringen är kritisk för överlevnad."
+    "care_guide": "Fikonträd kräver **full sol** under växtsäsongen. Vattna rikligt under sommaren, men se till att jorden torkar upp mellan vattningarna. Övervintringen är kritisk för överlevnad."
   },
   {
     "id": 109,
-    "name": "Citrusträd Grandiflora",
-    "latin_name": "Citrus (spp.) 'Grandiflora'",
+    "name": "Citrusträd",
+    "latin_name": "Citrus",
     "category": "Träd/Krukväxt",
     "type": "Krukväxt/Träd",
-    "description": "Citrusträd Grandiflora refererar troligen till en storslagen, doftande citrusväxt (möjligen en Pompelmus). Dessa träd odlas i kruka i Sverige. De har glänsande gröna blad, doftande vita blommor och producerar frukter. De är populära för sin starka citrusdoft och dekorativa utseende.",
+    "description": "Citrusträd refererar troligen till en storslagen, doftande citrusväxt. Dessa träd odlas i kruka i Sverige. De har glänsande gröna blad, doftande vita blommor och producerar frukter. De är populära för sin starka citrusdoft och dekorativa utseende.",
     "usage": "Krukväxt/Prydnadsträd för uteplats och vinterträdgård. Frukt och doftande blommor.",
-    "image": "Citrusträd Grandiflora.jpg",
+    "image": "citrustrad.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6544,7 +6544,7 @@
       "juli"
     ],
     "height_cm": 150,
-    "care_guide": "Citrusträd Grandiflora kräver **full sol** och skydd mot kyla. Se till att jorden har utmärkt dränering och undvik att ställa krukan på kallt golv under vintern. Vattna med kalkfattigt vatten."
+    "care_guide": "Citrusträd kräver **full sol** och skydd mot kyla. Se till att jorden har utmärkt dränering och undvik att ställa krukan på kallt golv under vintern. Vattna med kalkfattigt vatten."
   },
   {
     "id": 110,
@@ -6554,7 +6554,7 @@
     "type": "Krukväxt/Träd",
     "description": "Apelsinträd är en populär citrusväxt som odlas i kruka i Sverige för sina glänsande blad, vita, doftande blommor och, under gynnsamma förhållanden, sina söta frukter. Det ger en Medelhavskänsla till uteplatser under sommaren.",
     "usage": "Krukväxt/Prydnadsträd, frukt (ätliga apelsiner), doftande blommor.",
-    "image": "Apelsinträd.jpg",
+    "image": "apelsintrad.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6609,13 +6609,13 @@
   },
   {
     "id": 111,
-    "name": "Citronträd Silver",
-    "latin_name": "Citrus limon 'Silver'",
+    "name": "Citronträd",
+    "latin_name": "Citrus limon",
     "category": "Träd/Krukväxt",
     "type": "Krukväxt/Träd",
-    "description": "Citronträd Silver (en antagen namnsort) odlas som krukväxt i Sverige och bär citrusfrukter. Liksom andra citrusträd har den vita, starkt doftande blommor och mörkgröna, glänsande blad. Den kräver mycket ljus och värme för att sätta frukt.",
+    "description": "Citronträd odlas som krukväxt i Sverige och bär citrusfrukter. Liksom andra citrusträd har den vita, starkt doftande blommor och mörkgröna, glänsande blad. Den kräver mycket ljus och värme för att sätta frukt.",
     "usage": "Krukväxt/Prydnadsträd, frukt (ätliga citroner), doftande blommor.",
-    "image": "Citronträd Silver.jpg",
+    "image": "citrontrad.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6667,17 +6667,17 @@
       "juli"
     ],
     "height_cm": 150,
-    "care_guide": "Citronträd Silver kräver **full sol** under sommaren. Se till att det inte står i drag. Vattna med kalkfattigt vatten, och låt ytan torka upp mellan vattningarna."
+    "care_guide": "Citronträd kräver **full sol** under sommaren. Se till att det inte står i drag. Vattna med kalkfattigt vatten, och låt ytan torka upp mellan vattningarna."
   },
   {
     "id": 112,
-    "name": "Lime Florex",
-    "latin_name": "Citrus aurantiifolia 'Florex'",
+    "name": "Lime",
+    "latin_name": "Citrus aurantiifolia",
     "category": "Träd/Krukväxt",
     "type": "Krukväxt/Träd",
-    "description": "Lime Florex är en sort av limeträd som odlas i kruka i Sverige. Det är känt för att vara produktivt och bära frukter även i krukkultur. Liksom andra citrusar har den blanka blad och starkt doftande blommor, och behöver en lång och varm sommar.",
+    "description": "Lime är en sort av limeträd som odlas i kruka i Sverige. Det är känt för att vara produktivt och bära frukter även i krukkultur. Liksom andra citrusar har den blanka blad och starkt doftande blommor, och behöver en lång och varm sommar.",
     "usage": "Krukväxt/Prydnadsträd, frukt (ätliga limefrukter), doftande blommor.",
-    "image": "Lime Florex.jpg",
+    "image": "limetrad.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6730,7 +6730,7 @@
       "juli"
     ],
     "height_cm": 150,
-    "care_guide": "Lime Florex kräver **full sol** och skydd mot kyla. Jorden måste vara väldränerad för att undvika rotröta. Låt jorden torka upp mellan vattningarna. Lång och sval vintervila är viktig."
+    "care_guide": "Lime kräver **full sol** och skydd mot kyla. Jorden måste vara väldränerad för att undvika rotröta. Låt jorden torka upp mellan vattningarna. Lång och sval vintervila är viktig."
   },
   {
     "id": 113,
@@ -6740,7 +6740,7 @@
     "type": "Krukväxt",
     "description": "Maranta, även känd som 'Prayer Plant', är en populär krukväxt känd för sitt vackra bladverk och unika rörelse; bladen fäller ihop sig på kvällen. Den har ovala blad med distinkta markeringar, ofta röda vener och ljusgröna fläckar. Trivs i hög luftfuktighet.",
     "usage": "Krukväxt, prydnadsväxt för inomhusmiljöer.",
-    "image": "Maranta.jpg",
+    "image": "maranta.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6801,12 +6801,12 @@
   {
     "id": 114,
     "name": "Kalatea",
-    "latin_name": "Calathea (spp.)",
+    "latin_name": "Calathea",
     "category": "Krukväxt",
     "type": "Krukväxt",
     "description": "Kalatea är ett släkte av tropiska krukväxter, kända för sina otroligt mönstrade och färgstarka blad, som ofta är lila på undersidan. Många arter fäller också ihop bladen på natten ('Prayer Plant'). De kräver värme och hög luftfuktighet för att trivas i hemmiljö.",
     "usage": "Krukväxt, prydnadsväxt för inomhusmiljöer.",
-    "image": "Kalatea.jpg",
+    "image": "kalatea.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6863,13 +6863,13 @@
   },
   {
     "id": 115,
-    "name": "Palettblad Nana",
-    "latin_name": "Plectranthus scutellarioides 'Nana'",
+    "name": "Palettblad",
+    "latin_name": "Plectranthus scutellarioides",
     "category": "Krukväxt",
     "type": "Ettårig/Krukväxt",
-    "description": "Palettblad Nana är en kompakt variant av den populära prydnadsväxten Palettblad, känd för sina otroligt färgstarka och sammetslena blad. Den odlas ofta som krukväxt inomhus men kan användas som ettårig växt utomhus under sommaren. Färgen varierar beroende på sort och ljusförhållanden.",
+    "description": "Palettblad är en kompakt variant av den populära prydnadsväxten Palettblad, känd för sina otroligt färgstarka och sammetslena blad. Den odlas ofta som krukväxt inomhus men kan användas som ettårig växt utomhus under sommaren. Färgen varierar beroende på sort och ljusförhållanden.",
     "usage": "Krukväxt, utplanteringsväxt (sommar), prydnadsväxt för bladverk.",
-    "image": "Palettblad Nana.jpg",
+    "image": "palettblad.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6926,17 +6926,17 @@
       "september"
     ],
     "height_cm": 30,
-    "care_guide": "Palettblad Nana trivs bäst i **ljust indirekt ljus** eller **halvskugga**. Direkt stark sol kan bleka bladen. Kräver jämn fuktighet och får inte torka ut helt. Toppning är nyckeln till en fin planta."
+    "care_guide": "Palettblad trivs bäst i **ljust indirekt ljus** eller **halvskugga**. Direkt stark sol kan bleka bladen. Kräver jämn fuktighet och får inte torka ut helt. Toppning är nyckeln till en fin planta."
   },
   {
     "id": 116,
-    "name": "Ormbunke Purpurea",
-    "latin_name": "Nephrolepis (spp.) / Athyrium (spp.)",
+    "name": "Ormbunke",
+    "latin_name": "Nephrolepis",
     "category": "Krukväxt",
     "type": "Krukväxt/Perenn",
-    "description": "Ormbunke Purpurea kan vara en sort av Japansk regnbågsormbunke (*Athyrium niponicum 'Pictum'*, perenn) eller en inomhusormbunke (*Nephrolepis*). Oavsett art är ormbunkar kända för sina graciösa, fjäderlika blad (bräken). De trivs i skugga och hög luftfuktighet.",
+    "description": "Ormbunke kan vara en sort av Japansk regnbågsormbunke (perenn) eller en inomhusormbunke. Oavsett art är ormbunkar kända för sina graciösa, fjäderlika blad (bräken). De trivs i skugga och hög luftfuktighet.",
     "usage": "Krukväxt, skuggplantering (perenn sort), prydnadsväxt för bladverk.",
-    "image": "Ormbunke Purpurea.jpg",
+    "image": "ormbunke.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -6987,7 +6987,7 @@
     "care_interval_days": 7,
     "bloom_period": [],
     "height_cm": 70,
-    "care_guide": "Ormbunke Purpurea trivs bäst i **skugga** och **hög luftfuktighet**. Låt inte jorden torka ut. Vattna med kalkfattigt vatten för att undvika fula fläckar på bladen."
+    "care_guide": "Ormbunke trivs bäst i **skugga** och **hög luftfuktighet**. Låt inte jorden torka ut. Vattna med kalkfattigt vatten för att undvika fula fläckar på bladen."
   },
   {
     "id": 117,
@@ -6997,7 +6997,7 @@
     "type": "Krukväxt",
     "description": "Aspidistra, även kallad 'Gjutjärnsplantan', är en extremt tålig och anspråkslös krukväxt, känd för att klara av lågt ljus och dålig skötsel. Den har mörkgröna, långa, blanka blad som växer direkt från jordytan. Mycket populär i gamla tiders salonger och fortfarande en utmärkt kontorsväxt.",
     "usage": "Krukväxt, tålig prydnadsväxt för mörka hörn.",
-    "image": "Aspidistra.jpg",
+    "image": "aspidistra.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7053,13 +7053,13 @@
   },
   {
     "id": 118,
-    "name": "Rosenskärm (Schizocodon)",
-    "latin_name": "Schizocodon soldanelloides",
+    "name": "Rosenskärm",
+    "latin_name": "Medinilla magnifica",
     "category": "Perenn",
     "type": "Perenn",
-    "description": "Rosenskärm (*Schizocodon*) är en ovanlig, lågväxande perenn, besläktad med Vårsköna, känd för sina flikiga, klockformade rosa eller lila blommor. Den har vintergrönt bladverk som ofta skiftar till rött på hösten. Växer vilt i Japan och trivs i fuktiga, skuggiga skogsmiljöer.",
+    "description": "Rosenskärm är en ovanlig, lågväxande perenn, besläktad med Vårsköna, känd för sina flikiga, klockformade rosa eller lila blommor. Den har vintergrönt bladverk som ofta skiftar till rött på hösten. Växer vilt i Japan och trivs i fuktiga, skuggiga skogsmiljöer.",
     "usage": "Skuggplantering, stenparti, lundmiljö, prydnadsväxt för blad och tidig blomning.",
-    "image": "Rosenskärm.jpg",
+    "image": "rosenskarm.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7117,7 +7117,7 @@
     "type": "Ettårig växt",
     "description": "Rosenskära är en populär ettårig sommarblomma känd för sina fjäderlätta blad och stora, skålformade blommor som lockar bin och fjärilar. Den blommar rikligt från sommar till frost och finns i färgerna vit, rosa och röd. Passar utmärkt som snittblomma.",
     "usage": "Rabattväxt, snittblomma, insektsdragande, bakgrundsväxt.",
-    "image": "Rosenskära.jpg",
+    "image": "rosenskara.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7169,12 +7169,12 @@
   {
     "id": 120,
     "name": "Astilbe",
-    "latin_name": "Astilbe (spp.)",
+    "latin_name": "Astilbe",
     "category": "Perenn",
     "type": "Perenn",
     "description": "Astilbe är en flerårig perenn känd för sina fjäderlika, fluffiga blomspiror i nyanser av vitt, rosa, rött och lila. Den har ett elegant, finflikigt bladverk och trivs utmärkt på skuggiga, fuktiga platser där få andra växter blommar. Blommar under högsommaren.",
     "usage": "Skuggplantering, fuktig rabatt, kantväxt vid dammar, snittblomma.",
-    "image": "Astilbe.jpg",
+    "image": "astilbe.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7224,13 +7224,13 @@
   },
   {
     "id": 121,
-    "name": "Funkia Silver",
-    "latin_name": "Hosta (spp.) 'Silver'",
+    "name": "Funkia",
+    "latin_name": "Hosta",
     "category": "Perenn",
     "type": "Perenn",
-    "description": "Funkia Silver (Hosta) är en tålig perenn som är älskad för sitt silvergröna eller blådaggiga bladverk. Den bildar täta tuvor och blommar med lavendelfärgade eller vita klockformade blommor på höga stjälkar under sommaren. Den är idealisk för skuggiga rabatter och är en utmärkt kantväxt.",
+    "description": "Funkia (Hosta) är en tålig perenn som är älskad för sitt silvergröna eller blådaggiga bladverk. Den bildar täta tuvor och blommar med lavendelfärgade eller vita klockformade blommor på höga stjälkar under sommaren. Den är idealisk för skuggiga rabatter och är en utmärkt kantväxt.",
     "usage": "Skuggplantering, kantväxt, krukodling, prydnadsväxt för bladverk.",
-    "image": "Funkia Silver.jpg",
+    "image": "funkia.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7275,17 +7275,17 @@
       "augusti"
     ],
     "height_cm": 40,
-    "care_guide": "Funkia Silver trivs bäst i **skugga till halvskugga**. Håll jorden jämt fuktig. **Observera:** Bladen är mycket attraktiva för sniglar och snäckor, använd lämpliga snigelmedel eller förebyggande åtgärder."
+    "care_guide": "Funkia trivs bäst i **skugga till halvskugga**. Håll jorden jämt fuktig. **Observera:** Bladen är mycket attraktiva för sniglar och snäckor, använd lämpliga snigelmedel eller förebyggande åtgärder."
   },
   {
     "id": 122,
-    "name": "Hosta Variegata",
-    "latin_name": "Hosta (spp.) 'Variegata'",
+    "name": "Hosta",
+    "latin_name": "Hosta",
     "category": "Perenn",
     "type": "Perenn",
-    "description": "Hosta Variegata (Funkia Variegerad) är en perenn känd för sina stora, variegerade blad som kombinerar nyanser av grönt, vitt och gult. Den är mycket populär som skuggväxt och prydnadsväxt för bladverk. Blommar med klockformade, doftande blommor under högsommaren.",
+    "description": "Hosta är en perenn känd för sina stora, variegerade blad som kombinerar nyanser av grönt, vitt och gult. Den är mycket populär som skuggväxt och prydnadsväxt för bladverk. Blommar med klockformade, doftande blommor under högsommaren.",
     "usage": "Skuggplantering, kantväxt, krukodling, prydnadsväxt för bladverk.",
-    "image": "Hosta Variegata.jpg",
+    "image": "hosta.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7334,12 +7334,12 @@
   {
     "id": 123,
     "name": "Alunrot",
-    "latin_name": "Heuchera (spp.)",
+    "latin_name": "Heuchera",
     "category": "Perenn",
     "type": "Perenn",
     "description": "Alunrot är en flerårig perenn som huvudsakligen odlas för sitt spektakulära, färgstarka bladverk som kan vara allt från limegrönt, gult, bärnstensfärgat, till mörkt lila eller nästan svart. Den bildar låga, täta tuvor och skickar upp tunna spiror av små, klockformade blommor under sommaren.",
     "usage": "Rabattkant, marktäckare, krukodling, prydnadsväxt för bladverk.",
-    "image": "Alunrot.jpg",
+    "image": "alunrot.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7398,7 +7398,7 @@
     "type": "Prydnadsgräs",
     "description": "Prydnadsgräs är en samling av många olika arter och sorter som används för att skapa textur, rörelse och höjd i rabatter. De flesta är perenna och bjuder på vackra fröställningar och höstfärger. De är generellt tåliga och ger struktur även under vintern.",
     "usage": "Rabattväxt, solitär, vinterstruktur, insynsskydd (höga sorter).",
-    "image": "Prydnadsgräs.jpg",
+    "image": "prydnadsgras.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7458,7 +7458,7 @@
     "type": "Prydnadsgräs",
     "description": "Jätterör är ett imponerande, högt prydnadsgräs som skapar dramatisk höjd och textur. Dess bambuliknande stjälkar och stora blad ger en tropisk känsla. Det är snabbväxande, men måste vintertäckas noggrant i Sverige för att överleva som perenn. Observera den angivna höjden, som kan vara extremt hög för denna art.",
     "usage": "Solitär, insynsskydd, bakgrund i rabatt, medelhavsträdgård.",
-    "image": "Jätterör.jpg",
+    "image": "jatteror.JPG",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7513,13 +7513,13 @@
   },
   {
     "id": 126,
-    "name": "Prydnadskål Purpurea",
-    "latin_name": "Brassica oleracea var. acephala (Purpurea)",
+    "name": "Prydnadskål",
+    "latin_name": "Brassica oleracea",
     "category": "Ettårig/Tvåårig",
     "type": "Dekorationsväxt",
-    "description": "Prydnadskål 'Purpurea' är en färgstark växt som används för att ge färg i höst- och vinterplanteringar. Dess blad skiftar i vackra nyanser av lila och rött när temperaturen sjunker. Den odlas vanligen som ettårig i Sverige men tål lätt frost.",
+    "description": "Prydnadskål är en färgstark växt som används för att ge färg i höst- och vinterplanteringar. Dess blad skiftar i vackra nyanser av lila och rött när temperaturen sjunker. Den odlas vanligen som ettårig i Sverige men tål lätt frost.",
     "usage": "Höstkrukor, rabattkant, vinterdekoration.",
-    "image": "Prydnadskål Purpurea.jpg",
+    "image": "prydnadskal.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7561,7 +7561,7 @@
     "care_interval_days": 7,
     "bloom_period": [],
     "height_cm": 25,
-    "care_guide": "Prydnadskål 'Purpurea' trivs bäst i **sol till halvskugga**. Färgerna blir intensivast med svala nätter och mycket ljus. Vattna regelbundet; låt inte torka ut helt i kruka."
+    "care_guide": "Prydnadskål trivs bäst i **sol till halvskugga**. Färgerna blir intensivast med svala nätter och mycket ljus. Vattna regelbundet; låt inte torka ut helt i kruka."
   },
   {
     "id": 127,
@@ -7571,7 +7571,7 @@
     "type": "Perenn",
     "description": "Praktriddarsporren är en klassisk, ståtlig perenn känd för sina höga, spirformade blomställningar i nyanser av blått, lila eller vitt. Den ger höjd och drama till rabatten och blommar under tidig till mitten av sommaren. Växten är giftig och bör hanteras varsamt.",
     "usage": "Bakgrundsväxt, snittblomma, cottage garden, solitär.",
-    "image": "Praktriddarsporre.jpg",
+    "image": "praktriddarsporre.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7624,13 +7624,13 @@
   },
   {
     "id": 128,
-    "name": "Löjtnantshjärta Gigantea",
+    "name": "Löjtnantshjärta",
     "latin_name": "Dicentra spectabilis 'Alba' / 'Valentine' (Gigantea är ingen känd sort)",
     "category": "Perenn",
     "type": "Perenn",
     "description": "Löjtnantshjärtat är en charmig klassiker i rabatten, känd för sina hängande hjärtformade blommor som sitter på bågformade stjälkar. Den 'gigantea'-varianten är antagligen tänkt att beskriva en storväxande sort, men Dicentra Spectabilis blir ofta ca 80-90 cm hög. Den vissnar ner helt efter blomningen på sommaren.",
     "usage": "Skuggrabatt, woodland, snittblomma, tidig vårfärg.",
-    "image": "Löjtnantshjärta Gigantea.jpg",
+    "image": "lojtnantshjarta.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7681,13 +7681,13 @@
   },
   {
     "id": 129,
-    "name": "Stormhatt Nana",
-    "latin_name": "Aconitum carmichaelii 'Arendsii' (Nana är okänd variant)",
+    "name": "Stormhatt",
+    "latin_name": "Aconitum napellus",
     "category": "Perenn",
     "type": "Perenn",
     "description": "Stormhatt (Aconitum) är en upprättväxande perenn känd för sina hjälmformade, djupt blå-lila blommor som blommar sent på säsongen, vilket är värdefullt i rabatten. 'Nana' antyder en kompakt, lägre sort. **Viktigt:** Hela växten, särskilt rötterna, är mycket giftig.",
     "usage": "Bakgrundsväxt, rabatt, snittblomma, höstfärg.",
-    "image": "Stormhatt Nana.jpg",
+    "image": "stormhatt.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7740,13 +7740,13 @@
   },
   {
     "id": 130,
-    "name": "Vallmo Nana",
-    "latin_name": "Papaver (olika arter) (Nana indikerar en lågväxande sort)",
+    "name": "Vallmo",
+    "latin_name": "Papaver (olika arter)",
     "category": "Ettårig/Perenn",
     "type": "Blomma",
-    "description": "Vallmo ('Papaver') är känd för sina stora, pappersliknande blommor i starka färger. Denna 'Nana'-sort är en lågväxande typ, troligen en ettårig sort som sår sig lätt (t.ex. Papaver nudicaule Nana eller P. rhoeas). Den ger en kort men intensiv blomning.",
+    "description": "Vallmo ('Papaver') är känd för sina stora, pappersliknande blommor i starka färger. Denna sort är en lågväxande typ, troligen en ettårig sort som sår sig lätt. Den ger en kort men intensiv blomning.",
     "usage": "Rabatt, stenparti (lägre sorter), självsådd i grus, snittblomma.",
-    "image": "Vallmo Nana.jpg",
+    "image": "vallmo.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7796,12 +7796,12 @@
   {
     "id": 131,
     "name": "Brudslöja Rubra",
-    "latin_name": "Gypsophila paniculata 'Rubra' (Gypsophila paniculata är vanligast)",
+    "latin_name": "Gypsophila paniculata",
     "category": "Perenn",
     "type": "Perenn",
     "description": "Brudslöja är en lätt, luftig perenn, känd för sina moln av små blommor, vanligen vita eller rosa. 'Rubra' indikerar en rosa-röd variant. Den ger en vacker kontrast och fyllighet i rabatter och är populär som snittblomma.",
     "usage": "Rabattfyllnad, snittblomma, stenparti (lägre sorter), kantväxt.",
-    "image": "Brudslöja Rubra.jpg",
+    "image": "brudsloja.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7859,7 +7859,7 @@
     "type": "Prydnadsgräs",
     "description": "Pampasgräs är ett storslaget, vintergrönt prydnadsgräs som är berömt för sina enorma, plymliknande blomvippor som kan bli upp till 3 meter höga. Det ger en fantastisk höst- och vinterstruktur i trädgården. Växten är dock känslig för vinterfukt och kyla i Sverige.",
     "usage": "Solitär, blickfång, vinterstruktur, i stora krukor (med övervintring).",
-    "image": "Pampasgräs.jpg",
+    "image": "pampasgras.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7911,13 +7911,13 @@
   },
   {
     "id": 133,
-    "name": "Fuchsia Grandiflora",
-    "latin_name": "Fuchsia (olika sorter, t.ex. 'General Monk')",
+    "name": "Fuchsia",
+    "latin_name": "Fuchsia",
     "category": "Ute/Inne",
     "type": "Sommarblomma",
-    "description": "Fuchsia, känd som 'Örhänge', är en populär sommarblomma med hängande, klockformade blommor som ofta är tvåfärgade i rött, lila, rosa eller vitt. 'Grandiflora' indikerar storblommande sorter. Den används ofta i krukor och amplar på skyddade platser.",
+    "description": "Fuchsia, känd som 'Örhänge', är en populär sommarblomma med hängande, klockformade blommor som ofta är tvåfärgade i rött, lila, rosa eller vitt. Den används ofta i krukor och amplar på skyddade platser.",
     "usage": "Amplar, krukor, halvskuggiga rabatter, terrasser.",
-    "image": "Fuchsia Grandiflora.jpg",
+    "image": "fuchsia.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -7974,196 +7974,13 @@
   },
   {
     "id": 134,
-    "name": "Begonia semperflorens",
-    "latin_name": "Begonia semperflorens-gruppen",
-    "category": "Ettårig",
-    "type": "Sommarblomma",
-    "description": "Begonia semperflorens, eller Isbegonia, är en pålitlig och lättodlad ettårig växt som blommar kontinuerligt från utplantering till första frosten. Den har glansiga, ofta bronsfärgade blad och små blommor i rött, rosa eller vitt. Perfekt för massplanteringar.",
-    "usage": "Massplanteringar, kantväxt, kyrkogårdsplantering, krukor.",
-    "image": "Begonia semperflorens.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "interval": "Låt torka upp lätt mellan vattningarna"
-    },
-    "pruning": {
-      "months": [
-        "ingen beskärning"
-      ],
-      "notes": "Kräver ingen beskärning. Plocka bort vissna blommor för att hålla plantan snygg."
-    },
-    "planting": {
-      "months": [
-        "maj",
-        "juni"
-      ],
-      "notes": "Planteras ut när nattemperaturen är över 10°C. Sätt inte för djupt."
-    },
-    "fertilizing": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "notes": "Gödslas regelbundet med flytande näring under hela växtsäsongen."
-    },
-    "winter": {
-      "months": [
-        "inte relevant"
-      ],
-      "notes": "Odlas som ettårig i Sverige och tål inte frost."
-    },
-    "soil": "Näringsrik, lucker, väldränerad",
-    "zone": 6,
-    "care_interval_days": 7,
-    "bloom_period": [
-      "maj",
-      "juni",
-      "juli",
-      "augusti",
-      "september"
-    ],
-    "height_cm": 30,
-    "care_guide": "Begonia semperflorens trivs bäst i **sol till halvskugga**. Med bronsfärgade blad blir blomningen rikligast i solen. Håll jorden måttligt fuktig. Angiven kategori 'ört'/'ört & kryddväxt' är felaktig."
-  },
-  {
-    "id": 135,
-    "name": "Engelsk Pelargon Purpurea",
-    "latin_name": "Pelargonium x domesticum (Purpurea indikerar färgen)",
-    "category": "Ute/Inne",
-    "type": "Sommarblomma",
-    "description": "Engelsk pelargon (Regal Pelargon) är en ståtlig pelargon-typ med stora, ofta brokiga blommor i intensiva färger. 'Purpurea' antyder en sort med mörklila eller röd-lila blommor. Den är perfekt som prydnadsväxt i kruka, särskilt på skyddade platser.",
-    "usage": "Fönsterbräda, krukor, skyddad uteplats.",
-    "image": "Engelsk Pelargon Purpurea.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "interval": "Låt torka upp ordentligt mellan vattningarna"
-    },
-    "pruning": {
-      "months": [
-        "augusti",
-        "september"
-      ],
-      "notes": "Klipp ner grenarna på sensommaren/hösten för att få en buskigare form nästa säsong."
-    },
-    "planting": {
-      "months": [
-        "maj",
-        "juni"
-      ],
-      "notes": "Planteras i pelargonjord eller annan lucker, näringsrik jord i kruka."
-    },
-    "fertilizing": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "notes": "Gödslas regelbundet med pelargonnäring under växtsäsongen."
-    },
-    "winter": {
-      "months": [
-        "oktober",
-        "november",
-        "december",
-        "januari",
-        "februari"
-      ],
-      "notes": "Övervintras svalt (5-10°C) och ljust inomhus. Dra ner på vattningen kraftigt."
-    },
-    "soil": "Luckert, väldränerat, näringsrikt",
-    "zone": 7,
-    "care_interval_days": 7,
-    "bloom_period": [
-      "maj",
-      "juni",
-      "juli",
-      "augusti"
-    ],
-    "height_cm": 50,
-    "care_guide": "Engelsk Pelargon trivs bäst i **full sol** men kan behöva lite skydd mot den allra starkaste middagssolen. Låt jorden torka upp mellan vattningarna. Angiven höjd (476 cm) är felaktig."
-  },
-  {
-    "id": 136,
-    "name": "Klematis 'Jackmanii' Elegant",
-    "latin_name": "Clematis 'Jackmanii'",
-    "category": "Klätterväxt",
-    "type": "Klätterväxt",
-    "description": "'Jackmanii' är en av de mest kända storblommiga klematissorterna, känd för sina djuplila blommor som täcker växten från sommar till höst. Den tillhör den sena storblommiga gruppen och är en robust och relativt lättskött klätterväxt.",
-    "usage": "Spaljé, pergola, träd, buskar, markfyllnad.",
-    "image": "Klematis 'Jackmanii' Elegant.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "interval": "Håll jorden jämnt fuktig"
-    },
-    "pruning": {
-      "months": [
-        "mars"
-      ],
-      "notes": "Tillhör beskärningsgrupp 3. Klipps ned hårt (ca 20-50 cm över marken) tidigt på våren för riklig blomning på årsskotten."
-    },
-    "planting": {
-      "months": [
-        "april",
-        "maj",
-        "september"
-      ],
-      "notes": "Plantera djupt, ca 10 cm djupare än kruknivån, för att skydda rothalsen. Skydda basen mot stark sol ('Huvudet i solen, fötterna i skuggan')."
-    },
-    "fertilizing": {
-      "months": [
-        "april",
-        "juni"
-      ],
-      "notes": "Gödslas rikligt på våren och en gång till under sommaren med kvävefattig gödsel."
-    },
-    "winter": {
-      "months": [
-        "november",
-        "december",
-        "januari"
-      ],
-      "notes": "Väldigt härdig. Täck rothalsen med kompost eller löv i kallare zoner för att minska frystorka."
-    },
-    "soil": "Näringsrik, fuktig, väldränerad, gärna kalkhaltig",
-    "zone": 6,
-    "care_interval_days": 7,
-    "bloom_period": [
-      "juli",
-      "augusti",
-      "september"
-    ],
-    "height_cm": 350,
-    "care_guide": "Klematis 'Jackmanii' trivs bäst i **soligt läge** för rikligast blomning, men rötterna måste skyddas från direkt sol och torka. Vattna djupt och regelbundet. Angiven höjd (362 cm) är rimlig."
-  },
-  {
-    "id": 137,
     "name": "Fjärilslavendel",
     "latin_name": "Lavandula stoechas",
     "category": "Kryddväxt/Perenn",
     "type": "Kryddväxt/Prydnadsväxt",
     "description": "Fjärilslavendel utmärker sig med sina karaktäristiska 'vingar' (sterila högblad) som sticker upp från blomspirorna, vilket ger den ett unikt utseende. Den doftar starkt och är omtyckt av bin och fjärilar. Den är mindre härdig än vanlig lavendel och odlas ofta som ettårig i Sverige.",
     "usage": "Krukor, kantväxt, medelhavstema, torkning (eteriska oljor).",
-    "image": "Fjärilslavendel.jpg",
+    "image": "fjarilslavendel.jpeg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -8213,77 +8030,14 @@
     "care_guide": "Fjärilslavendel trivs bäst i **full sol**. Den kräver utmärkt dränering och tål torka väl när den är etablerad. Undvik att vattna direkt på bladen. Angiven skötsel i augusti-oktober är felaktig för huvudblomning."
   },
   {
-    "id": 138,
-    "name": "Hornviol Alba",
-    "latin_name": "Viola cornuta 'Alba'",
-    "category": "Perenn",
-    "type": "Perenn",
-    "description": "Hornviolen 'Alba' är en låg, kuddformad perenn som täcker marken med sina många små, vita blommor under en lång period. Den är mer flerårig än penséer och sår sig lätt. Perfekt för kanter och stenpartier där den bildar täta kuddar.",
-    "usage": "Kantväxt, stenparti, markfyllnad, tidig vårfärg, krukor.",
-    "image": "Hornviol Alba.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "april",
-        "maj",
-        "juni",
-        "juli"
-      ],
-      "interval": "Håll jorden jämnt fuktig"
-    },
-    "pruning": {
-      "months": [
-        "juli",
-        "augusti"
-      ],
-      "notes": "Klipp ner plantan något efter den första blomningen för att stimulera en ny blomperiod på sensommaren/hösten."
-    },
-    "planting": {
-      "months": [
-        "april",
-        "maj",
-        "september"
-      ],
-      "notes": "Planteras i lucker, väldränerad jord. Går bra att plantera både vår och höst."
-    },
-    "fertilizing": {
-      "months": [
-        "april",
-        "juni"
-      ],
-      "notes": "Gödslas lätt på våren och en gång till efter nedklippning. För mycket gödsel ger mer blad än blommor."
-    },
-    "winter": {
-      "months": [
-        "november",
-        "december",
-        "januari"
-      ],
-      "notes": "Härdig. Kan behöva lätt täckning med granris för att skydda mot vårsol och frystorka i snöfria lägen."
-    },
-    "soil": "Mullrik, väldränerad",
-    "zone": 7,
-    "care_interval_days": 7,
-    "bloom_period": [
-      "april",
-      "maj",
-      "juni",
-      "juli",
-      "september",
-      "oktober"
-    ],
-    "height_cm": 20,
-    "care_guide": "Hornviol 'Alba' trivs bäst i **sol till halvskugga**. Den behöver en jämn tillgång på vatten, särskilt i kruka. Angiven höjd (1068 cm) och kategori 'träd' är felaktig."
-  },
-  {
-    "id": 139,
+    "id": 135,
     "name": "Vårviva",
     "latin_name": "Primula vulgaris",
     "category": "Perenn",
     "type": "Perenn",
     "description": "Vårviva är en av de första perennerna som blommar på våren, ofta redan i mars/april. Den bildar låga rosetter med gröna blad och blommar med enkla eller dubbla blommor i olika färger, vanligen gult. Den är mycket populär som krukväxt på våren men är egentligen en härdig rabattväxt.",
     "usage": "Tidig vårplantering, rabattkant, woodland, krukor/balkonglådor.",
-    "image": "Vårviva.jpg",
+    "image": "varviva.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -8334,187 +8088,14 @@
     "care_guide": "Vårviva trivs bäst i **halvskugga till skugga**. Den måste ha en jämn tillgång på fukt, särskilt under blomningen. Angiven höjd (99 cm) och kategori 'ört & kryddväxt' är felaktig."
   },
   {
-    "id": 140,
-    "name": "Klockblomma 'Variegata'",
-    "latin_name": "Campanula portenschlagiana 'Variegata'",
-    "category": "Perenn",
-    "type": "Perenn",
-    "description": "Campanula portenschlagiana (Murklocka) är en lågväxande, matbildande perenn med små, lila klockformade blommor som blommar rikligt under sommaren. 'Variegata' har brokiga blad som ger färg även när den inte blommar. Utmärkt för murar och stenpartier.",
-    "usage": "Stenparti, murkrön, kantväxt, krukor, markfyllnad.",
-    "image": "Klockblomma 'Variegata'.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "interval": "Vattnas vid torka"
-    },
-    "pruning": {
-      "months": [
-        "efter blomning"
-      ],
-      "notes": "Klipp ner de utblommade stjälkarna efter den första blomningsvågen för att uppmuntra ny knoppsättning."
-    },
-    "planting": {
-      "months": [
-        "april",
-        "maj",
-        "september"
-      ],
-      "notes": "Plantera i väldränerad, kalkrik jord. Sätt grunt i springor eller på murkrön."
-    },
-    "fertilizing": {
-      "months": [
-        "april"
-      ],
-      "notes": "Gödslas sparsamt på våren, klarar sig bra i mager jord."
-    },
-    "winter": {
-      "months": [
-        "november",
-        "december",
-        "januari"
-      ],
-      "notes": "Härdig i väldränerade lägen. Vinterfukt är det största hotet."
-    },
-    "soil": "Väldränerad, sandig, gärna kalkrik",
-    "zone": 8,
-    "care_interval_days": 14,
-    "bloom_period": [
-      "juni",
-      "juli",
-      "augusti"
-    ],
-    "height_cm": 15,
-    "care_guide": "Klockblomma trivs bäst i **full sol till halvskugga**. Behöver mycket god dränering. Vattna vid långvarig torka. Angiven kategori 'ört' och 'ört & kryddväxt' är felaktig."
-  },
-  {
-    "id": 141,
-    "name": "Blåklocka Minor",
-    "latin_name": "Campanula persicifolia 'Minor'",
-    "category": "Perenn",
-    "type": "Perenn",
-    "description": "Campanula persicifolia (Persikbladklocka) är en upprättväxande perenn med eleganta, stora, klockformade blommor på höga stjälkar. 'Minor' antyder en något mindre eller lägre variant. Den är en utmärkt snittblomma och trivs bra i både sol och halvskugga.",
-    "usage": "Perennrabatt, snittblomma, woodland (i halvskugga), ängsmark.",
-    "image": "Blåklocka Minor.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli"
-      ],
-      "interval": "Vattnas vid torka"
-    },
-    "pruning": {
-      "months": [
-        "juli",
-        "augusti"
-      ],
-      "notes": "Klipp ner vissna stjälkar efter blomningen. Kan ge en svag andra blomning."
-    },
-    "planting": {
-      "months": [
-        "april",
-        "maj",
-        "september"
-      ],
-      "notes": "Plantera i näringsrik, lucker jord. Kan behöva stöd vid blåsiga lägen."
-    },
-    "fertilizing": {
-      "months": [
-        "april"
-      ],
-      "notes": "Gödslas lätt på våren. Trivs bäst i mager till normal jord."
-    },
-    "winter": {
-      "months": [
-        "november",
-        "december",
-        "januari"
-      ],
-      "notes": "Mycket härdig. Kräver inget särskilt vinterskydd."
-    },
-    "soil": "Väldränerad, sandig, lucker",
-    "zone": 3,
-    "care_interval_days": 14,
-    "bloom_period": [
-      "juni",
-      "juli"
-    ],
-    "height_cm": 60,
-    "care_guide": "Blåklocka (Persikbladklocka) trivs bäst i **full sol till halvskugga**. Den är torktålig när den är etablerad, men vattna vid långvarig torka. Angiven blomning i december och trivsel i ljust fönster är felaktig."
-  },
-  {
-    "id": 142,
-    "name": "Alunrot 'Palace Purple'",
-    "latin_name": "Heuchera micrantha 'Palace Purple'",
-    "category": "Perenn",
-    "type": "Perenn",
-    "description": "Alunrot 'Palace Purple' är känd för sitt dekorativa, mörkt purpurfärgade till bronsfärgade bladverk. Den bildar kompakta bladrosetter och får små, vita blomspiror som svävar ovanför bladen på sommaren. Den behåller sin färg väl i sol och skugga och är en bra marktäckare.",
-    "usage": "Kantväxt, marktäckare, krukor, skuggrabatt, bladväxt.",
-    "image": "Alunrot 'Palace Purple'.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "interval": "Håll jorden lätt fuktig"
-    },
-    "pruning": {
-      "months": [
-        "mars",
-        "april"
-      ],
-      "notes": "Klipp bort fula, gamla blad på våren innan den nya tillväxten börjar. Klipp bort utblommade stjälkar."
-    },
-    "planting": {
-      "months": [
-        "april",
-        "maj",
-        "september"
-      ],
-      "notes": "Planteras grunt, då den har ytliga rötter. Mullrik, väldränerad jord är viktigt."
-    },
-    "fertilizing": {
-      "months": [
-        "april"
-      ],
-      "notes": "Gödslas lätt på våren. För mycket näring kan ge sämre bladfärg."
-    },
-    "winter": {
-      "months": [
-        "november",
-        "december",
-        "januari"
-      ],
-      "notes": "Kan lida av tjälskjutning, se till att den inte fryser och tinar omväxlande. Täck rothalsen lätt med granris."
-    },
-    "soil": "Mullrik, väldränerad",
-    "zone": 7,
-    "care_interval_days": 7,
-    "bloom_period": [
-      "juni",
-      "juli"
-    ],
-    "height_cm": 30,
-    "care_guide": "Alunrot 'Palace Purple' trivs bäst i **halvskugga** men klarar sol om jorden är konstant fuktig. Bladfärgen blir ofta mörkast i solen. Angiven höjd (509 cm), blomning i mars och kategori 'träd' är felaktig."
-  },
-  {
-    "id": 143,
-    "name": "Rävlysa Silver",
-    "latin_name": "Digitalis purpurea 'Silver' (eller liknande silverfärgad sort)",
+    "id": 136,
+    "name": "Rävsvans",
+    "latin_name": "Amaranthus caudatus",
     "category": "Tvåårig",
     "type": "Prydnadsväxt",
-    "description": "Rävlysa (Digitalis) är en hög, dramatisk tvåårig växt med fingerborgsliknande blommor i täta spiror. 'Silver' kan referera till silver-vita blommor eller grågrönt, ludet bladverk. Den är mycket populär i 'cottage gardens'. **Viktigt:** Hela växten är mycket giftig.",
+    "description": "Rävsvans är en hög, dramatisk tvåårig växt med fingerborgsliknande blommor i täta spiror. Den är mycket populär i 'cottage gardens'. **Viktigt:** Hela växten är mycket giftig.",
     "usage": "Bakgrundsväxt, woodland, naturlika planteringar, snittblomma.",
-    "image": "Rävlysa Silver.jpg",
+    "image": "ravlysa.webp",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -8561,134 +8142,17 @@
       "juli"
     ],
     "height_cm": 100,
-    "care_guide": "Rävlysa trivs bäst i **halvskugga** eller skugga. Klarar sol om jorden är fuktig. Håll jorden fuktig under växtperioden. Angiven kategori 'ört' och 'ört & kryddväxt' är felaktig (den är giftig, inte en krydda)."
-  },
-  {
-    "id": 144,
-    "name": "Japansk Kaprifol Purpurea",
-    "latin_name": "Lonicera japonica 'Purpurea'",
-    "category": "Klätterväxt",
-    "type": "Klätterväxt",
-    "description": "Japansk kaprifol 'Purpurea' är en klättrande buske som utmärks av sitt vintergröna bladverk som får mörkt purpurfärgade inslag under hösten och vintern, särskilt i sol. Den blommar med doftande, vita blommor som skiftar till gult. Den är inte helt vinterhärdig i de kallaste zonerna.",
-    "usage": "Pergola, plank, spaljé, marktäckare.",
-    "image": "Japansk Kaprifol Purpurea.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "interval": "Regelbunden vattning under etablering"
-    },
-    "pruning": {
-      "months": [
-        "mars",
-        "april"
-      ],
-      "notes": "Gallra ut äldre, risiga grenar på våren. Kan beskäras hårt vid behov."
-    },
-    "planting": {
-      "months": [
-        "april",
-        "maj",
-        "september"
-      ],
-      "notes": "Plantera i näringsrik, fuktighetshållande jord. Basen bör gärna vara i skugga."
-    },
-    "fertilizing": {
-      "months": [
-        "april"
-      ],
-      "notes": "Gödslas lätt på våren med en allsidig gödsel."
-    },
-    "winter": {
-      "months": [
-        "november",
-        "december",
-        "januari"
-      ],
-      "notes": "Kan frysa tillbaka i kallare klimat. Skydda rothalsen med löv eller granris."
-    },
-    "soil": "Mullrik, fuktighetshållande",
-    "zone": 5,
-    "care_interval_days": 14,
-    "bloom_period": [
-      "juni",
-      "juli",
-      "augusti"
-    ],
-    "height_cm": 300,
-    "care_guide": "Japansk Kaprifol trivs bäst i **sol till halvskugga**. Får bäst bladfärg i solen. Håll jorden fuktig, speciellt under torra perioder. Angiven kategori 'buske' och trivsel i ljust fönster är felaktig."
-  },
-  {
-    "id": 145,
-    "name": "Julklematis",
-    "latin_name": "Clematis cirrhosa",
-    "category": "Klätterväxt",
-    "type": "Klätterväxt",
-    "description": "Julklematis är en vinterblommande klätterväxt som får klockformade, gräddvita blommor under den mildare delen av vintern (december-februari). Den är vintergrön och kräver ett mycket skyddat, varmt läge i Sverige, eller odling i kruka som övervintras svalt.",
-    "usage": "Skyddad vägg, vinterträdgård, kruka/uterum.",
-    "image": "Julklematis.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli"
-      ],
-      "interval": "Håll jorden jämnt fuktig"
-    },
-    "pruning": {
-      "months": [
-        "april",
-        "maj"
-      ],
-      "notes": "Beskärs lätt efter blomningen på våren genom att tunna ut risiga grenar. Tillhör beskärningsgrupp 1."
-    },
-    "planting": {
-      "months": [
-        "april",
-        "maj"
-      ],
-      "notes": "Plantera i kalkrik, väldränerad jord. Kräver en skyddad växtplats, t.ex. mot en södervägg."
-    },
-    "fertilizing": {
-      "months": [
-        "maj"
-      ],
-      "notes": "Gödslas lätt på våren efter blomningen."
-    },
-    "winter": {
-      "months": [
-        "december",
-        "januari",
-        "februari"
-      ],
-      "notes": "Endast härdig i de mildaste delarna av Sverige (zon 1/2) och i mycket skyddade lägen. Täck noga vid kyla."
-    },
-    "soil": "Kalkrik, väldränerad",
-    "zone": 6,
-    "care_interval_days": 14,
-    "bloom_period": [
-      "december",
-      "januari",
-      "februari",
-      "mars"
-    ],
-    "height_cm": 300,
-    "care_guide": "Julklematis trivs bäst i **full sol** och en varm, skyddad plats. God dränering är avgörande. Angiven kategori 'buske' och trivsel i ljust fönster är felaktig."
+    "care_guide": "Rävsvans trivs bäst i **halvskugga** eller skugga. Klarar sol om jorden är fuktig. Håll jorden fuktig under växtperioden. Angiven kategori 'ört' och 'ört & kryddväxt' är felaktig (den är giftig, inte en krydda)."
   },
   {
     "id": 146,
     "name": "Julros",
-    "latin_name": "Helleborus niger",
+    "latin_name": "Helleborus",
     "category": "Perenn",
     "type": "Perenn",
     "description": "Julrosen är en vintergrön perenn som blommar mycket tidigt, ofta mitt i vintern (december-mars), med stora, vita skålformade blommor. Den är mycket värdefull för att ge färg i trädgården under den mörka årstiden. Plantan är giftig.",
     "usage": "Skuggrabatt, krukor (vid entrén), woodland, tidig vinterfärg.",
-    "image": "Julros.jpg",
+    "image": "julros.jpg",
     "image_source": "Lokal fil",
     "watering": {
       "months": [
@@ -8740,64 +8204,5 @@
     ],
     "height_cm": 30,
     "care_guide": "Julrosen trivs bäst i **halvskugga** eller skugga under sommaren. Håll jorden fuktig. Angiven kategori 'blomma' och 'sommarblomma' samt blomning i april/maj är felaktig."
-  },
-  {
-    "id": 147,
-    "name": "Röd Solhatt",
-    "latin_name": "Echinacea purpurea 'Rubra' (eller liknande röd sort)",
-    "category": "Perenn",
-    "type": "Perenn",
-    "description": "Röd Solhatt är en populär prärieperenn med upprätt växtsätt och stora, konformade blommor som lockar fjärilar och bin. 'Rubra' indikerar en sort med intensivt rödrosa färgade kronblad. De vissnade blomhuvudena ger fin vinterstruktur och frö till fåglar.",
-    "usage": "Perennrabatt, prärierabatt, snittblomma, insektsväxt, vinterstruktur.",
-    "image": "Röd Solhatt.jpg",
-    "image_source": "Lokal fil",
-    "watering": {
-      "months": [
-        "maj",
-        "juni",
-        "juli",
-        "augusti"
-      ],
-      "interval": "Tål torka, vattna vid långvarig torka"
-    },
-    "pruning": {
-      "months": [
-        "mars",
-        "april"
-      ],
-      "notes": "Klipp ner stjälkarna till marken på våren. Låt stå över vintern för struktur och vinterskydd."
-    },
-    "planting": {
-      "months": [
-        "april",
-        "maj",
-        "september"
-      ],
-      "notes": "Planteras i lucker, väldränerad jord. Gillar inte vinterfukt runt rothalsen."
-    },
-    "fertilizing": {
-      "months": [
-        "april"
-      ],
-      "notes": "Gödslas sparsamt på våren. För mycket näring kan leda till kortare livslängd."
-    },
-    "winter": {
-      "months": [
-        "november",
-        "december",
-        "januari"
-      ],
-      "notes": "Härdig i väldränerad jord. Skydda mot vinterfukt genom att se till att dräneringen är god."
-    },
-    "soil": "Väldränerad, mullrik, gärna sandig",
-    "zone": 3,
-    "care_interval_days": 7,
-    "bloom_period": [
-      "juli",
-      "augusti",
-      "september"
-    ],
-    "height_cm": 80,
-    "care_guide": "Röd Solhatt trivs bäst i **full sol**. Den är anpassad för torka när den är etablerad, men vattna vid extrem torka. Väldränering är avgörande. Angiven kategori 'träd', höjd (813 cm) och blomning i april/maj är felaktig."
   }
 ]

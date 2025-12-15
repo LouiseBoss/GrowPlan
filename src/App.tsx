@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router";
 import TestDataPage from "./pages/testDataPage";
-import ImageTestPage from "./pages/imageTestPage";
 import AuthPage from "./pages/AuthPage";
 import UpdatePasswordPage from "./pages/UpdatePasswordPage";
 import { useAuth } from './hooks/useAuth';
 import OverviewPage from "./pages/OverviewPage";
 import HomePage from "./pages/HomePage";
 import PlantListPage from "./pages/PlantListPage";
+import PlantDetailPage from "./pages/PlantDetailPage";
 
 function App() {
   const { user, loading } = useAuth();
@@ -20,8 +20,8 @@ function App() {
       <Route path="/" element={<HomePage />} />
 
       <Route path="/testdata" element={<TestDataPage />} />
-      <Route path="/imagetest" element={<ImageTestPage />} />
       <Route path="/plants" element={<PlantListPage />} />
+      <Route path="/plant/:id" element={<PlantDetailPage />} />
 
 
       {/* Authentication/Inloggningssidor */}
