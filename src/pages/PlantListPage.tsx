@@ -1,33 +1,46 @@
 import { useState } from "react";
-import plants from "../data/plants.json";
 import Pagination from "../components/Pagination";
 import PlantFilters from "../components/PlantFilters";
-import { Link } from "react-router";
+import { Link } from "react-router"; 
 import "../assets/scss/components/PlantList.scss";
 import { getImageUrl } from "../utils/getImageUrl";
+import { usePlants } from "../hooks/usePlants"; 
 
 const ITEMS_PER_PAGE = 20;
 
 const PlantListPage = () => {
+    const { plants, loading, error } = usePlants(); 
+
     const [search, setSearch] = useState("");
     const [category, setCategory] = useState("");
     const [type, setType] = useState("");
     const [page, setPage] = useState(0);
 
-    // ⭐ Filtrering
     const filtered = plants
         .filter((p) =>
             p.name.toLowerCase().includes(search.toLowerCase())
         )
         .filter((p) => (category ? p.category === category : true))
-        .filter((p) => (type ? p.type === type : true))
+        .filter((p) => (type ? p.type === type : true));
 
     const pageCount = Math.ceil(filtered.length / ITEMS_PER_PAGE);
-
-    const safePage = Math.min(page, pageCount - 1);
-
+    const safePage = Math.min(page, Math.max(pageCount - 1, 0));
     const start = safePage * ITEMS_PER_PAGE;
     const paginatedPlants = filtered.slice(start, start + ITEMS_PER_PAGE);
+
+    if (loading) {
+        return <p style={{ padding: "20px" }}>Laddar växter...</p>;
+    }
+    
+    if (error) {
+        return <p style={{ padding: "20px", color: "red" }}>Kunde inte ladda växter från databasen: {error.message}</p>;
+    }
+
+    if (plants.length === 0 && !loading) {
+        return <p style={{ padding: "20px" }}>Hittade inga växter i katalogen.</p>;
+    }
+    // ------------------------------------
+
 
     return (
         <div style={{ padding: "20px" }}>
@@ -85,10 +98,10 @@ const PlantListPage = () => {
             </ul>
 
             <Pagination
-                page={page}
+                page={safePage}
                 totalPages={pageCount}
-                onPrev={() => setPage(page - 1)}
-                onNext={() => setPage(page + 1)}
+                onPrev={() => setPage((p) => Math.max(p - 1, 0))}
+                onNext={() => setPage((p) => Math.min(p + 1, pageCount - 1))}
             />
         </div>
     );
