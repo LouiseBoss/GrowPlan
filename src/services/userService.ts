@@ -7,7 +7,6 @@ export type UserProfile = {
   created_at: string;
 };
 
-// Hämta profil för den inloggade användaren
 export async function getProfile(userId: string): Promise<UserProfile | null> {
   const { data, error } = await supabase
     .from("profiles")
@@ -19,7 +18,6 @@ export async function getProfile(userId: string): Promise<UserProfile | null> {
   return data;
 }
 
-// Uppdatera profil
 export async function updateProfile(
   userId: string,
   updates: Partial<UserProfile>

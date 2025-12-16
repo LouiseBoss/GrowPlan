@@ -1,0 +1,48 @@
+
+.plantlist-page {
+    background-color: #F7D6C0; 
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    
+    h1 {
+        color: #3A4A3D; 
+    }
+    p {
+        color: #3A4A3D;
+    }
+}
+
+.form-control {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    padding: 0.75rem;
+    border: 2px solid #96AD90; 
+    background-color: white; 
+    color: #3A4A3D;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+
+    &::placeholder {
+        color: #96AD90; 
+    }
+
+    &:focus {
+        border-color: #3A4A3D; 
+        box-shadow: 0 0 0 0.2rem rgba(58, 74, 61, 0.25); 
+    }
+}
+
+.plantlist-page > p {
+    margin-top: 1.5rem;
+    color: #3A4A3D;
+}
+
+.pagination-container {
+    margin: 3rem auto 0;
+    max-width: 500px;
+}

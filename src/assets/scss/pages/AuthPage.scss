@@ -1,0 +1,116 @@
+// Färgpalett:
+$page-background: #F7D6C0; // Ljus persikofärg/Beige
+$card-background: #ffffff;
+$primary-dark: #3A4A3D; // Mörk skogsgrön (Huvudtext/Logga in)
+$primary-accent: #96AD90; // Mellan grön/Mossa (Registrera)
+$secondary-accent: #F4B9B8; // Rosa/Lax (Länkar/Accent)
+$light-border: darken($page-background, 8%);
+$white: #ffffff;
+
+.auth-page-container {
+    min-height: 100vh;
+    background-color: $page-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background-color: $card-background;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        color: $primary-dark;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid $light-border;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+
+    &:focus {
+        border-color: $primary-accent;
+        outline: none;
+        box-shadow: 0 0 0 2px lighten($primary-accent, 15%);
+    }
+
+    &:disabled {
+        background-color: lighten($page-background, 5%);
+        cursor: not-allowed;
+    }
+}
+
+.auth-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, opacity 0.2s;
+    flex: 1;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.btn-login {
+    background-color: $primary-dark;
+    color: $white;
+
+    &:hover:not(:disabled) {
+        background-color: lighten($primary-dark, 5%);
+    }
+}
+
+.btn-signup {
+    background-color: $primary-accent;
+    color: $primary-dark;
+
+    &:hover:not(:disabled) {
+        background-color: darken($primary-accent, 5%);
+    }
+}
+
+.reset-password-container {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn-reset-password {
+    background: none;
+    border: none;
+    color: $primary-dark;
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: underline;
+    font-size: 14px;
+
+    &:hover {
+        color: $secondary-accent;
+    }
+}

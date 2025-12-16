@@ -1,5 +1,5 @@
 
-interface CarePeriod {
+export interface CarePeriod {
   months: string[];
   notes?: string;
   interval?: string;

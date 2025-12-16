@@ -1,0 +1,57 @@
+
+.plant-card-custom {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    border: solid 1px #96AD90 !important; 
+    background-color: #F7D6C0 !important; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+.plant-card-custom:hover {
+    transform: translateY(-5px); 
+    box-shadow: rgba(58, 74, 61, 0.5) 0px 8px 20px; 
+    border-color: #3A4A3D !important; 
+}
+
+.plant-card-image-top {
+    height: 200px; 
+    object-fit: cover;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.plant-card-custom .btn-secondary {
+    background-color: #3A4A3D !important;
+    border-color: #3A4A3D !important;
+    color: white !important;
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 0 auto; 
+    max-width: 1400px; 
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+    @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

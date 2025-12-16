@@ -17,7 +17,6 @@ const PlantFilters: React.FC<PlantFiltersProps> = ({
     return (
         <div style={{ display: "flex", gap: "16px", marginBottom: "20px" }}>
             
-            {/* KATEGORI */}
             <Form.Select 
                 value={category} 
                 onChange={(e) => onCategoryChange(e.target.value)}
@@ -31,7 +30,6 @@ const PlantFilters: React.FC<PlantFiltersProps> = ({
                 <option value="utomhusväxt">Utomhusväxter</option>
             </Form.Select>
 
-            {/* TYP */}
             <Form.Select 
                 value={type} 
                 onChange={(e) => onTypeChange(e.target.value)}

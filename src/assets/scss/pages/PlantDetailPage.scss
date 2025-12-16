@@ -1,0 +1,306 @@
+$page-background: #F7D6C0; // Ljus persikofärg/Beige
+$primary-dark: #3A4A3D; // Mörk skogsgrön (Huvudtext, knappar)
+$primary-accent: #96AD90; // Mellan grön/Mossa (Lägg till i trädgård, care guide)
+$secondary-accent: #F4B9B8; // Rosa/Lax (Önskelista, highlights)
+$white: #ffffff;
+$text-light: darken($page-background, 20%);
+$container-bg: #fdfdfd;
+
+.plant-detail-page-container {
+    padding: 40px 20px;
+    background-color: $container-bg;
+    color: $primary-dark;
+    min-height: 100vh;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: $primary-dark;
+    text-align: center;
+}
+
+.top-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    .image-gallery {
+        flex: 1;
+        max-width: 500px;
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .info-panel {
+        flex: 1;
+
+        .plant-name {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .latin-name {
+            color: $primary-accent;
+            font-style: italic;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            padding: 20px;
+            background-color: lighten($page-background, 5%);
+            border-radius: 10px;
+            margin-bottom: 25px;
+
+            h3 {
+                font-size: 20px;
+                color: $primary-dark;
+                margin-top: 0;
+            }
+
+            p {
+                color: $text-light;
+            }
+
+            .small-text {
+                font-size: 13px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.quick-care-tags {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 30px;
+
+    .tag-item {
+        background-color: $page-background;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $primary-dark;
+
+        span {
+            margin-right: 5px;
+        }
+    }
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+
+    button {
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.2s, opacity 0.2s, transform 0.1s;
+        flex: 1;
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }
+
+    .btn-add-garden {
+        background-color: $primary-accent;
+        color: $primary-dark;
+
+        &:hover:not(:disabled) {
+            background-color: darken($primary-accent, 5%);
+        }
+
+        &.saved {
+            background-color: $secondary-accent;
+            color: $primary-dark;
+            border: 1px solid darken($secondary-accent, 10%);
+        }
+    }
+
+    .btn-wishlist {
+        background-color: $white;
+        color: $primary-dark;
+        border: 2px solid $secondary-accent;
+        flex: 0 0 auto;
+
+        &.active {
+            background-color: $secondary-accent;
+            color: $white;
+            border-color: $secondary-accent;
+        }
+
+        &:hover:not(:disabled) {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+    }
+}
+
+.login-prompt {
+    color: $secondary-accent;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.detailed-care-guide {
+    .care-guide-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+
+        .guide-box {
+            background-color: lighten($page-background, 5%);
+            padding: 20px;
+            border-left: 5px solid $primary-accent;
+            border-radius: 8px;
+
+            h3 {
+                color: $primary-dark;
+                font-size: 18px;
+                margin-top: 0;
+            }
+
+            p {
+                color: $text-light;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.care-activities {
+    h3 {
+        font-size: 22px;
+        color: $primary-dark;
+        margin-bottom: 20px;
+        border-bottom: 1px solid darken($container-bg, 5%);
+        padding-bottom: 10px;
+    }
+}
+
+.care-guide-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: $white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    border-left: 4px solid $secondary-accent;
+
+    .care-icon {
+        font-size: 20px;
+        font-weight: bold;
+        color: $white;
+        background-color: $primary-dark;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0; 
+    }
+
+    .care-title {
+        font-weight: 600;
+        margin: 0 0 3px 0;
+        color: $primary-dark;
+    }
+
+    small {
+        color: $secondary-accent;
+        display: block;
+        font-weight: 500;
+    }
+
+    .care-notes {
+        font-size: 13px;
+        color: $text-light;
+        margin: 5px 0 0 0;
+    }
+}
+
+.month-strip {
+    display: flex;
+    justify-content: space-between;
+    gap: 3px;
+    text-align: center;
+
+    .month-indicator {
+        flex: 1;
+        padding: 8px 0;
+        border-radius: 4px;
+        font-size: 11px;
+        background-color: darken($container-bg, 5%);
+        color: $text-light;
+        font-weight: 500;
+
+        &.active {
+            background-color: $primary-accent;
+            color: $white;
+        }
+
+        &.bloom {
+            background-color: $secondary-accent;
+            color: $primary-dark;
+            font-weight: 700;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+
+        .image-gallery {
+            max-width: 100%; 
+        }
+    }
+
+    .info-panel {
+        padding-top: 20px;
+    }
+
+    .plant-name {
+        font-size: 36px !important;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+
+        .btn-wishlist {
+            width: 100%;
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}

@@ -1,23 +1,19 @@
-// src/pages/AuthPage.jsx
-
 import React, { useState } from "react";
 import { supabase } from "../lib/supabaseClient";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify'; // NY IMPORT
-// import "../assets/scss/pages/AuthPage.scss"; // Behåll din styling-import
+import { toast } from 'react-toastify';
+import "../assets/scss/pages/AuthPage.scss";
 
 function AuthPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
-    // Vi behöver inte längre authError state, då toast hanterar felmeddelanden
     const navigate = useNavigate();
 
     const handleAuth = async (isSignUp: boolean, e?: React.FormEvent) => {
         e?.preventDefault();
 
         setLoading(true);
-        // setAuthError(""); // Raderas
 
         let data;
         let error;
@@ -29,7 +25,6 @@ function AuthPage() {
         }
 
         if (error) {
-            // Visa felmeddelanden som en röd toast
             if (error.message.includes('Invalid login credentials')) {
                 toast.error("Felaktig e-postadress eller lösenord.");
             } else {
@@ -37,7 +32,6 @@ function AuthPage() {
             }
         } else if (data.user) {
             if (isSignUp) {
-                // Steg efter lyckad registrering
                 await supabase.from("profiles").upsert({
                     id: data.user.id,
                     full_name: email.split('@')[0]
@@ -45,12 +39,10 @@ function AuthPage() {
                 toast.success("Registrering klar! Du kan nu logga in.");
 
             } else {
-                // ANVÄNDARE INLOGGAD: Visa framgångsmeddelande OCH navigera
                 toast.success("Välkommen tillbaka!");
                 navigate("/overview");
             }
         } else if (!data.user && isSignUp) {
-            // Detta hanterar Supabases "Kolla e-post för bekräftelse"
             toast.info("Kolla din e-post (och skräppost) för bekräftelselänk.");
         }
 
@@ -75,57 +67,54 @@ function AuthPage() {
     };
 
     return (
-        <div style={{ padding: 30, maxWidth: 400, margin: '50px auto', border: '1px solid #ccc', borderRadius: '8px' }}>
-            <h2>Inloggning / Registrering</h2>
+        <div className="auth-page-container">
+            <div className="auth-card">
+                <h2>Välkommen till GreenSpace</h2>
 
-            {/* Inget manuellt felmeddelande-element behövs längre, ToastContainer hanterar det! */}
+                <form onSubmit={(e) => handleAuth(false, e)}>
+                    <input
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        disabled={loading}
+                    />
+                    <input
+                        placeholder="Lösenord"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        type="password"
+                        disabled={loading}
+                    />
 
-            <form onSubmit={(e) => handleAuth(false, e)}>
-                {/* ... (input fält för email och password förblir desamma) ... */}
-                <input
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="email"
-                    disabled={loading}
-                    style={{ display: 'block', width: '100%', padding: '10px', margin: '10px 0' }}
-                />
-                <input
-                    placeholder="Lösenord"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    type="password"
-                    disabled={loading}
-                    style={{ display: 'block', width: '100%', padding: '10px', margin: '10px 0' }}
-                />
+                    <div className="auth-actions">
+                        <button
+                            type="submit"
+                            disabled={loading || !email || !password}
+                            className="btn-login"
+                        >
+                            {loading ? 'Loggar in...' : 'Logga in'}
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => handleAuth(true)}
+                            disabled={loading || !email || !password}
+                            className="btn-signup"
+                        >
+                            {loading ? 'Registrerar...' : 'Registrera'}
+                        </button>
+                    </div>
+                </form>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
+                <div className="reset-password-container">
                     <button
-                        type="submit"
-                        disabled={loading || !email || !password}
-                        style={{ padding: '10px 20px' }}
+                        onClick={handlePasswordReset}
+                        disabled={loading}
+                        className="btn-reset-password"
                     >
-                        {loading ? 'Loggar in...' : 'Logga in'}
-                    </button>
-                    <button
-                        type="button"
-                        onClick={() => handleAuth(true)}
-                        disabled={loading || !email || !password}
-                        style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white' }}
-                    >
-                        {loading ? 'Registrerar...' : 'Registrera'}
+                        Glömt lösenord?
                     </button>
                 </div>
-            </form>
-
-            <div style={{ marginTop: '15px' }}>
-                <button
-                    onClick={handlePasswordReset}
-                    disabled={loading}
-                    style={{ background: 'none', border: 'none', color: '#007bff', cursor: 'pointer', padding: 0 }}
-                >
-                    Glömt lösenord?
-                </button>
             </div>
         </div>
     );

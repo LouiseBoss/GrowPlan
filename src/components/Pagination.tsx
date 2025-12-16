@@ -3,8 +3,8 @@ import Button from "react-bootstrap/Button";
 import "../assets/scss/components/Pagination.scss";
 
 interface PaginationProps {
-    page: number; // 0-based
-    totalPages: number; // number of pages
+    page: number; 
+    totalPages: number; 
     onNext: () => void;
     onPrev: () => void;
 }
@@ -16,7 +16,6 @@ const Pagination: React.FC<PaginationProps> = ({
     onPrev,
 }) => {
 
-    // FIXADE villkor
     const hasNext = page < totalPages - 1;
     const hasPrev = page > 0;
 
