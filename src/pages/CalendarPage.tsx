@@ -4,7 +4,6 @@ import { useAuth } from "../hooks/useAuth";
 import { useAnnualTasks } from "../hooks/useAnnualTasks";
 import { type CustomTask, type MonthlyTask } from "../types/Task";
 import TaskForm from "../components/TaskForm";
-// Se till att detta är rätt filnamn (tasksService eller taskService?)
 import { deleteTask } from "../services/taskService";
 
 import { TfiPencilAlt, TfiTrash } from "react-icons/tfi";
@@ -42,7 +41,7 @@ const getTaskIcon = (title: string) => {
 interface CalendarMonthProps {
     monthNumber: number;
     tasks: (CustomTask | MonthlyTask)[];
-    onDelete: (id: number) => void;
+    onDelete: (id: string | number) => void; // Typsäkrad för UUID
     onEdit: (task: CustomTask) => void;
 }
 
@@ -77,7 +76,7 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ tasks, onDelete, onEdit, 
                                                 <TfiPencilAlt size={16} />
                                             </button>
                                             <button
-                                                onClick={() => onDelete(Number(task.id))}
+                                                onClick={() => onDelete(task.id)} // Skickar id direkt (string | number)
                                                 className="action-btn delete-btn"
                                             >
                                                 <TfiTrash size={16} />
@@ -112,19 +111,16 @@ const CalendarPage = () => {
         return groups;
     }, [allTasks]);
 
-    // FIX FÖR RADERING
-    const handleDelete = async (id: number) => {
-        // Om du vill slippa den "fula" fönstret kan du ta bort if-checken nedan, 
-        // men det är säkrast att ha en bekräftelse.
+    const handleDelete = async (id: string | number) => {
         if (!window.confirm("Vill du ta bort uppgiften?")) return;
 
         try {
-            await deleteTask(id);
+            await deleteTask(id); // Nu matchar typerna perfekt!
             toast.success("Uppgiften raderades!");
-            await refetch(); // Vänta på att listan uppdateras
+            await refetch();
         } catch (err) {
             console.error("Fel vid radering:", err);
-            toast.error("Kunde inte ta bort uppgiften. Prova att ladda om sidan.");
+            toast.error("Kunde inte ta bort uppgiften.");
         }
     };
 
@@ -157,7 +153,7 @@ const CalendarPage = () => {
                     <CalendarMonth
                         key={m}
                         monthNumber={m}
-                        tasks={groupedTasks[m] || []} // SÄKERHETSKOLL FÖR RAD 126
+                        tasks={groupedTasks[m] || []}
                         onDelete={handleDelete}
                         onEdit={(task) => {
                             setTaskToEdit(task);

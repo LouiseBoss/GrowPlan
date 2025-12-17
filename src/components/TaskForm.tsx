@@ -97,16 +97,6 @@ const TaskForm: React.FC<TaskFormProps> = ({ userId, onTaskAdded, editTask, onCa
                 </select>
             </div>
 
-            <div className="form-group">
-                <label htmlFor="desc">Beskrivning (valfritt)</label>
-                <textarea
-                    id="desc"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    placeholder="Anteckningar om hur det ska göras..."
-                />
-            </div>
-
             <div className="form-actions">
                 <button type="submit" disabled={isSubmitting} className="btn-save">
                     {isSubmitting ? 'Sparar...' : editTask ? 'Uppdatera uppgift' : 'Spara uppgift'}

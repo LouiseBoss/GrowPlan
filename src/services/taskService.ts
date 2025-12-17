@@ -47,7 +47,7 @@ export async function addCustomTask(
 /**
  * Raderar en uppgift baserat på ID.
  */
-export async function deleteTask(taskId: number): Promise<void> {
+export async function deleteTask(taskId: string | number): Promise<void> {
     const { error } = await supabase
         .from('user_tasks')
         .delete()
