@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/scss/pages/HomePage.scss';
 
+import { SlCalender } from "react-icons/sl";
+import { GiGreenhouse } from "react-icons/gi";
+import { TbSnowflake } from "react-icons/tb";
+import { ImHeart } from "react-icons/im";
+import { MdOutlineMenuBook } from "react-icons/md";
+import { TfiPencilAlt } from "react-icons/tfi";
+
 interface FeatureBoxProps {
     icon: React.ReactNode;
     title: string;
@@ -16,6 +23,9 @@ const FeatureBox: React.FC<FeatureBoxProps> = ({ icon, title, description }) => 
     </div>
 );
 
+const PRIMARY_ICON_COLOR = "#3A4A3D";
+const ICON_SIZE = 40;
+
 const HomePage = () => {
     return (
         <div className="home-page-container">
@@ -23,7 +33,7 @@ const HomePage = () => {
                 <div className="hero-content">
                     <h1>Your Personal Garden Companion</h1>
                     <p>
-                        Plan, track, and nurture your garden with ease. From seasonal tasks to personal wishlists, 
+                        Plan, track, and nurture your garden with ease. From seasonal tasks to personal wishlists,
                         everything you need to grow a thriving garden.
                     </p>
                     <div className="hero-actions">
@@ -39,36 +49,36 @@ const HomePage = () => {
             <section className="features-section">
                 <h2>Everything Your Garden Needs</h2>
                 <p className="subtitle">Simple tools to help your plants thrive all year round</p>
-                
+
                 <div className="features-grid">
-                    <FeatureBox 
-                        icon="🗓️" 
-                        title="Seasonal Calendar" 
+                    <FeatureBox
+                        icon={<SlCalender size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
+                        title="Seasonal Calendar"
                         description="Stay on top of your garden tasks with our monthly/annual view, covering watering, pruning, and fertilizing."
                     />
-                    <FeatureBox 
-                        icon="✍️" 
-                        title="Personal Tasks" 
+                    <FeatureBox
+                        icon={<TfiPencilAlt size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
+                        title="Personal Tasks"
                         description="Create custom tasks specific to your needs and track important care activities for your plants."
                     />
-                    <FeatureBox 
-                        icon="💖" 
-                        title="Plant Wishlist" 
+                    <FeatureBox
+                        icon={<ImHeart size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
+                        title="Plant Wishlist"
                         description="Dream and plan your perfect garden. Save plants you want to acquire with notes and planting details."
                     />
-                    <FeatureBox 
-                        icon="🏠" 
-                        title="Indoor & Outdoor" 
+                    <FeatureBox
+                        icon={<GiGreenhouse size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
+                        title="Indoor & Outdoor"
                         description="Manage both your indoor houseplants and outdoor beds with specialized care guides for every environment."
                     />
-                    <FeatureBox 
-                        icon="❄️" 
-                        title="Winter Storage" 
+                    <FeatureBox
+                        icon={<TbSnowflake size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
+                        title="Winter Storage"
                         description="Protect your plants during cold months. Plan for proper potted plant storage, mulching, and general winter care."
                     />
-                    <FeatureBox 
-                        icon="📚" 
-                        title="Care Guides" 
+                    <FeatureBox
+                        icon={<MdOutlineMenuBook size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
+                        title="Care Guides"
                         description="Access comprehensive care information and best practices for watering, sunlight, soil, and pests."
                     />
                 </div>
@@ -95,7 +105,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            
+
         </div>
     );
 };

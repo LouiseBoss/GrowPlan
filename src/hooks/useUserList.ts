@@ -15,25 +15,26 @@ export const useUserList = (user: User | null, idFetcher: IdFetcher) => {
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
 
+    // 1️⃣ Hämta ALLA ID:n (körs när user ändras eller refetch)
     const fetchAllIds = useCallback(async () => {
         if (!user) {
             setPlantIds([]);
-            setLoading(false);
+            setPlants([]);
             setTotalPages(0);
+            setLoading(false);
             return;
         }
 
+        setLoading(true);
+
         try {
-            setLoading(true);
             const ids = await idFetcher(user.id);
             setPlantIds(ids);
-
-            const calculatedTotalPages = Math.ceil(ids.length / ITEMS_PER_PAGE);
-            setTotalPages(calculatedTotalPages);
-
+            setTotalPages(Math.ceil(ids.length / ITEMS_PER_PAGE));
+            setPage(0);
         } catch (error) {
-            console.error("Kunde inte ladda listans ID:n:", error);
-            toast.error("Kunde inte ladda listans ID:n.");
+            console.error(error);
+            toast.error("Kunde inte ladda listan.");
             setPlantIds([]);
         } finally {
             setLoading(false);
@@ -41,6 +42,7 @@ export const useUserList = (user: User | null, idFetcher: IdFetcher) => {
     }, [user, idFetcher]);
 
 
+    // 2️⃣ Hämta detaljer för aktuell sida
     const fetchPageDetails = useCallback(async () => {
         if (plantIds.length === 0) {
             setPlants([]);
@@ -50,56 +52,40 @@ export const useUserList = (user: User | null, idFetcher: IdFetcher) => {
         setLoading(true);
 
         const start = page * ITEMS_PER_PAGE;
-        const end = start + ITEMS_PER_PAGE;
-        const idsForPage = plantIds.slice(start, end);
+        const idsForPage = plantIds.slice(start, start + ITEMS_PER_PAGE);
 
         try {
             const plantDetails = await getPlantListItemsByIds(idsForPage);
             setPlants(plantDetails);
         } catch (error) {
-            console.error("Kunde inte ladda detaljerna för denna sida:", error);
-            toast.error("Kunde inte ladda detaljerna för denna sida.");
+            console.error("Kunde inte ladda detaljer:", error);
+            toast.error("Kunde inte ladda växterna.");
             setPlants([]);
         } finally {
             setLoading(false);
         }
-
     }, [plantIds, page]);
 
-
+    // 3️⃣ Körs när användaren ändras
     useEffect(() => {
         fetchAllIds();
     }, [fetchAllIds]);
 
+    // 4️⃣ Körs när page eller plantIds ändras
     useEffect(() => {
-        if (totalPages > 0 && page >= totalPages) {
-            setPage(Math.max(0, totalPages - 1));
-        } else if (plantIds.length === 0 && page !== 0) {
-            setPage(0);
-        }
-    }, [plantIds.length, totalPages, page]);
+        fetchPageDetails();
+    }, [fetchPageDetails]);
 
-
-    useEffect(() => {
-        if (plantIds.length > 0 || !loading) {
-            fetchPageDetails();
-        }
-    }, [fetchPageDetails, plantIds, loading]);
-
-
-    const handleNext = () => setPage((p) => Math.min(p + 1, totalPages - 1));
-    const handlePrev = () => setPage((p) => Math.max(p - 1, 0));
-
-    const refetch = () => fetchAllIds();
+    const onNext = () => setPage((p) => Math.min(p + 1, totalPages - 1));
+    const onPrev = () => setPage((p) => Math.max(p - 1, 0));
 
     return {
         plants,
         loading,
-        refetch,
+        refetch: fetchAllIds,
         page,
         totalPages,
-        onNext: handleNext,
-        onPrev: handlePrev,
-        ITEMS_PER_PAGE
+        onNext,
+        onPrev
     };
 };

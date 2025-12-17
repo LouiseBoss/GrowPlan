@@ -1,8 +1,10 @@
 import { supabase } from "./supabaseClient";
 import { type CustomTask } from "../types/Task";
 
-
-export async function getCustomTasks(userId: string): Promise<CustomTask[] | null> {
+/**
+ * Hämtar alla uppgifter 
+ */
+export async function getCustomTasks(userId: string): Promise<CustomTask[]> {
     const { data, error } = await supabase
         .from("user_tasks")
         .select(`
@@ -22,28 +24,56 @@ export async function getCustomTasks(userId: string): Promise<CustomTask[] | nul
         throw error;
     }
 
-    return data as CustomTask[] | null;
+    return (data as CustomTask[]) || [];
 }
 
+/**
+ * Lägger till en ny anpassad uppgift.
+ * 
+ */
 export async function addCustomTask(
-    userId: string,
-    title: string,
-    month: number,
-    description: string = '', 
-    interval?: string
-) {
+    task: Omit<CustomTask, 'id' | 'created_at'>
+): Promise<void> {
     const { error } = await supabase
         .from("user_tasks")
-        .insert([{
-            user_id: userId,
-            title: title,
-            month: month,
-            description: description, 
-            interval: interval      
-        }]);
+        .insert([task]);
 
     if (error) {
         console.error("Fel vid tillägg av anpassad uppgift:", error);
+        throw error;
+    }
+}
+
+/**
+ * Raderar en uppgift baserat på ID.
+ */
+export async function deleteTask(taskId: number): Promise<void> {
+    const { error } = await supabase
+        .from('user_tasks')
+        .delete()
+        .eq('id', taskId);
+
+    if (error) {
+        console.error("Fel vid radering av uppgift:", error);
+        throw error;
+    }
+}
+
+/**
+ * Uppdaterar en befintlig uppgift.
+ * 
+ */
+export async function updateTask(
+    taskId: number,
+    updates: Partial<Omit<CustomTask, 'id' | 'user_id' | 'created_at'>>
+): Promise<void> {
+    const { error } = await supabase
+        .from('user_tasks')
+        .update(updates)
+        .eq('id', taskId);
+
+    if (error) {
+        console.error("Fel vid uppdatering av uppgift:", error);
         throw error;
     }
 }

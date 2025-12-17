@@ -3,10 +3,10 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../assets/scss/pages/navigation.scss';
+import '../../assets/scss/pages/Navigation.scss';
 
 const Navigation: React.FC = () => {
-    const { user, logout } = useAuth(); 
+    const { user, logout } = useAuth();
 
     return (
         <Navbar expand="md" className="custom-app-navbar" variant="light">

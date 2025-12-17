@@ -1,65 +1,123 @@
-import React, { useState } from "react";
-import { addCustomTask } from "../services/taskService";
+import React, { useState, useEffect } from 'react';
+import { addCustomTask, updateTask } from '../services/taskService';
+import { type CustomTask } from '../types/Task';
+import { toast } from 'react-toastify';
 
 interface TaskFormProps {
     userId: string;
-    onTaskAdded: () => void; 
+    onTaskAdded: () => void; // Trigger för att ladda om kalendern
+    editTask: CustomTask | null; // Uppgiften som ska redigeras (om någon)
+    onCancel: () => void; // Funktion för att avbryta redigering
 }
 
-const TaskForm: React.FC<TaskFormProps> = ({ userId, onTaskAdded }) => {
-    const [title, setTitle] = useState("");
-    const [month, setMonth] = useState(new Date().getMonth() + 1);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+const TaskForm: React.FC<TaskFormProps> = ({ userId, onTaskAdded, editTask, onCancel }) => {
+    const [title, setTitle] = useState('');
+    const [month, setMonth] = useState(1);
+    const [description, setDescription] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const monthOptions = [
-        "Januari", "Februari", "Mars", "April", "Maj", "Juni", 
-        "Juli", "Augusti", "September", "Oktober", "November", "December"
-    ];
+    // Fyll i formuläret om vi går in i "edit-läge"
+    useEffect(() => {
+        if (editTask) {
+            setTitle(editTask.title);
+            setMonth(editTask.month);
+            setDescription(editTask.description || '');
+        } else {
+            resetForm();
+        }
+    }, [editTask]);
+
+    const resetForm = () => {
+        setTitle('');
+        setMonth(1);
+        setDescription('');
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!title.trim()) return;
 
-        setLoading(true);
-        setError(null);
-
+        setIsSubmitting(true);
         try {
-            await addCustomTask(userId, title.trim(), month);
-            setTitle(""); 
-            onTaskAdded(); 
-        } catch (err) {
-            setError("Kunde inte lägga till uppgiften. Kontrollera RLS!");
-            console.error(err);
+            if (editTask) {
+                // Uppdatera befintlig uppgift
+                await updateTask(editTask.id, {
+                    title,
+                    month,
+                    description
+                });
+                toast.success("Uppgift uppdaterad!");
+            } else {
+                // Skapa ny uppgift
+                await addCustomTask({
+                    user_id: userId,
+                    title,
+                    month,
+                    description,
+                });
+                toast.success("Ny uppgift tillagd!");
+            }
+            
+            resetForm();
+            onTaskAdded(); // Ber CalendarPage att köra refetch
+        } catch (error) {
+            toast.error("Något gick fel. Försök igen.");
+            console.error(error);
         } finally {
-            setLoading(false);
+            setIsSubmitting(false);
         }
     };
 
     return (
         <form onSubmit={handleSubmit} className="task-form">
-            <input
-                type="text"
-                placeholder="Titel på uppgift (t.ex. Flytta krukor till skugga)"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                disabled={loading}
-                required
-            />
-            
-            <select value={month} onChange={(e) => setMonth(Number(e.target.value))} disabled={loading}>
-                {monthOptions.map((name, index) => (
-                    <option key={index} value={index + 1}>
-                        {name}
-                    </option>
-                ))}
-            </select>
-            
-            <button type="submit" disabled={loading}>
-                {loading ? "Sparar..." : "Lägg till uppgift"}
-            </button>
-            
-            {error && <p style={{ color: "red" }}>{error}</p>}
+            <div className="form-group">
+                <label htmlFor="title">Uppgift</label>
+                <input
+                    id="title"
+                    type="text"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    placeholder="T.ex. Beskära äppelträdet"
+                    required
+                />
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="month">Månad</label>
+                <select 
+                    id="month" 
+                    value={month} 
+                    onChange={(e) => setMonth(Number(e.target.value))}
+                >
+                    {Array.from({ length: 12 }, (_, i) => (
+                        <option key={i + 1} value={i + 1}>
+                            {new Date(0, i).toLocaleString('sv-SE', { month: 'long' })}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="desc">Beskrivning (valfritt)</label>
+                <textarea
+                    id="desc"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    placeholder="Anteckningar om hur det ska göras..."
+                />
+            </div>
+
+            <div className="form-actions">
+                <button type="submit" disabled={isSubmitting} className="btn-save">
+                    {isSubmitting ? 'Sparar...' : editTask ? 'Uppdatera uppgift' : 'Spara uppgift'}
+                </button>
+                
+                {editTask && (
+                    <button type="button" onClick={onCancel} className="btn-cancel">
+                        Avbryt
+                    </button>
+                )}
+            </div>
         </form>
     );
 };
