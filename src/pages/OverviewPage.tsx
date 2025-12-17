@@ -15,9 +15,9 @@ interface TaskListCardProps {
 
 const TaskListCard: React.FC<TaskListCardProps> = ({ tasks, loading, currentDate }) => {
 
-    const currentMonthNumber = currentDate.getMonth() + 1; 
+    const currentMonthNumber = currentDate.getMonth() + 1;
     const currentMonthName = getMonthName(currentMonthNumber);
-    const currentDay = currentDate.getDate(); 
+    const currentDay = currentDate.getDate();
 
     return (
         <div className="current-month-card">
@@ -83,6 +83,9 @@ const OverviewPage = () => {
 
     const { totalPlants, wishlistItems, loading: statsLoading } = useUserGardenStats(user);
 
+    // HÄR ÄR ÄNDRINGEN: Hämtar namnet från metadata istället för bara e-post
+    const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Odlare';
+
     if (!user) {
         return (
             <div className="overview-container not-logged-in">
@@ -97,7 +100,8 @@ const OverviewPage = () => {
     return (
         <div className="overview-container">
             <header className="page-header">
-                <h1>Välkommen tillbaka, {user?.email || 'GrowPlan användare'}! 🪴</h1>
+                {/* HÄR ÄR ÄNDRINGEN: Använder displayName variabeln */}
+                <h1>Välkommen tillbaka, {displayName}! 🪴</h1>
                 <p>Här är vad som händer i din trädgård idag.</p>
             </header>
 

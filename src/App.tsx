@@ -17,6 +17,7 @@ import Navigation from "./pages/partials/navigation";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GardenPage from "./pages/MyGardenPage";
 import WishlistPage from "./pages/WishlistPage";
+import ProfilePage from "./pages/ProfilePage";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/garden" element={<GardenPage />} />
             <Route path="/wishlist" element={<WishlistPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
 
         </Route>
 

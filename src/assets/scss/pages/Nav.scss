@@ -1,145 +1,103 @@
-// =======================
-// FÄRGPALETT
-// =======================
-$page-background: #F7D6C0;
-$primary-dark: #3A4A3D;
-$primary-accent: #96AD90;
-$secondary-accent: #F4B9B8;
-$white: #ffffff;
-
-// =======================
-// NAVBAR – GRUND
-// =======================
 .custom-app-navbar {
-    background-color: $white;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    padding: 10px 0;
-    position: relative;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); // Ger en snygg modern glaskänsla
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 0.8rem 0;
 
-    // LOGO
     .navbar-logo {
         display: flex;
         align-items: center;
+        gap: 0.5rem;
         font-weight: 700;
-        font-size: 1.6rem;
-        color: $primary-dark !important;
+        font-size: 1.4rem;
+        color: #2d4a22 !important; // Mörkgrön
 
         .logo-icon {
-            font-size: 1.8rem;
-            margin-right: 8px;
-            color: $primary-accent;
+            font-size: 1.6rem;
         }
     }
 
-    // =======================
-    // HAMBURGER-IKON
-    // =======================
-    .navbar-toggler {
-        width: 40px;
-        height: 40px;
-        padding: 5px;
-        border-color: rgba($primary-dark, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &:focus {
-            box-shadow: none;
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$primary-dark}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-    }
-
-    // =======================
-    // NAV-LÄNKAR
-    // =======================
-    .nav-link {
-        color: $primary-dark !important;
+    .nav-item-link {
+        color: #444 !important;
         font-weight: 500;
-        padding: 8px 14px;
-        border-radius: 6px;
+        margin: 0 0.5rem;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #659354 !important; 
+        }
+    }
+
+    .profile-nav-link {
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 0.5rem;
+        background: #f0f4ef;
+        padding: 0.4rem 0.8rem !important;
+        border-radius: 20px;
+        margin-left: 1rem;
 
-        &:hover {
-            background-color: lighten($secondary-accent, 5%);
-        }
-
-        .icon {
-            font-size: 1.2rem;
-        }
-    }
-
-    // PLANTS-LÄNK
-    .plants-link {
-        border: 1px solid $primary-accent;
-        color: $primary-accent !important;
-
-        &:hover {
-            background-color: $primary-accent;
-            color: $white !important;
-        }
-    }
-
-    // AUTH-KNAPPAR
-    .auth-link {
-        &.btn-login-signup {
-            background-color: $primary-dark;
-            color: $white !important;
-            padding: 8px 20px;
-
-            &:hover {
-                background-color: lighten($primary-dark, 10%);
-            }
-        }
-
-        &.btn-logout {
-            background-color: $secondary-accent;
-            color: $primary-dark !important;
-            padding: 8px 20px;
-
-            &:hover {
-                background-color: darken($secondary-accent, 5%);
-            }
-        }
-    }
-
-    .navbar-toggler-icon {
-        display: block;
-        width: 1.5em;
-        height: 1.5em;
-    }
-
-    .custom-app-navbar {
-        .navbar-toggler {
-            width: 40px;
-            height: 40px;
-            padding: 0;
-            flex-shrink: 0; // 🔑 hindrar den från att växa
-        }
-    }
-
-    @media (max-width: 767.98px) {
-        .navbar-collapse {
-            position: absolute;
-            top: 100%;
-            right: 1rem;
-            background-color: #fff;
-            padding: 12px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            width: auto;
-            min-width: 220px;
-            z-index: 1000;
-        }
-
-        .main-nav-links {
+        .nav-avatar {
+            width: 24px;
+            height: 24px;
+            background: #507941;
+            color: white;
+            border-radius: 50%;
             display: flex;
-            flex-direction: column;
-            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
         }
+    }
+
+    .btn-logout-nav {
+        background: none;
+        border: 1px solid #ddd;
+        padding: 0.4rem 1rem;
+        border-radius: 8px;
+        color: #888;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+        transition: all 0.2s;
+
+        &:hover {
+            background: #fff5f5;
+            color: #d32f2f;
+            border-color: #ffcdd2;
+        }
+    }
+
+    .btn-login-signup {
+        background: #507941;
+        color: white !important;
+        padding: 0.5rem 1.2rem !important;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: transform 0.2s;
+
+        &:hover {
+            background: #507941;
+            transform: translateY(-1px);
+        }
+    }
+}
+
+// Mobil-anpassning
+@media (max-width: 768px) {
+    .ms-auto {
+        padding-top: 1rem;
+        gap: 1rem;
+    }
+
+    .profile-nav-link {
+        margin-left: 0;
+        width: fit-content;
+    }
+
+    .btn-logout-nav {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
     }
 }

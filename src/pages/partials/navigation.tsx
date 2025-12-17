@@ -7,9 +7,12 @@ import "../../assets/scss/pages/Nav.scss";
 
 const Navigation: React.FC = () => {
     const { user, logout } = useAuth();
+    
+    // Hämta första bokstaven för en liten "avatar-ikon" i menyn
+    const userInitial = user?.user_metadata?.full_name?.charAt(0).toUpperCase() || "👤";
 
     return (
-        <Navbar expand="md" className="custom-app-navbar" variant="light">
+        <Navbar expand="md" className="custom-app-navbar" variant="light" sticky="top">
             <Container fluid className="px-4">
 
                 {/* LOGO */}
@@ -21,37 +24,42 @@ const Navigation: React.FC = () => {
                 <Navbar.Toggle aria-controls="main-navbar" />
 
                 <Navbar.Collapse id="main-navbar">
-                    <Nav className="ms-auto main-nav-links">
+                    <Nav className="ms-auto align-items-center">
 
-                        <Nav.Link as={Link} to="/plants" className="plants-link">
+                        <Nav.Link as={Link} to="/plants" className="nav-item-link">
                             Växter
                         </Nav.Link>
 
                         {user && (
                             <>
-                                <Nav.Link as={Link} to="/overview">
+                                <Nav.Link as={Link} to="/overview" className="nav-item-link">
                                     Översikt
                                 </Nav.Link>
 
-                                <Nav.Link as={Link} to="/garden">
+                                <Nav.Link as={Link} to="/garden" className="nav-item-link">
                                     Min Trädgård
                                 </Nav.Link>
 
-                                <Nav.Link as={Link} to="/calendar">
+                                <Nav.Link as={Link} to="/calendar" className="nav-item-link">
                                     Kalender
                                 </Nav.Link>
 
-                                <Nav.Link as={Link} to="/wishlist">
+                                <Nav.Link as={Link} to="/wishlist" className="nav-item-link">
                                     Önskelista
                                 </Nav.Link>
 
-                                <Nav.Link
-                                    as="button"
+                                {/* PROFIL-LÄNK */}
+                                <Nav.Link as={Link} to="/profile" className="nav-item-link profile-nav-link">
+                                    <span className="nav-avatar">{userInitial}</span>
+                                    Profil
+                                </Nav.Link>
+
+                                <button
                                     onClick={logout}
-                                    className="auth-link btn-logout"
+                                    className="btn-logout-nav"
                                 >
                                     Logga ut
-                                </Nav.Link>
+                                </button>
                             </>
                         )}
 
@@ -61,7 +69,7 @@ const Navigation: React.FC = () => {
                                 to="/auth"
                                 className="auth-link btn-login-signup"
                             >
-                                Logga in / Skapa konto
+                                Logga in
                             </Nav.Link>
                         )}
 
