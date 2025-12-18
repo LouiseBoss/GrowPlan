@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; 
 import "../assets/scss/components/Pagination.scss";
 
 interface PaginationProps {
-    page: number; 
-    totalPages: number; 
+    page: number;
+    totalPages: number;
     onNext: () => void;
     onPrev: () => void;
 }
@@ -15,31 +16,39 @@ const Pagination: React.FC<PaginationProps> = ({
     onNext,
     onPrev,
 }) => {
-
     const hasNext = page < totalPages - 1;
     const hasPrev = page > 0;
 
-    return (
-        <div className="pagination-container">
+    const handleScrollAndNext = () => {
+        onNext();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
+    const handleScrollAndPrev = () => {
+        onPrev();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    return (
+        <div className="pagination-wrapper">
             <Button
-                variant="dark"
+                className="pagination-btn"
                 disabled={!hasPrev}
-                onClick={onPrev}
+                onClick={handleScrollAndPrev}
             >
-                ⬅ Föregående
+                <FaChevronLeft /> <span>Föregående</span>
             </Button>
 
-            <div className="pagination-status">
-                Sida <strong>{page + 1}</strong> / {totalPages}
+            <div className="pagination-info">
+                Sida <span className="current">{page + 1}</span> av {totalPages}
             </div>
 
             <Button
-                variant="dark"
+                className="pagination-btn"
                 disabled={!hasNext}
-                onClick={onNext}
+                onClick={handleScrollAndNext}
             >
-                Nästa ➡
+                <span>Nästa</span> <FaChevronRight />
             </Button>
         </div>
     );

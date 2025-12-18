@@ -12,6 +12,7 @@ import { GiWateringCan } from "react-icons/gi";
 import { LuShovel } from "react-icons/lu";
 import { PiPlant } from "react-icons/pi";
 import { TbSnowflake } from "react-icons/tb";
+import { TiPinOutline } from "react-icons/ti";
 
 import { toast } from "react-toastify";
 import "../assets/scss/pages/CalendarPage.scss";
@@ -24,10 +25,12 @@ const getMonthName = (monthIndex: number): string => {
     return monthNames[monthIndex - 1];
 };
 
-const getTaskIcon = (title: string) => {
+const getTaskIcon = (title: string, isCustom: boolean) => {
     const t = title.toLowerCase();
     const color = "#3A4A3D";
     const size = 18;
+
+    if (isCustom) return <TiPinOutline size={size} color={color} />;
 
     if (t.includes("beskär")) return <HiOutlineScissors size={size} color={color} />;
     if (t.includes("vattna")) return <GiWateringCan size={size} color={color} />;
@@ -41,7 +44,7 @@ const getTaskIcon = (title: string) => {
 interface CalendarMonthProps {
     monthNumber: number;
     tasks: (CustomTask | MonthlyTask)[];
-    onDelete: (id: string | number) => void; // Typsäkrad för UUID
+    onDelete: (id: string | number) => void; 
     onEdit: (task: CustomTask) => void;
 }
 
@@ -58,11 +61,11 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ tasks, onDelete, onEdit, 
                         const category = 'category' in task ? task.category : 'Anpassad';
 
                         return (
-                            <li key={task.id} className={`task-item task-${category.toLowerCase()}`}>
+                            <li key={task.id} className={`task-item task-${category.toLowerCase()} ${isCustom ? 'is-user-task' : ''}`}>
                                 <div className="task-row">
                                     <div className="task-main">
                                         <span className="task-icon-wrapper">
-                                            {getTaskIcon(task.title)}
+                                            {getTaskIcon(task.title, !!isCustom)}
                                         </span>
                                         <span className="task-title">{task.title}</span>
                                     </div>
@@ -76,7 +79,7 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ tasks, onDelete, onEdit, 
                                                 <TfiPencilAlt size={16} />
                                             </button>
                                             <button
-                                                onClick={() => onDelete(task.id)} // Skickar id direkt (string | number)
+                                                onClick={() => onDelete(task.id)} 
                                                 className="action-btn delete-btn"
                                             >
                                                 <TfiTrash size={16} />
@@ -115,7 +118,7 @@ const CalendarPage = () => {
         if (!window.confirm("Vill du ta bort uppgiften?")) return;
 
         try {
-            await deleteTask(id); // Nu matchar typerna perfekt!
+            await deleteTask(id); 
             toast.success("Uppgiften raderades!");
             await refetch();
         } catch (err) {

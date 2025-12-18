@@ -4,6 +4,7 @@ import { Card, Nav, Button } from 'react-bootstrap';
 import { type PlantListItem } from '../types/Plant';
 import { getImageUrl } from '../utils/getImageUrl';
 import '../assets/scss/components/PlantCard.scss';
+import { IoHeart, IoHeartOutline } from "react-icons/io5";
 
 interface PlantCardProps {
     plant: PlantListItem;
@@ -32,7 +33,6 @@ const PlantCard: React.FC<PlantCardProps> = ({
         <div className="CardGroup">
             <Card className="h-100 d-flex flex-column plant-card-custom">
 
-                {/* 🖼 IMAGE + ❤️ */}
                 <div className="plant-image-wrapper">
                     <Link to={`/plant/${plant.id}`}>
                         <Card.Img
@@ -52,7 +52,7 @@ const PlantCard: React.FC<PlantCardProps> = ({
                             }}
                             aria-label="Lägg till i önskelista"
                         >
-                            ♥
+                            {isInWishlist ? <IoHeart /> : <IoHeartOutline />}
                         </button>
                     )}
                 </div>
@@ -62,31 +62,38 @@ const PlantCard: React.FC<PlantCardProps> = ({
                     <Card.Text className="text-muted">
                         {plant.category} ({plant.type})
                     </Card.Text>
-
-                    <div className="mt-auto">
-
+                    <div className="mt-auto plant-card-footer">
+  
                         <Nav.Link
                             as={NavLink}
                             to={`/plant/${plant.id}`}
-                            className="btn btn-secondary btn-block"
+                            className="plant-btn btn-info"
                         >
                             Mer info
                         </Nav.Link>
 
-                        {/* 🌱 LÄGG TILL I TRÄDGÅRD */}
-                        {showActions && onAddToGarden && !isInGarden && (
-                            <Button
-                                className="btn-add-garden mt-2"
-                                onClick={() => onAddToGarden(plant.id)}
-                            >
-                                🌱 Lägg till i min trädgård
-                            </Button>
+                        {showActions && onAddToGarden && (
+                            isInGarden ? (
+                                <Nav.Link
+                                    as={NavLink}
+                                    to="/garden"
+                                    className="plant-btn btn-add is-added"
+                                >
+                                    ✓ Gå till min trädgård
+                                </Nav.Link>
+                            ) : (
+                                <Button
+                                    className="plant-btn btn-add"
+                                    onClick={() => onAddToGarden(plant.id)}
+                                >
+                                    🌱 Lägg till i min trädgård
+                                </Button>
+                            )
                         )}
 
-                        {/* ❌ TA BORT */}
                         {listType && onRemove && (
                             <Button
-                                className="mt-2 btn-remove-card btn-block"
+                                className="plant-btn btn-remove"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     e.stopPropagation();

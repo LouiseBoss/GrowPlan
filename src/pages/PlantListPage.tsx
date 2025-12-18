@@ -20,7 +20,6 @@ const PlantListPage = () => {
     const { plants, loading, error } = usePlants();
     const [search, setSearch] = useState("");
     const [category, setCategory] = useState("");
-    const [type, setType] = useState("");
     const [page, setPage] = useState(0);
     const { user } = useAuth();
     const [gardenIds, setGardenIds] = useState<number[]>([]);
@@ -40,7 +39,6 @@ const PlantListPage = () => {
             p.name.toLowerCase().includes(search.toLowerCase())
         )
         .filter((p) => (category ? p.category === category : true))
-        .filter((p) => (type ? p.type === type : true));
 
     const pageCount = Math.ceil(filtered.length / ITEMS_PER_PAGE);
 
@@ -105,44 +103,51 @@ const PlantListPage = () => {
 
 
     return (
-        <div className="page-container plantlist-page" style={{ backgroundColor: '#F7D6C0' }}>
-            <header className="page-header" style={{ marginBottom: '2rem' }}>
-                <h1 style={{ color: '#3A4A3D' }}>Växtkatalog 🔍</h1>
-                <p style={{ color: '#3A4A3D' }}>Sök och filtrera bland alla tillgängliga växter.</p>
+        <div className="page-container plantlist-page">
+            <header className="page-header">
+                <h1>Växtkatalog 🔍</h1>
+                <p>Sök och filtrera bland alla tillgängliga växter.</p>
             </header>
 
-            <input
-                className="form-control mb-4"
-                style={{ width: "100%", maxWidth: "400px", borderColor: '#96AD90', color: '#3A4A3D' }}
-                placeholder="Sök växt..."
-                value={search}
-                onChange={(e) => {
-                    setSearch(e.target.value);
-                    setPage(0);
-                }}
-            />
+            <section className="filter-section">
+                <div className="filter-card">
+                    <div className="search-group">
+                        <label htmlFor="search">Sök växt</label>
+                        <input
+                            id="search"
+                            className="form-control"
+                            placeholder="T.ex. Monstera..."
+                            value={search}
+                            onChange={(e) => {
+                                setSearch(e.target.value);
+                                setPage(0);
+                            }}
+                        />
+                    </div>
 
-            <PlantFilters
-                category={category}
-                type={type}
-                onCategoryChange={(v) => {
-                    setCategory(v);
-                    setPage(0);
-                }}
-                onTypeChange={(v) => {
-                    setType(v);
-                    setPage(0);
-                }}
-            />
+                    <div className="category-group">
+                        <label>Filtrera på kategori</label>
+                        <PlantFilters
+                            category={category}
+                            onCategoryChange={(value) => {
+                                setCategory(value);
+                                setPage(0);
+                            }}
+                        />
+                    </div>
+                </div>
+            </section>
 
-            <p style={{ marginTop: '1.5rem', color: '#3A4A3D' }}>
+            <p className="results-count">
                 Visar <strong>{paginatedPlants.length}</strong> av{" "}
                 <strong>{filtered.length}</strong> matchande växter.
             </p>
 
+
             <div className="plant-grid">
                 {paginatedPlants.map((plant) => (
                     <PlantCard
+                        key={plant.id}
                         plant={plant}
                         showActions
                         isInGarden={gardenIds.includes(plant.id)}

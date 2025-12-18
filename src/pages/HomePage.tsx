@@ -31,14 +31,13 @@ const HomePage = () => {
         <div className="home-page-container">
             <section className="hero-section">
                 <div className="hero-content">
-                    <h1>Your Personal Garden Companion</h1>
+                    <h1>Din personliga trädgårdskamrat</h1>
                     <p>
-                        Plan, track, and nurture your garden with ease. From seasonal tasks to personal wishlists,
-                        everything you need to grow a thriving garden.
+                        Planera, följ upp och sköt om dina växter med lätthet – oavsett om de står i trädgården eller i fönstret. Från säsongsbetonade sysslor till personliga önskelistor, allt du behöver för att skapa ditt eget gröna paradis.
                     </p>
                     <div className="hero-actions">
-                        <Link to="/auth" className="btn btn-primary-hero">Start Your Garden</Link>
-                        <Link to="/plants" className="btn btn-secondary-hero">Explore Plants</Link>
+                        <Link to="/auth" className="btn btn-primary-hero">Starta din trädgård</Link>
+                        <Link to="/plants" className="btn btn-secondary-hero">Utforska växter</Link>
                     </div>
                 </div>
                 <div className="hero-image-placeholder">
@@ -47,61 +46,61 @@ const HomePage = () => {
             </section>
 
             <section className="features-section">
-                <h2>Everything Your Garden Needs</h2>
-                <p className="subtitle">Simple tools to help your plants thrive all year round</p>
+                <h2>Allt dina växter behöver</h2>
+                <p className="subtitle">Enkla verktyg som hjälper dina växter att frodas året runt</p>
 
                 <div className="features-grid">
                     <FeatureBox
                         icon={<SlCalender size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
-                        title="Seasonal Calendar"
-                        description="Stay on top of your garden tasks with our monthly/annual view, covering watering, pruning, and fertilizing."
+                        title="Säsongskalender"
+                        description="Håll koll på dina trädgårdssysslor med vår månatliga/årliga översikt som täcker vattning, beskärning och gödsling."
                     />
                     <FeatureBox
                         icon={<TfiPencilAlt size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
-                        title="Personal Tasks"
-                        description="Create custom tasks specific to your needs and track important care activities for your plants."
+                        title="Personliga uppgifter"
+                        description="Skapa anpassade uppgifter specifikt för dina behov och spåra viktiga skötselaktiviteter för dina växter"
                     />
                     <FeatureBox
                         icon={<ImHeart size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
-                        title="Plant Wishlist"
-                        description="Dream and plan your perfect garden. Save plants you want to acquire with notes and planting details."
+                        title="Växtönskelista"
+                        description="Dröm och planera din perfekta trädgård. Spara växter du vill skaffa"
                     />
                     <FeatureBox
                         icon={<GiGreenhouse size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
-                        title="Indoor & Outdoor"
-                        description="Manage both your indoor houseplants and outdoor beds with specialized care guides for every environment."
+                        title="Inomhus och Utomhus"
+                        description="Sköt om både dina krukväxter inomhus och utomhusrabatter med specialiserade skötselguider för varje miljö."
                     />
                     <FeatureBox
                         icon={<TbSnowflake size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
-                        title="Winter Storage"
-                        description="Protect your plants during cold months. Plan for proper potted plant storage, mulching, and general winter care."
+                        title="Vinterförvaring"
+                        description="Skydda dina växter under de kalla månaderna. Planera för korrekt förvaring av krukväxter, täckning av täckmaterial och allmän vintervård."
                     />
                     <FeatureBox
                         icon={<MdOutlineMenuBook size={ICON_SIZE} color={PRIMARY_ICON_COLOR} />}
-                        title="Care Guides"
-                        description="Access comprehensive care information and best practices for watering, sunlight, soil, and pests."
+                        title="Skötselråd"
+                        description="Få tillgång till omfattande skötselinformation och bästa praxis för vattning, solljus och jord"
                     />
                 </div>
             </section>
 
             <section className="how-it-works-section">
-                <h2>How It Works</h2>
-                <p className="subtitle">Start your gardening journey in three simple steps</p>
+                <h2>Hur det funkar</h2>
+                <p className="subtitle">Börja din trädgårdsresa i tre enkla steg</p>
                 <div className="steps-grid">
                     <div className="step-card">
                         <span className="step-number">1</span>
-                        <h3>Create Your Profile</h3>
-                        <p>Sign up, customize your climate zone, and set up your initial garden to track everything for you.</p>
+                        <h3>Skapa din profil</h3>
+                        <p>Registrera dig, konfigurera din första trädgård så att den spårar allt åt dig.</p>
                     </div>
                     <div className="step-card">
                         <span className="step-number">2</span>
-                        <h3>Add Your Plants</h3>
-                        <p>Build your garden inventory and add the specific plants you own, getting forecasts of tasks in the future.</p>
+                        <h3>Lägg till dina växter</h3>
+                        <p>Bygg upp ditt trädgårdsinventarium och lägg till de specifika växter du äger, för att få prognoser för framtida uppgifter.</p>
                     </div>
                     <div className="step-card">
                         <span className="step-number">3</span>
-                        <h3>Watch & Grow</h3>
-                        <p>Follow your personalized exercise, complete tasks, and look at your garden thrive throughout the seasons.</p>
+                        <h3>Se dem växa</h3>
+                        <p>Följ din personliga plan, slutför uppgifter och se din trädgård frodas under alla årstiderna.</p>
                     </div>
                 </div>
             </section>

@@ -1,0 +1,63 @@
+.garden-page {
+    background-color: #F7D6C0;
+    padding: 2rem;
+    min-height: 100vh;
+
+    .info-section {
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+
+        .info-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .info-text {
+            h3 {
+                color: #3A4A3D;
+                margin: 0 0 5px 0;
+                font-size: 1.2rem;
+            }
+
+            p {
+                color: #5b6d5d;
+                font-style: italic;
+                margin: 0;
+            }
+        }
+
+        .info-stats {
+            display: flex;
+            gap: 30px;
+
+            .stat-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .stat-label {
+                    font-size: 0.8rem;
+                    color: #96AD90;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .stat-value {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: #3A4A3D;
+                }
+            }
+        }
+    }
+}

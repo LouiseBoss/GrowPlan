@@ -44,18 +44,48 @@
 .wishlist-heart {
     background: none;
     border: none;
-    font-size: 1.6rem;
-    color: #c8b6d9;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #ffffff;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+
     cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
+    padding: 0;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease;
+    z-index: 5;
 
     &:hover {
-        transform: scale(1.15);
+        transform: scale(1.2);
+        color: #fce4ec;
     }
 
     &.active {
         color: #e63946;
-        animation: pop 0.3s ease;
+        filter: drop-shadow(0 2px 8px rgba(230, 57, 70, 0.4));
+        animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    svg {
+        display: block;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -124,5 +154,64 @@
 
     @media (max-width: 576px) {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.plant-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 1rem;
+    width: 100%;
+
+    .plant-btn {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border: none !important;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none !important;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        background-color: #4a5d4c !important;
+        color: white !important;
+
+        &:hover:not(:disabled) {
+            background-color: #5f7a62 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white !important;
+        }
+
+        &.btn-info {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            background-color: #5b6d5d !important;
+        }
+
+        &.btn-add {
+            padding: 0.8rem;
+            font-size: 1rem;
+
+            &.is-added {
+                background-color: #96AD90 !important;
+                color: white !important;
+
+                &:hover {
+                    background-color: #a7bc9f !important;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+
+        &.btn-remove {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            background-color: #3a4a3d !important;
+        }
     }
 }

@@ -1,16 +1,16 @@
-
 .plantlist-page {
-    background-color: #F7D6C0; 
+    background-color: #F7D6C0;
     padding: 2rem;
     min-height: 100vh;
 }
 
 .page-header {
     margin-bottom: 2rem;
-    
+
     h1 {
-        color: #3A4A3D; 
+        color: #3A4A3D;
     }
+
     p {
         color: #3A4A3D;
     }
@@ -21,23 +21,23 @@
     max-width: 400px;
     height: 45px;
     padding: 0.75rem;
-    border: 2px solid #96AD90; 
-    background-color: white; 
+    border: 2px solid #96AD90;
+    background-color: white;
     color: #3A4A3D;
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
 
     &::placeholder {
-        color: #96AD90; 
+        color: #96AD90;
     }
 
     &:focus {
-        border-color: #3A4A3D; 
-        box-shadow: 0 0 0 0.2rem rgba(58, 74, 61, 0.25); 
+        border-color: #3A4A3D;
+        box-shadow: 0 0 0 0.2rem rgba(58, 74, 61, 0.25);
     }
 }
 
-.plantlist-page > p {
+.plantlist-page>p {
     margin-top: 1.5rem;
     color: #3A4A3D;
 }
@@ -45,4 +45,62 @@
 .pagination-container {
     margin: 3rem auto 0;
     max-width: 500px;
+}
+
+.plantlist-page {
+    background-color: #F7D6C0;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.filter-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+
+    .filter-card {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap; 
+
+        .search-group,
+        .category-group {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            label {
+                font-weight: 600;
+                color: #3A4A3D;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+.form-control {
+    width: 100%;
+    height: 45px;
+    padding: 0.75rem;
+    border: 1px solid #ddd; 
+    background-color: white;
+    color: #3A4A3D;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+        border-color: #96AD90;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(150, 173, 144, 0.2);
+    }
+}
+
+.results-count {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #3A4A3D;
 }
