@@ -1,7 +1,6 @@
 import { useAuth } from '../hooks/useAuth';
 import { useUserList } from '../hooks/useUserList';
-import { useListActions } from '../hooks/useListActions';
-import { getUserPlants } from '../services/plantsService';
+import { getUserPlants, removePlantFromGarden } from '../services/plantsService';
 import PlantCard from '../components/PlantCard';
 import Pagination from '../components/Pagination';
 import { Link } from 'react-router-dom';
@@ -19,7 +18,12 @@ const MyGardenPage = () => {
         onPrev
     } = useUserList(user, getUserPlants);
 
-    const { handleRemove } = useListActions(user, refetch);
+    const handleRemoveFromGarden = async (plantId: number) => {
+        if (!user) return;
+
+        await removePlantFromGarden(user.id, plantId);
+        refetch();
+    };
 
     if (!user) {
         return <div className="page-container"><p>Logga in för att se din trädgård.</p></div>;
@@ -45,10 +49,9 @@ const MyGardenPage = () => {
                     <div className="plant-grid">
                         {plants.map((plant) => (
                             <PlantCard
-                                key={plant.id}
                                 plant={plant}
                                 listType="garden"
-                                onRemove={(plantId) => handleRemove(plantId, 'garden')} 
+                                onRemove={handleRemoveFromGarden}
                             />
                         ))}
                     </div>

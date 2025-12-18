@@ -1,21 +1,21 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../assets/scss/pages/Nav.scss";
 
 const Navigation: React.FC = () => {
     const { user, logout } = useAuth();
-    
-    // Hämta första bokstaven för en liten "avatar-ikon" i menyn
-    const userInitial = user?.user_metadata?.full_name?.charAt(0).toUpperCase() || "👤";
+
+    const avatarUrl = user?.user_metadata?.avatar_url;
+    const fullName = user?.user_metadata?.full_name;
+    const userInitial = fullName ? fullName.charAt(0).toUpperCase() : "?";
 
     return (
         <Navbar expand="md" className="custom-app-navbar" variant="light" sticky="top">
             <Container fluid className="px-4">
 
-                {/* LOGO */}
                 <Navbar.Brand as={Link} to="/" className="navbar-logo">
                     <span className="logo-icon">🪴</span>
                     <span className="logo-name">GrowPlan</span>
@@ -48,27 +48,25 @@ const Navigation: React.FC = () => {
                                     Önskelista
                                 </Nav.Link>
 
-                                {/* PROFIL-LÄNK */}
                                 <Nav.Link as={Link} to="/profile" className="nav-item-link profile-nav-link">
-                                    <span className="nav-avatar">{userInitial}</span>
+                                    <div className="nav-avatar-wrapper">
+                                        {avatarUrl ? (
+                                            <img src={avatarUrl} alt="Profil" className="nav-avatar-img" />
+                                        ) : (
+                                            <span className="nav-avatar-initial">{userInitial}</span>
+                                        )}
+                                    </div>
                                     Profil
                                 </Nav.Link>
 
-                                <button
-                                    onClick={logout}
-                                    className="btn-logout-nav"
-                                >
+                                <button onClick={logout} className="btn-logout-nav">
                                     Logga ut
                                 </button>
                             </>
                         )}
 
                         {!user && (
-                            <Nav.Link
-                                as={Link}
-                                to="/auth"
-                                className="auth-link btn-login-signup"
-                            >
+                            <Nav.Link as={Link} to="/auth" className="auth-link btn-login-signup">
                                 Logga in
                             </Nav.Link>
                         )}

@@ -4,9 +4,28 @@ import { useAuth } from '../hooks/useAuth';
 import { useMonthlyTasks, type MonthlyTask } from '../hooks/useMonthlyTasks';
 import { getMonthName } from '../utils/dateHelpers';
 import { useUserGardenStats } from '../hooks/useUserGardenStats';
+import { HiOutlineScissors } from "react-icons/hi2";
+import { GiWateringCan } from "react-icons/gi";
+import { LuShovel } from "react-icons/lu";
+import { PiPlant } from "react-icons/pi";
+import { TbSnowflake } from "react-icons/tb";
+import { FaCalendarAlt, FaArrowRight } from 'react-icons/fa';
 import '../assets/scss/pages/OverviewPage.scss';
 
+const getTaskIcon = (category: string, title: string) => {
+    const searchText = `${category} ${title}`.toLowerCase();
 
+    if (searchText.includes('vinter') || searchText.includes('förvara') || searchText.includes('övervintra')) {
+        return <TbSnowflake />;
+    }
+
+    if (searchText.includes('vattna')) return <GiWateringCan />;
+    if (searchText.includes('beskär')) return <HiOutlineScissors />;
+    if (searchText.includes('plantera')) return <LuShovel />;
+    if (searchText.includes('gödsla') || searchText.includes('näring')) return <PiPlant />;
+
+    return <PiPlant />;
+};
 interface TaskListCardProps {
     tasks: MonthlyTask[];
     loading: boolean;
@@ -14,7 +33,6 @@ interface TaskListCardProps {
 }
 
 const TaskListCard: React.FC<TaskListCardProps> = ({ tasks, loading, currentDate }) => {
-
     const currentMonthNumber = currentDate.getMonth() + 1;
     const currentMonthName = getMonthName(currentMonthNumber);
     const currentDay = currentDate.getDate();
@@ -39,7 +57,7 @@ const TaskListCard: React.FC<TaskListCardProps> = ({ tasks, loading, currentDate
                 <div className="task-list-placeholder">Laddar uppgifter...</div>
             ) : tasks.length === 0 ? (
                 <div className="no-tasks">
-                    <p>Inga uppgifter schemalagda för denna månad. Se kalendern för inspiration!</p>
+                    <p>Inga uppgifter schemalagda för denna månad.</p>
                     <Link to="/calendar" className="view-all-link">Gå till Kalender →</Link>
                 </div>
             ) : (
@@ -47,7 +65,7 @@ const TaskListCard: React.FC<TaskListCardProps> = ({ tasks, loading, currentDate
                     {tasks.slice(0, 3).map(task => (
                         <div key={task.id} className={`task-item-card task-${task.category.toLowerCase()}`}>
                             <div className="task-icon">
-                                {task.category.slice(0, 1)}
+                                {getTaskIcon(task.category, task.title)} 
                             </div>
                             <div className="task-info">
                                 <h4 className="task-title">{task.title}</h4>
@@ -64,11 +82,11 @@ const TaskListCard: React.FC<TaskListCardProps> = ({ tasks, loading, currentDate
                         </div>
                     ))}
 
-                    {tasks.length > 3 && (
-                        <Link to="/calendar" className="view-all-link">
-                            Se alla {tasks.length} {currentMonthName} uppgifter →
+                    <div className="task-list-footer">
+                        <Link to="/calendar" className="goto-calendar-minimal">
+                            <FaCalendarAlt /> Gå till kalender för full översikt <FaArrowRight className="arrow" />
                         </Link>
-                    )}
+                    </div>
                 </div>
             )}
         </div>
@@ -78,12 +96,9 @@ const TaskListCard: React.FC<TaskListCardProps> = ({ tasks, loading, currentDate
 const OverviewPage = () => {
     const { user } = useAuth();
     const currentDate = new Date();
-
     const { tasks, loading: tasksLoading } = useMonthlyTasks(user);
-
     const { totalPlants, wishlistItems, loading: statsLoading } = useUserGardenStats(user);
 
-    // HÄR ÄR ÄNDRINGEN: Hämtar namnet från metadata istället för bara e-post
     const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Odlare';
 
     if (!user) {
@@ -100,13 +115,11 @@ const OverviewPage = () => {
     return (
         <div className="overview-container">
             <header className="page-header">
-                {/* HÄR ÄR ÄNDRINGEN: Använder displayName variabeln */}
                 <h1>Välkommen tillbaka, {displayName}! 🪴</h1>
                 <p>Här är vad som händer i din trädgård idag.</p>
             </header>
 
             <section className="dashboard-grid">
-
                 <TaskListCard
                     tasks={tasks}
                     loading={tasksLoading}
@@ -114,34 +127,24 @@ const OverviewPage = () => {
                 />
 
                 <div className="widgets-row">
-
-                    <Link to="/plants" className="info-widget plants-widget">
-                        <div className="widget-icon">🪴</div>
-                        {statsLoading ? (
-                            <p>Laddar...</p>
-                        ) : (
-                            <>
-                                <p>Gå till min trädgård</p>
-                                <span className="widget-number">{totalPlants}</span>
-                                <span className="widget-label">Växter i min trädgård</span>
-                            </>
-                        )}
+                    <Link to="/garden" className="stat-widget">
+                        <div className="stat-icon garden">🪴</div>
+                        <div className="stat-content">
+                            <span className="stat-number">{statsLoading ? '...' : totalPlants}</span>
+                            <span className="stat-label">Växter i trädgården</span>
+                        </div>
+                        <FaArrowRight className="stat-arrow" />
                     </Link>
 
-                    <Link to="/wishlist" className="info-widget wishlist-widget">
-                        <div className="widget-icon">💖</div>
-                        {statsLoading ? (
-                            <p>Laddar...</p>
-                        ) : (
-                            <>
-                                <p>Gå till min önskelista</p>
-                                <span className="widget-number">{wishlistItems}</span>
-                                <span className="widget-label">Önskelistade växter</span>
-                            </>
-                        )}
+                    <Link to="/wishlist" className="stat-widget">
+                        <div className="stat-icon wishlist">💖</div>
+                        <div className="stat-content">
+                            <span className="stat-number">{statsLoading ? '...' : wishlistItems}</span>
+                            <span className="stat-label">På önskelistan</span>
+                        </div>
+                        <FaArrowRight className="stat-arrow" />
                     </Link>
                 </div>
-
             </section>
         </div>
     );

@@ -1,13 +1,44 @@
 $light-background: #F7D6C0; // Ljus persikofärg/Beige (Huvudbakgrund)
-$primary-dark: #3A4A3D;     // Mörk skogsgrön (Huvudtext, Huvudkort)
-$primary-accent: #96AD90;   // Mellan grön/Mossa (Accent, Skötseluppgift)
+$primary-dark: #3A4A3D; // Mörk skogsgrön (Huvudtext, Huvudkort)
+$primary-accent: #96AD90; // Mellan grön/Mossa (Accent, Skötseluppgift)
 $secondary-accent: #F4B9B8; // Rosa/Lax (Wishlist, Anpassad uppgift)
 $white: #ffffff;
 
 .overview-container {
     padding: 30px;
-    background-color: $light-background; 
+    background-color: $light-background;
     min-height: 100vh;
+
+    .task-list-footer {
+        padding: 1rem 0 0.5rem;
+        text-align: center;
+
+        .goto-calendar-minimal {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #3A4A3D;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.8;
+            transition: all 0.2s;
+
+            &:hover {
+                opacity: 1;
+                color: #4CAF50;
+
+                .arrow {
+                    transform: translateX(3px);
+                }
+            }
+
+            .arrow {
+                font-size: 0.7rem;
+                transition: transform 0.2s;
+            }
+        }
+    }
 }
 
 .page-header {
@@ -25,7 +56,7 @@ $white: #ffffff;
 }
 
 .current-month-card {
-    background-color: $primary-dark; 
+    background-color: $primary-dark;
     color: $white;
     border-radius: 15px;
     padding: 30px;
@@ -40,7 +71,7 @@ $white: #ffffff;
         font-size: 12px;
         letter-spacing: 1px;
         text-transform: uppercase;
-        opacity: 0.8; 
+        opacity: 0.8;
     }
 
     .month-name {
@@ -60,7 +91,7 @@ $white: #ffffff;
         right: 20px;
         font-size: 120px;
         font-weight: 700;
-        opacity: 0.1; 
+        opacity: 0.1;
         line-height: 1;
     }
 }
@@ -92,13 +123,14 @@ $white: #ffffff;
         font-weight: bold;
         margin-right: 15px;
         font-size: 18px;
-        
+
         &.task-skötsel {
-            background-color: lighten($primary-accent, 20%); 
+            background-color: lighten($primary-accent, 20%);
             color: $primary-dark;
         }
+
         &.task-anpassad {
-            background-color: lighten($secondary-accent, 15%); 
+            background-color: lighten($secondary-accent, 15%);
             color: $secondary-accent;
         }
     }
@@ -111,10 +143,10 @@ $white: #ffffff;
 
     .task-description {
         font-size: 12px;
-        color: darken($light-background, 20%); 
+        color: darken($light-background, 20%);
         margin: 0;
     }
-    
+
     .task-dates {
         font-size: 11px;
         color: darken($light-background, 10%);
@@ -130,52 +162,133 @@ $white: #ffffff;
     color: $primary-accent;
     text-decoration: none;
     font-weight: 500;
-    
+
     &:hover {
         text-decoration: underline;
     }
 }
 
-
 .widgets-row {
-    display: flex;
-    gap: 30px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    .stat-widget {
+        background: white;
+        padding: 1.2rem;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+        border: 1px solid #f0f0f0;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: #96AD90;
+        }
+
+        .stat-icon {
+            font-size: 1.8rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+
+            &.garden {
+                background: #f0f7f0;
+            }
+
+            &.wishlist {
+                background: #fff0f3;
+            }
+        }
+
+        .stat-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            .stat-number {
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: #3A4A3D;
+                line-height: 1.2;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+                color: #666;
+            }
+        }
+
+        .stat-arrow {
+            color: #ccc;
+            font-size: 0.8rem;
+        }
+    }
 }
 
-.info-widget {
-    flex: 1;
-    background-color: $white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.welcome-section {
+    .welcome-content {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
 
-    .widget-icon {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
+        .overview-avatar-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #96AD90;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-    p {
-        font-size: 12px;
-        color: darken($light-background, 20%);
-        margin: 0 0 5px 0;
-    }
-
-    .widget-number {
-        font-size: 36px;
-        font-weight: bold;
-        color: $primary-dark;
-        display: block;
-        line-height: 1;
-    }
-    
-    .widget-label {
-        font-size: 14px;
-        color: darken($light-background, 15%);
-        display: block;
-        margin-top: 5px;
+            .overview-avatar {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 }
 
-.plants-widget .widget-icon { color: $primary-accent; }
-.wishlist-widget .widget-icon { color: $secondary-accent; }
+.current-month-card {
+    .task-icon {
+        font-size: 1.2rem;
+        color: #4caf50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-footer-actions {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+
+        .btn-go-to-calendar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #3A4A3D;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background 0.2s;
+
+            &:hover {
+                background: #4caf50;
+            }
+        }
+    }
+}

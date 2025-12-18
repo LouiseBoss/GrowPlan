@@ -1,25 +1,30 @@
 import { useAuth } from '../hooks/useAuth';
-import { useUserList } from '../hooks/useUserList'; 
-import { useListActions } from '../hooks/useListActions'; 
-import { getWishlistPlantIds } from '../services/plantsService';
+import { useUserList } from '../hooks/useUserList';
+import { getWishlistPlantIds, togglePlantWishlist } from '../services/plantsService';
 import PlantCard from '../components/PlantCard';
-import Pagination from '../components/Pagination'; 
+import Pagination from '../components/Pagination';
 import { Link } from 'react-router-dom';
 
 const WishlistPage = () => {
     const { user } = useAuth();
-    
-    const { 
-        plants, 
-        loading, 
-        refetch, 
-        page, 
-        totalPages, 
-        onNext, 
-        onPrev 
+
+    const {
+        plants,
+        loading,
+        refetch,
+        page,
+        totalPages,
+        onNext,
+        onPrev
     } = useUserList(user, getWishlistPlantIds);
 
-    const { handleRemove } = useListActions(user, refetch);
+    const handleRemoveFromWishlist = async (plantId: number) => {
+        if (!user) return;
+
+        await togglePlantWishlist(user.id, plantId, true);
+        refetch();
+    };
+
 
     if (!user) {
         return <div className="page-container"><p>Logga in för att se din önskelista.</p></div>;
@@ -31,29 +36,29 @@ const WishlistPage = () => {
                 <h1>Min Önskelista 💖</h1>
                 <p>Visar {plants.length} växter på sida {page + 1} av {totalPages}.</p>
             </header>
-            
+
             {loading ? (
                 <p>Laddar din önskelista...</p>
             ) : plants.length === 0 && totalPages === 0 ? (
                 <div className="empty-list-message">
                     <p>Din önskelista är tom. Hitta inspiration i katalogen!</p>
-                    <Link to="/plantcatalog" className="button primary">Sök växter</Link>
+                    <Link to="/plants" className="button primary">Sök växter</Link>
                 </div>
             ) : (
                 <>
                     <div className="plant-grid">
                         {plants.map((plant) => (
-                            <PlantCard 
-                                key={plant.id} 
-                                plant={plant} 
-                                listType="wishlist" 
-                                onRemove={(plantId) => handleRemove(plantId, 'wishlist')} 
+                            <PlantCard
+                                plant={plant}
+                                listType="wishlist"
+                                onRemove={handleRemoveFromWishlist}
                             />
+
                         ))}
                     </div>
-                    
+
                     {totalPages > 1 && (
-                        <Pagination 
+                        <Pagination
                             page={page}
                             totalPages={totalPages}
                             onNext={onNext}
