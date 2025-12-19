@@ -7,7 +7,9 @@ $white: #ffffff;
 .overview-container {
     padding: 30px;
     background-color: $light-background;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 
     @media (max-width: 768px) {
         padding: 20px 15px;
@@ -31,7 +33,10 @@ $white: #ffffff;
             &:hover {
                 opacity: 1;
                 color: #4CAF50;
-                .arrow { transform: translateX(3px); }
+
+                .arrow {
+                    transform: translateX(3px);
+                }
             }
 
             .arrow {
@@ -44,88 +49,116 @@ $white: #ffffff;
 
 .page-header {
     margin-bottom: 30px;
-    @media (max-width: 768px) { text-align: center; }
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 
     h1 {
         font-size: 28px;
         color: $primary-dark;
-        @media (max-width: 768px) { font-size: 22px; }
+        margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: 22px;
+        }
+    }
+
+    p {
+        margin: 5px 0 0;
+        opacity: 0.8;
     }
 }
 
 .dashboard-grid {
     display: grid;
     gap: 30px;
+    flex: 1;
 }
 
 .current-month-card {
     background-color: $primary-dark;
     color: $white;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 30px;
     position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 
-    @media (max-width: 768px) { padding: 20px; }
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+
+    .current-month-label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        opacity: 0.8;
+    }
 
     .month-name {
         font-size: 40px;
         margin: 5px 0;
-        font-weight: 700;
-        @media (max-width: 768px) { font-size: 30px; }
+        font-weight: 800;
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
+
+    .task-count {
+        margin: 0;
+        opacity: 0.9;
+        font-size: 0.95rem;
     }
 
     .month-number-large {
         position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 120px;
-        font-weight: 700;
-        opacity: 0.1;
+        top: -10px;
+        right: -10px;
+        font-size: 150px;
+        font-weight: 800;
+        opacity: 0.07;
         line-height: 1;
-        @media (max-width: 768px) { font-size: 80px; }
+        pointer-events: none;
+
+        @media (max-width: 768px) {
+            font-size: 100px;
+        }
     }
 }
 
 .task-list {
     background-color: $white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
 }
 
 .task-item-card {
     display: flex;
-    align-items: flex-start;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f0;
 
-    &:last-child { border-bottom: none; }
+    &:last-child {
+        border-bottom: none;
+    }
 
     .task-icon {
         flex-shrink: 0;
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 15px;
-        font-size: 20px; 
-
-        &.task-skötsel {
-            background-color: lighten($primary-accent, 20%);
-            color: $primary-dark;
-        }
-
-        &.task-anpassad {
-            background-color: lighten($secondary-accent, 15%);
-            color: darken($secondary-accent, 20%);
-        }
-
-        background-color: #f0f0f0;
+        font-size: 22px;
+        background-color: #f5f5f5;
         color: $primary-dark;
-        
+
         svg {
             display: block;
         }
@@ -136,30 +169,41 @@ $white: #ffffff;
     }
 
     .task-title {
-        margin: 0 0 5px 0;
+        margin: 0 0 2px 0;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         color: $primary-dark;
     }
 
+    .task-detail {
+        font-size: 12px;
+        color: $primary-accent;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 4px;
+    }
+
     .task-description {
-        font-size: 13px;
+        font-size: 14px;
         color: #666;
         margin: 0;
+        line-height: 1.4;
     }
 
     .task-dates {
-        font-size: 11px;
-        color: #999;
-        margin-top: 5px;
+        font-size: 12px;
+        color: #aaa;
+        margin-top: 6px;
     }
 }
 
 .widgets-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
@@ -167,42 +211,76 @@ $white: #ffffff;
 
     .stat-widget {
         background: white;
-        padding: 1.2rem;
-        border-radius: 12px;
+        padding: 1.5rem;
+        border-radius: 18px;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 1.2rem;
         text-decoration: none !important;
-        color: inherit !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        border: 1px solid #f0f0f0;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+
+            .stat-arrow {
+                transform: translateX(5px);
+                color: $primary-dark;
+            }
+        }
 
         .stat-icon {
             flex-shrink: 0;
-            font-size: 1.8rem;
-            width: 50px;
-            height: 50px;
+            width: 56px;
+            height: 56px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 10px;
+            border-radius: 14px;
+            font-size: 28px;
+            transition: all 0.3s;
 
-            &.garden { background: #f0f7f0; }
-            &.wishlist { background: #fff0f3; }
+            // Bakgrundsfärger för att få bort den platta känslan
+            &.garden {
+                background-color: rgba($primary-accent, 0.15);
+                color: $primary-dark;
+            }
+
+            &.wishlist {
+                background-color: rgba($secondary-accent, 0.2);
+                color: darken($secondary-accent, 15%);
+
+                svg {
+                    stroke-width: 32;
+                }
+            }
         }
 
         .stat-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
             .stat-number {
-                font-size: 1.4rem;
-                font-weight: bold;
-                color: $primary-dark !important;
-                text-decoration: none !important;
+                font-size: 1.6rem;
+                font-weight: 800;
+                color: $primary-dark;
+                line-height: 1.1;
             }
+
             .stat-label {
-                font-size: 0.8rem;
-                color: #666;
-                text-decoration: none !important;
+                font-size: 0.9rem;
+                color: #777;
+                font-weight: 500;
             }
+        }
+
+        .stat-arrow {
+            color: #ddd;
+            font-size: 1.1rem;
+            transition: all 0.3s;
         }
     }
 }

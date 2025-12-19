@@ -18,44 +18,49 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GardenPage from "./pages/MyGardenPage";
 import WishlistPage from "./pages/WishlistPage";
 import ProfilePage from "./pages/ProfilePage";
-
+import Footer from "./pages/partials/Footer";
+import "../src/assets/scss/main.scss";
 
 function App() {
-  const { loading } = useAuth(); 
+  const { loading } = useAuth();
   if (loading) {
     return <div>Laddar användarstatus...</div>;
   }
 
   return (
     <>
-      <Navigation />
-      <Routes>
-        
-        <Route path="/" element={<HomePage />} />
-        <Route path="/plants" element={<PlantListPage />} />
-        <Route path="/plant/:id" element={<PlantDetailPage />} />
-        
-        <Route path="/auth" element={<AuthPage />} />
-        <Route path="/update-password" element={<UpdatePasswordPage />} />
+      <div className="app-wrapper">
+        <Navigation />
 
-        <Route element={<ProtectedRoute />}>
-            
-            <Route path="/overview" element={<OverviewPage />} />
-            <Route path="/calendar" element={<CalendarPage />} />
-            <Route path="/garden" element={<GardenPage />} />
-            <Route path="/wishlist" element={<WishlistPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/plants" element={<PlantListPage />} />
+            <Route path="/plant/:id" element={<PlantDetailPage />} />
 
-        </Route>
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="/update-password" element={<UpdatePasswordPage />} />
 
-        <Route path="*" element={<h1>404 | Sidan hittades inte</h1>} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/overview" element={<OverviewPage />} />
+              <Route path="/calendar" element={<CalendarPage />} />
+              <Route path="/garden" element={<GardenPage />} />
+              <Route path="/wishlist" element={<WishlistPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+            </Route>
 
-      </Routes>
+            <Route path="*" element={<h1>404 | Sidan hittades inte</h1>} />
+          </Routes>
+        </main>
 
+        <Footer />
+
+      </div>
       <ToastContainer
         position="top-right"
         autoClose={4000}
         hideProgressBar={false}
+        theme="light"
         newestOnTop={false}
         closeOnClick
         rtl={false}

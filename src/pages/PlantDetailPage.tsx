@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import { type User } from "@supabase/supabase-js";
-import { type Plant, type CarePeriod } from "../types/Plant"; 
+import { type Plant, type CarePeriod } from "../types/Plant";
 import { getImageUrl } from "../utils/getImageUrl";
 import {
     getPlantById,
@@ -12,57 +12,34 @@ import {
     isPlantOnWishlist,
     togglePlantWishlist
 } from "../services/plantsService";
-import { toast } from 'react-toastify'; 
+import { toast } from 'react-toastify';
+
+// --- Importera Dina Specifika React Icons ---
+import { TfiTrash } from "react-icons/tfi";
+import { HiOutlineScissors } from "react-icons/hi2";
+import { GiWateringCan } from "react-icons/gi";
+import { LuShovel, LuSun, LuInfo, LuTrees } from "react-icons/lu";
+import { PiPlant } from "react-icons/pi";
+import { TbSnowflake } from "react-icons/tb";
+import { TiPinOutline } from "react-icons/ti";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { IoArrowBack, IoFlowerOutline } from "react-icons/io5";
+
 import '../assets/scss/pages/PlantDetailPage.scss';
 
-
-const renderCareGuideItem = (care: CarePeriod | undefined, title: string, icon: string) => {
+const renderCareGuideItem = (care: CarePeriod | undefined, title: string, IconComponent: React.ReactNode) => {
     if (!care) return null;
 
     const monthsText = care.months && care.months.length > 0 ? care.months.join(', ') : 'När det behövs';
-    
+
     return (
         <div className="care-guide-item">
-            <span className="care-icon">{icon}</span>
+            <span className="care-icon">{IconComponent}</span>
             <div className="care-details">
                 <p className="care-title">{title}</p>
-                <small>Bäst under: {monthsText}</small>
+                <small className="care-months">Bäst under: {monthsText}</small>
                 <p className="care-notes">{care.notes || care.interval || 'Ingen specifik anvisning.'}</p>
             </div>
-        </div>
-    );
-};
-
-const renderMonthStrip = (plant: Plant) => {
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'Maj', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'];
-    const activeMonths = [
-        ...plant.watering.months, ...plant.pruning.months, 
-        ...plant.planting.months, ...plant.fertilizing.months, 
-        ...plant.winter.months, ...plant.bloom_period
-    ].map(s => s.substring(0, 3)); 
-
-    return (
-        <div className="month-strip">
-            {monthNames.map(m => {
-                const isBloom = plant.bloom_period.map(s => s.substring(0, 3)).includes(m);
-                const isActive = activeMonths.includes(m);
-                
-                let className = '';
-                if (isBloom) {
-                    className = 'bloom';
-                } else if (isActive) {
-                    className = 'active'; 
-                }
-                
-                return (
-                    <div 
-                        key={m} 
-                        className={`month-indicator ${className}`}
-                    >
-                        {m}
-                    </div>
-                );
-            })}
         </div>
     );
 };
@@ -74,11 +51,9 @@ const PlantDetailPage = () => {
 
     const [plant, setPlant] = useState<Plant | null>(null);
     const [user, setUser] = useState<User | null>(null);
-
     const [isLoading, setIsLoading] = useState(true);
     const [isSaved, setIsSaved] = useState(false);
     const [isOnWishlist, setIsOnWishlist] = useState(false);
-
     const [gardenActionLoading, setGardenActionLoading] = useState(false);
     const [wishlistActionLoading, setWishlistActionLoading] = useState(false);
 
@@ -99,15 +74,12 @@ const PlantDetailPage = () => {
                     const userId = loggedInUser.id;
                     const savedStatus = await isPlantInGarden(userId, plantId);
                     setIsSaved(savedStatus);
-
                     const wishlistStatus = await isPlantOnWishlist(userId, plantId);
                     setIsOnWishlist(wishlistStatus);
                 }
-
             } catch (error) {
                 console.error("Fel vid hämtning av data:", error);
                 toast.error("Kunde inte hämta växtdata.");
-                setPlant(null);
             } finally {
                 setIsLoading(false);
             }
@@ -118,7 +90,7 @@ const PlantDetailPage = () => {
     const handleGardenToggle = async () => {
         if (!user) {
             toast.warn("Du måste logga in för att hantera din trädgård.");
-            navigate('/auth'); 
+            navigate('/auth');
             return;
         }
         if (!plant) return;
@@ -128,15 +100,15 @@ const PlantDetailPage = () => {
             if (isSaved) {
                 await removePlantFromGarden(user.id, plant.id);
                 setIsSaved(false);
-                toast.info(`🗑️ ${plant.name} borttagen från din trädgård.`);
+                toast.info(`Borttagen från din trädgård.`);
             } else {
                 await addPlantToGarden(user.id, plant.id);
                 setIsSaved(true);
-                toast.success(`🌱 ${plant.name} tillagd i din trädgård!`);
+                toast.success(`Tillagd i din trädgård!`);
             }
         } catch (error) {
-            console.error("Fel vid hantering av trädgård:", error);
-            toast.error("Kunde inte uppdatera trädgården. Försök igen.");
+            console.error("Fel vid radering:", error);
+            toast.error("Kunde inte uppdatera trädgården.");
         } finally {
             setGardenActionLoading(false);
         }
@@ -144,8 +116,8 @@ const PlantDetailPage = () => {
 
     const handleWishlistToggle = async () => {
         if (!user) {
-            toast.warn("Du måste logga in för att hantera din önskelista.");
-            navigate('/auth'); 
+            toast.warn("Du måste logga in.");
+            navigate('/auth');
             return;
         }
         if (!plant) return;
@@ -154,10 +126,10 @@ const PlantDetailPage = () => {
         try {
             const newStatus = await togglePlantWishlist(user.id, plant.id, isOnWishlist);
             setIsOnWishlist(newStatus);
-            toast.success(newStatus ? `💖 ${plant.name} tillagd i önskelistan!` : `🤍 ${plant.name} borttagen från önskelistan.`);
+            toast.success(newStatus ? `Tillagd i önskelistan!` : `Borttagen från önskelistan.`);
         } catch (error) {
-            console.error("Fel vid hantering av önskelista:", error);
-            toast.error("Kunde inte uppdatera önskelistan. Försök igen.");
+            console.error("Fel vid radering:", error);
+            toast.error("Kunde inte uppdatera önskelistan.");
         } finally {
             setWishlistActionLoading(false);
         }
@@ -166,95 +138,114 @@ const PlantDetailPage = () => {
     if (isLoading) return <div className="loading-page">Laddar information...</div>;
     if (!plant) return <div className="error-page">Växt hittades inte</div>;
 
-
     return (
         <div className="plant-detail-page-container">
-            
-            <section className="top-section">
-                
-                <div className="image-gallery">
+            <div className="top-navigation">
+                <button className="btn-back" onClick={() => navigate(-1)}>
+                    <IoArrowBack /> Tillbaka
+                </button>
+            </div>
+
+            <section className="hero-info-section">
+                <div className="image-wrapper">
                     <img src={getImageUrl(plant.image)} alt={plant.name} className="main-image" />
+                    <div className="category-badge">
+                        <PiPlant className="badge-icon" /> {plant.category}
+                    </div>
                 </div>
 
                 <div className="info-panel">
-                    <h2 className="plant-name">{plant.name}</h2>
-                    <p className="latin-name">{plant.latin_name}</p>
-                    
-                    <div className="description">
-                        <h3>Om {plant.name}</h3>
-                        <p>{plant.description}</p>
-                        <p className="small-text">Växtzon: **{plant.zone}**. Höjd: **{plant.height_cm} cm**.</p>
+                    <div className="title-area">
+                        <h1 className="plant-name">{plant.name}</h1>
+                        <p className="latin-name">{plant.latin_name}</p>
                     </div>
 
-                    <div className="quick-care-tags">
-                        <div className="tag-item"><span>💧</span> Intervall: {plant.care_interval_days} dagar</div>
-                        <div className="tag-item"><span>🌱</span> {plant.category}</div>
-                        <div className="tag-item"><span>🌡️</span> Zon {plant.zone}</div>
+                    <div className="description-card">
+                        <h3><LuInfo className="card-title-icon" /> Om växten</h3>
+                        <p>{plant.description}</p>
+                        <div className="plant-specs">
+                            <span><TiPinOutline /> Zon: {plant.zone}</span>
+                            <span><LuTrees /> Höjd: {plant.height_cm} cm</span>
+                        </div>
+                    </div>
+
+                    <div className="quick-stats-grid">
+                        <div className="stat-pill">
+                            <GiWateringCan className="icon water" />
+                            <div className="stat-text">
+                                <small>Vattning</small>
+                                <span>Var {plant.care_interval_days}:e dag</span>
+                            </div>
+                        </div>
+                        <div className="stat-pill">
+                            <LuSun className="icon sun" />
+                            <div className="stat-text">
+                                <small>Läge</small>
+                                <span>Zon {plant.zone}</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="action-buttons">
-                        <button 
-                            className={`btn-add-garden ${isSaved ? 'saved' : ''}`}
+                        <button
+                            className={`btn-primary-action ${isSaved ? 'saved' : ''}`}
                             onClick={handleGardenToggle}
                             disabled={!user || gardenActionLoading}
                         >
-                            {gardenActionLoading ? 'Uppdaterar...' : (isSaved ? '🗑️ Ta bort från Trädgård' : '🌱 Lägg till i min Trädgård')}
+                            {gardenActionLoading ? '...' : (isSaved ? <><TfiTrash /> Ta bort</> : <><PiPlant /> I min trädgård</>)}
                         </button>
-                        <button 
-                            className={`btn-wishlist ${isOnWishlist ? 'active' : ''}`} 
+                        <button
+                            className={`btn-wishlist-action ${isOnWishlist ? 'active' : ''}`}
                             onClick={handleWishlistToggle}
                             disabled={!user || wishlistActionLoading}
-                            title={isOnWishlist ? "Ta bort från önskelista" : "Lägg till på önskelista"}
                         >
-                            {wishlistActionLoading ? '...' : (isOnWishlist ? '💖' : '🤍')} Önskelista
+                            {isOnWishlist ? <FaHeart color="#fff" /> : <FaRegHeart />}
                         </button>
                     </div>
-
-                    {!user && (
-                         <p className="login-prompt">
-                             Logga in för att hantera växter i din trädgård och önskelista.
-                         </p>
-                    )}
                 </div>
             </section>
 
-            <section className="detailed-care-guide">
-                <h2>Komplett Skötselguide</h2>
-                
-                <div className="care-guide-grid">
-                    <div className="guide-box">
-                        <h3>Plats & Jord</h3>
-                        <p>{plant.care_guide.replace(/\*\*/g, '')} Jorden bör vara {plant.soil}.</p>
+            <section className="detailed-care-section">
+                <h2 className="section-title">Skötsel & Råd</h2>
+
+                <div className="care-cards-grid">
+                    <div className="care-card">
+                        <div className="card-header">
+                            <TiPinOutline className="card-icon" />
+                            <h3>Plats & Jord</h3>
+                        </div>
+                        <p>{plant.care_guide.replace(/\*\*/g, '')}</p>
+                        <p className="soil-info"><strong>Jord:</strong> {plant.soil}</p>
                     </div>
-                    <div className="guide-box">
-                        <h3>Blomning</h3>
-                        <p>Blommar från **{plant.bloom_period.join(', ')}**. Typ: {plant.type}.</p>
+
+                    <div className="care-card">
+                        <div className="card-header">
+                            <IoFlowerOutline className="card-icon bloom" />
+                            <h3>Blomning</h3>
+                        </div>
+                        <p>Denna {plant.type.toLowerCase()} blommar under månaderna: <strong>{plant.bloom_period.join(', ')}</strong>.</p>
                     </div>
-                    <div className="guide-box">
-                        <h3>Användning</h3>
+
+                    <div className="care-card">
+                        <div className="card-header">
+                            <LuInfo className="card-icon usage" />
+                            <h3>Användning</h3>
+                        </div>
                         <p>{plant.usage}</p>
                     </div>
-                    <div className="guide-box">
-                        <h3>Växtkälla</h3>
-                        <p>Bildkälla: {plant.image_source}. Kategori: {plant.category}</p>
+                </div>
+
+                <div className="monthly-activities-container">
+                    <h3>Månatliga Aktiviteter</h3>
+                    <div className="activities-list">
+                        {renderCareGuideItem(plant.watering, 'Vattning', <GiWateringCan />)}
+                        {renderCareGuideItem(plant.fertilizing, 'Gödsling', <PiPlant />)}
+                        {renderCareGuideItem(plant.pruning, 'Beskärning', <HiOutlineScissors />)}
+                        {renderCareGuideItem(plant.planting, 'Plantering', <LuShovel />)}
+                        {renderCareGuideItem(plant.winter, 'Vinterskydd', <TbSnowflake />)}
                     </div>
                 </div>
-
-                <div className="care-activities">
-                    <h3>Månatliga Aktiviteter</h3>
-                    {renderCareGuideItem(plant.watering, 'Vattning', '💧')}
-                    {renderCareGuideItem(plant.fertilizing, 'Gödsling', '✨')}
-                    {renderCareGuideItem(plant.pruning, 'Beskärning', '✂️')}
-                    {renderCareGuideItem(plant.planting, 'Plantering', '🪴')}
-                    {renderCareGuideItem(plant.winter, 'Vinterskydd', '❄️')}
-                </div>
             </section>
-
-            <section className="seasonal-calendar-preview">
-                <h2>Aktivitet under Året</h2>
-                {renderMonthStrip(plant)}
-            </section>
-            
         </div>
     );
 }

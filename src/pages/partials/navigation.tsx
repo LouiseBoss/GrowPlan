@@ -5,6 +5,17 @@ import { useAuth } from '../../hooks/useAuth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../assets/scss/pages/Nav.scss";
 
+import {
+    IoLeaf,
+    IoLibraryOutline,
+    IoCalendarOutline,
+    IoHeartOutline,
+    IoLogOutOutline,
+    IoGridOutline
+} from "react-icons/io5";
+
+import { PiPlant } from "react-icons/pi";
+
 const Navigation: React.FC = () => {
     const { user, logout } = useAuth();
 
@@ -33,7 +44,7 @@ const Navigation: React.FC = () => {
             <Container fluid className="px-4">
 
                 <Navbar.Brand as={Link} to="/" className="navbar-logo" onClick={closeMenu}>
-                    <span className="logo-icon">🪴</span>
+                    <PiPlant />
                     <span className="logo-name">GrowPlan</span>
                 </Navbar.Brand>
 
@@ -43,25 +54,25 @@ const Navigation: React.FC = () => {
                     <Nav className="ms-auto align-items-center">
 
                         <Nav.Link as={Link} to="/plants" className="nav-item-link" onClick={closeMenu}>
-                            Växter
+                            <IoLibraryOutline className="nav-icon" /> Växter
                         </Nav.Link>
 
                         {user && (
                             <>
                                 <Nav.Link as={Link} to="/overview" className="nav-item-link" onClick={closeMenu}>
-                                    Översikt
+                                    <IoGridOutline className="nav-icon" /> Översikt
                                 </Nav.Link>
 
                                 <Nav.Link as={Link} to="/garden" className="nav-item-link" onClick={closeMenu}>
-                                    Min Trädgård
+                                    <IoLeaf className="nav-icon" /> Min Trädgård
                                 </Nav.Link>
 
                                 <Nav.Link as={Link} to="/calendar" className="nav-item-link" onClick={closeMenu}>
-                                    Kalender
+                                    <IoCalendarOutline className="nav-icon" /> Kalender
                                 </Nav.Link>
 
                                 <Nav.Link as={Link} to="/wishlist" className="nav-item-link" onClick={closeMenu}>
-                                    Önskelista
+                                    <IoHeartOutline className="nav-icon" /> Önskelista
                                 </Nav.Link>
 
                                 <Nav.Link as={Link} to="/profile" className="nav-item-link profile-nav-link" onClick={closeMenu}>
@@ -76,7 +87,7 @@ const Navigation: React.FC = () => {
                                 </Nav.Link>
 
                                 <button onClick={handleLogout} className="btn-logout-nav">
-                                    Logga ut
+                                    <IoLogOutOutline /> Logga ut
                                 </button>
                             </>
                         )}

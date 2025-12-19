@@ -9,7 +9,7 @@ function AuthPage() {
     const [password, setPassword] = useState("");
     const [fullName, setFullName] = useState("");
     const [loading, setLoading] = useState(false);
-    const [isSignUpMode, setIsSignUpMode] = useState(false); // Växlar mellan login/signup
+    const [isSignUpMode, setIsSignUpMode] = useState(false);
     const navigate = useNavigate();
 
     const handleAuth = async (isSignUp: boolean, e?: React.FormEvent) => {
@@ -17,13 +17,12 @@ function AuthPage() {
         setLoading(true);
 
         if (isSignUp) {
-            // --- REGISTRERING ---
             const { data, error } = await supabase.auth.signUp({
                 email,
                 password,
                 options: {
                     data: {
-                        full_name: fullName, // Sparas i user_metadata för snabb åtkomst
+                        full_name: fullName,
                     },
                 },
             });
@@ -31,19 +30,16 @@ function AuthPage() {
             if (error) {
                 toast.error(`Ett fel uppstod: ${error.message}`);
             } else if (data?.user?.identities?.length === 0) {
-                // Om identities är tomt betyder det att e-posten redan finns i Supabase
                 toast.error("Denna e-postadress är redan registrerad. Prova att logga in.");
             } else if (data.user) {
-                // Spara även i profiles-tabellen
                 await supabase.from("profiles").upsert({
                     id: data.user.id,
                     full_name: fullName,
                 });
                 toast.success("Registrering klar! Du kan nu logga in.");
-                setIsSignUpMode(false); // Växla tillbaka till inloggning
+                setIsSignUpMode(false);
             }
         } else {
-            // --- INLOGGNING ---
             const { data, error } = await supabase.auth.signInWithPassword({
                 email,
                 password,
@@ -84,87 +80,89 @@ function AuthPage() {
     return (
         <div className="auth-page-container">
             <div className="auth-card">
-                <h2>Välkommen till GreenSpace</h2>
-                <p className="auth-subtitle">
-                    {isSignUpMode ? "Skapa ditt trädgårdskonto" : "Logga in på ditt konto"}
-                </p>
+                <div className="auth-header">
+                    <h2>GreenSpace 🌿</h2>
+                    <p className="auth-quote">
+                        {isSignUpMode
+                            ? "Börja din gröna resa hos oss idag."
+                            : "Välkommen hem till din digitala trädgård."}
+                    </p>
+                </div>
 
-                <form onSubmit={(e) => handleAuth(isSignUpMode, e)}>
+                <form onSubmit={(e) => handleAuth(isSignUpMode, e)} className="auth-form">
                     {isSignUpMode && (
+                        <div className="input-group">
+                            <label>Namn</label>
+                            <input
+                                placeholder="Ditt fullständiga namn"
+                                value={fullName}
+                                onChange={(e) => setFullName(e.target.value)}
+                                type="text"
+                                disabled={loading}
+                                required
+                            />
+                        </div>
+                    )}
+
+                    <div className="input-group">
+                        <label>E-post</label>
                         <input
-                            placeholder="Ditt namn"
-                            value={fullName}
-                            onChange={(e) => setFullName(e.target.value)}
-                            type="text"
+                            placeholder="din.mail@exempel.se"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            type="email"
                             disabled={loading}
                             required
                         />
-                    )}
-                    <input
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        type="email"
-                        disabled={loading}
-                        required
-                    />
-                    <input
-                        placeholder="Lösenord"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        type="password"
-                        disabled={loading}
-                        required
-                    />
+                    </div>
 
-                    <div className="auth-actions">
-                        {!isSignUpMode ? (
-                            <>
-                                <button
-                                    type="submit"
-                                    disabled={loading || !email || !password}
-                                    className="btn-login"
-                                >
-                                    {loading ? 'Loggar in...' : 'Logga in'}
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setIsSignUpMode(true)}
-                                    className="btn-link-toggle"
-                                >
-                                    Inget konto? Registrera dig här
-                                </button>
-                            </>
-                        ) : (
-                            <>
-                                <button
-                                    type="submit"
-                                    disabled={loading || !email || !password || !fullName}
-                                    className="btn-signup"
-                                >
-                                    {loading ? 'Skapar konto...' : 'Skapa konto'}
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setIsSignUpMode(false)}
-                                    className="btn-link-toggle"
-                                >
-                                    Har du redan ett konto? Logga in
-                                </button>
-                            </>
+                    <div className="input-group">
+                        <label>Lösenord</label>
+                        <input
+                            placeholder="********"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            type="password"
+                            disabled={loading}
+                            required
+                        />
+                    </div>
+
+                    <div className="auth-main-action">
+                        <button
+                            type="submit"
+                            disabled={loading || !email || !password || (isSignUpMode && !fullName)}
+                            className="plant-btn btn-primary-green"
+                        >
+                            {loading
+                                ? (isSignUpMode ? 'Skapar konto...' : 'Loggar in...')
+                                : (isSignUpMode ? 'Skapa konto' : 'Logga in')}
+                        </button>
+                    </div>
+
+                    <div className="auth-secondary-actions">
+                        <button
+                            type="button"
+                            onClick={() => setIsSignUpMode(!isSignUpMode)}
+                            className="btn-toggle-mode"
+                        >
+                            {isSignUpMode
+                                ? "Har du redan ett konto? Logga in"
+                                : "Inget konto än? Registrera dig här"}
+                        </button>
+
+                        {!isSignUpMode && (
+                            <button
+                                type="button"
+                                onClick={handlePasswordReset}
+                                disabled={loading}
+                                className="btn-forgot-password"
+                            >
+                                Glömt lösenordet?
+                            </button>
                         )}
                     </div>
                 </form>
-
-                <div className="reset-password-container">
-                    <button
-                        onClick={handlePasswordReset}
-                        disabled={loading}
-                        className="btn-reset-password"
-                    >
-                        Glömt lösenord?
-                    </button>
-                </div>
             </div>
         </div>
     );

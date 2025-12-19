@@ -1,18 +1,38 @@
-// Base styles
-@import "base/globals";
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color:#F7D6C0;
+}
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-@import "components/footer";
+.app-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
 @import "components/pagination";
+@import "components/PlantCard.scss";
+@import "components/PlantList.scss";
 
-// Pages
 @import "pages/AuthPage.scss";
 @import "pages/CalendarPage.scss";
+@import "pages/Footer.scss";
 @import "pages/HomePage.scss";
+@import "pages/MyGardenPage.scss";
+@import "pages/Nav.scss";
 @import "pages/OverviewPage.scss";
 @import "pages/PlantDetailPage.scss";
 @import "pages/PlantListPage.scss";
-@import "pages/Nav.scss";
 @import "pages/ProfilePage.scss";
 @import "pages/WishlistPage.scss";
-@import "pages/MyGardenPage.scss";

@@ -1,3 +1,4 @@
+import { useState, useMemo } from 'react'; 
 import { useAuth } from '../hooks/useAuth';
 import { useUserList } from '../hooks/useUserList';
 import { getWishlistPlantIds, togglePlantWishlist } from '../services/plantsService';
@@ -8,6 +9,7 @@ import "../assets/scss/pages/WishlistPage.scss";
 
 const WishlistPage = () => {
     const { user } = useAuth();
+    const [activeTab, setActiveTab] = useState('Alla'); 
 
     const {
         plants,
@@ -19,13 +21,22 @@ const WishlistPage = () => {
         onPrev
     } = useUserList(user, getWishlistPlantIds);
 
+    const categories = useMemo(() => {
+        if (!plants) return ['Alla'];
+        const uniqueCategories = Array.from(new Set(plants.map(p => p.category).filter(Boolean)));
+        return ['Alla', ...uniqueCategories];
+    }, [plants]);
+
+    const filteredPlants = useMemo(() => {
+        if (activeTab === 'Alla') return plants;
+        return plants.filter(p => p.category === activeTab);
+    }, [plants, activeTab]);
+
     const handleRemoveFromWishlist = async (plantId: number) => {
         if (!user) return;
-
         await togglePlantWishlist(user.id, plantId, true);
         refetch();
     };
-
 
     if (!user) {
         return <div className="page-container"><p>Logga in för att se din önskelista.</p></div>;
@@ -45,12 +56,26 @@ const WishlistPage = () => {
                     </div>
                     <div className="info-stats">
                         <div className="stat-item">
-                            <span className="stat-label">Antal växter</span>
-                            <span className="stat-value">{plants.length}</span>
+                            <span className="stat-label">Visar</span>
+                            <span className="stat-value">{filteredPlants.length}</span>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {!loading && plants.length > 0 && (
+                <div className="category-tabs">
+                    {categories.map(cat => (
+                        <button
+                            key={cat}
+                            className={`tab-btn ${activeTab === cat ? 'active' : ''}`}
+                            onClick={() => setActiveTab(cat)}
+                        >
+                            {cat}
+                        </button>
+                    ))}
+                </div>
+            )}
 
             {loading ? (
                 <p>Laddar din önskelista...</p>
@@ -64,7 +89,7 @@ const WishlistPage = () => {
             ) : (
                 <>
                     <div className="plant-grid">
-                        {plants.map((plant) => (
+                        {filteredPlants.map((plant) => (
                             <PlantCard
                                 key={plant.id}
                                 plant={plant}
@@ -74,7 +99,7 @@ const WishlistPage = () => {
                         ))}
                     </div>
 
-                    {totalPages > 1 && (
+                    {activeTab === 'Alla' && totalPages > 1 && (
                         <Pagination
                             page={page}
                             totalPages={totalPages}

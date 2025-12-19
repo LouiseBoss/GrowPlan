@@ -1,188 +1,271 @@
-$light-background: #F7D6C0;
-$primary-dark: #3A4A3D;
-$primary-accent: #96AD90;
-$secondary-accent: #F4B9B8;
+$light-background: #F7D6C0; // Persika
+$primary-dark: #3A4A3D; // Mörkgrön
+$primary-accent: #96AD90; // Mossgrön
+$secondary-accent: #F4B9B8; // Rosa
 $white: #ffffff;
 
 .home-page-container {
-    background-color: $white; 
+    background-color: $white;
     color: $primary-dark;
-    font-family: sans-serif; 
-}
-
-section {
-    padding: 80px 50px;
-    max-width: 1200px;
+    font-family: 'Quicksand', sans-serif;
+    display: block;
+    overflow-x: hidden;
+    max-width: 100%;
     margin: 0 auto;
-
-    @media (max-width: 768px) {
-        padding: 40px 20px;
-    }
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 56px;
+    font-weight: 800;
     line-height: 1.1;
+    color: $primary-dark;
 
     @media (max-width: 768px) {
-        font-size: 32px;
+        font-size: 38px;
         text-align: center;
     }
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 800;
     text-align: center;
-    margin-bottom: 10px;
+    margin-top: 35px;
+    margin-bottom: 15px;
 
     @media (max-width: 768px) {
-        font-size: 26px;
+        font-size: 28px;
     }
 }
 
 .subtitle {
     text-align: center;
-    color: #888;
-    margin-bottom: 40px;
+    color: darken($primary-accent, 15%);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 50px;
 }
 
 .hero-section {
-    background-color: $light-background; 
+    width: 100%; 
+    background-color: #F7D6C0;
     display: flex;
     align-items: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    gap: 50px;
+    justify-content: center;
+    padding: 4rem 5%;
+    flex: 0 0 auto; 
 
-    @media (max-width: 992px) {
+    @media (max-width: 770px) {
         flex-direction: column;
         text-align: center;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        gap: 30px;
     }
 
     .hero-content {
-        flex: 1;
+        max-width: 600px;
     }
 
     .hero-image-placeholder {
         flex: 1;
         display: flex;
         justify-content: center;
+        animation: float 6s ease-in-out infinite;
 
         @media (max-width: 992px) {
-            order: -1; 
+            order: -1;
         }
     }
 
     .flower-graphic {
-        font-size: 150px;
-        filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.1));
+        font-size: 180px;
+        filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.1));
 
         @media (max-width: 768px) {
-            font-size: 100px; 
+            font-size: 120px;
         }
     }
 
     p {
-        font-size: 18px;
-        color: darken($light-background, 25%);
-        margin: 20px 0;
+        font-size: 20px;
+        line-height: 1.6;
+        color: rgba($primary-dark, 0.8);
+        margin: 25px 0 35px 0;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
     }
 }
 
 .hero-actions {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 
     @media (max-width: 768px) {
-        flex-direction: column; 
-        width: 100%;
-        
-        .btn {
-            width: 100%;
-            text-align: center;
-        }
+        flex-direction: column;
+        align-items: center;
     }
 
     .btn {
-        padding: 12px 25px;
-        border-radius: 8px;
-        font-weight: 600;
+        padding: 16px 35px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
         text-decoration: none;
-        transition: background-color 0.2s;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: inline-block;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
     .btn-primary-hero {
         background-color: $primary-dark;
         color: $white;
-        &:hover { background-color: lighten($primary-dark, 10%); }
+        box-shadow: 0 10px 20px rgba($primary-dark, 0.2);
+
+        &:hover {
+            background-color: lighten($primary-dark, 5%);
+        }
     }
 
     .btn-secondary-hero {
-        background-color: transparent;
+        background-color: $white;
         color: $primary-dark;
         border: 2px solid $primary-dark;
-        &:hover { background-color: $primary-dark; color: $white; }
+
+        &:hover {
+            background-color: $primary-dark;
+            color: $white;
+        }
     }
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
 
     @media (max-width: 992px) {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 
     @media (max-width: 600px) {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
 
 .feature-box {
-    background-color: $light-background; 
-    border-radius: 12px;
-    padding: 30px;
+    background-color: rgba($light-background, 0.3);
+    border: 2px solid transparent;
+    border-radius: 24px;
+    padding: 40px 30px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    .feature-icon { font-size: 36px; margin-bottom: 15px; }
-    h3 { font-size: 20px; margin-top: 0; }
-    p { color: darken($light-background, 20%); font-size: 14px; }
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $white;
+        border-color: $light-background;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        font-size: 45px;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    h3 {
+        font-size: 22px;
+        color: $primary-dark;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.5;
+    }
 }
+
 
 .steps-grid {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 30px;
+    margin-top: 30px;
 
     @media (max-width: 768px) {
-        flex-direction: column; 
-        gap: 30px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .step-card {
         flex: 1;
         text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+
+            .step-number {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
     }
 
     .step-number {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 45px;
-        height: 45px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-        background-color: $primary-accent;
         color: $white;
-        font-weight: 700;
-        font-size: 22px;
-        margin-bottom: 20px;
+        font-weight: 800;
+        font-size: 36px;
+        margin-bottom: 25px;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
-    h3 { font-size: 20px; margin-bottom: 10px; }
-    p { color: darken($light-background, 20%); }
+
+    .step-card:nth-child(1) .step-number {
+        background-color: $primary-accent;
+    }
+
+    .step-card:nth-child(2) .step-number {
+        background-color: $secondary-accent;
+    }
+
+    .step-card:nth-child(3) .step-number {
+        background-color: $light-background;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: $primary-dark;
+    }
+
+    p {
+        color: #777;
+        line-height: 1.6;
+        font-size: 16px;
+    }
 }

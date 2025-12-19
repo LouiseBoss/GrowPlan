@@ -11,6 +11,8 @@ import { PiPlant } from "react-icons/pi";
 import { TbSnowflake } from "react-icons/tb";
 import { FaCalendarAlt, FaArrowRight } from 'react-icons/fa';
 import '../assets/scss/pages/OverviewPage.scss';
+import { IoHeartOutline } from "react-icons/io5";
+
 
 const getTaskIcon = (category: string, title: string) => {
     const searchText = `${category} ${title}`.toLowerCase();
@@ -65,7 +67,7 @@ const TaskListCard: React.FC<TaskListCardProps> = ({ tasks, loading, currentDate
                     {tasks.slice(0, 3).map(task => (
                         <div key={task.id} className={`task-item-card task-${task.category.toLowerCase()}`}>
                             <div className="task-icon">
-                                {getTaskIcon(task.category, task.title)} 
+                                {getTaskIcon(task.category, task.title)}
                             </div>
                             <div className="task-info">
                                 <h4 className="task-title">{task.title}</h4>
@@ -128,7 +130,9 @@ const OverviewPage = () => {
 
                 <div className="widgets-row">
                     <Link to="/garden" className="stat-widget">
-                        <div className="stat-icon garden">🪴</div>
+                        <div className="stat-icon garden">
+                            <PiPlant />
+                        </div>
                         <div className="stat-content">
                             <span className="stat-number">{statsLoading ? '...' : totalPlants}</span>
                             <span className="stat-label">Växter i trädgården</span>
@@ -137,7 +141,9 @@ const OverviewPage = () => {
                     </Link>
 
                     <Link to="/wishlist" className="stat-widget">
-                        <div className="stat-icon wishlist">💖</div>
+                        <div className="stat-icon wishlist">
+                            <IoHeartOutline />
+                        </div>
                         <div className="stat-content">
                             <span className="stat-number">{statsLoading ? '...' : wishlistItems}</span>
                             <span className="stat-label">På önskelistan</span>

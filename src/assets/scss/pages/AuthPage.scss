@@ -1,76 +1,95 @@
-// Färgpalett:
-$page-background: #F7D6C0; // Ljus persikofärg/Beige
+$page-background: #F7D6C0;
 $card-background: #ffffff;
-$primary-dark: #3A4A3D; // Mörk skogsgrön (Huvudtext/Logga in)
-$primary-accent: #96AD90; // Mellan grön/Mossa (Registrera)
-$secondary-accent: #F4B9B8; // Rosa/Lax (Länkar/Accent)
-$light-border: darken($page-background, 8%);
-$white: #ffffff;
+$primary-green: #3A4A3D;
+$accent-green: #96AD90;
+$text-muted: #5b6d5d;
 
 .auth-page-container {
-    min-height: 100vh;
     background-color: $page-background;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    flex: 1;
 }
 
 .auth-card {
     background-color: $card-background;
     padding: 40px;
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
-    h2 {
-        color: $primary-dark;
+    .auth-header {
         text-align: center;
-        margin-top: 0;
         margin-bottom: 30px;
-        font-size: 24px;
+
+        h2 {
+            color: $primary-green;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .auth-quote {
+            color: $text-muted;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
     }
 }
 
-input {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid $light-border;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    box-sizing: border-box;
-
-    &:focus {
-        border-color: $primary-accent;
-        outline: none;
-        box-shadow: 0 0 0 2px lighten($primary-accent, 15%);
-    }
-
-    &:disabled {
-        background-color: lighten($page-background, 5%);
-        cursor: not-allowed;
-    }
-}
-
-.auth-actions {
+.auth-form {
     display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-    gap: 15px;
+    flex-direction: column;
+    gap: 20px;
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+            font-weight: 600;
+            color: $primary-green;
+            font-size: 0.85rem;
+            margin-left: 4px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s;
+
+            &:focus {
+                border-color: $accent-green;
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(150, 173, 144, 0.2);
+            }
+        }
+    }
 }
 
-button {
-    padding: 12px 25px;
+.plant-btn.btn-primary-green {
+    width: 100%;
+    padding: 14px;
+    background-color: $primary-green !important;
+    color: white !important;
+    border: none;
     border-radius: 8px;
     font-weight: 600;
+    font-size: 1.1rem;
     cursor: pointer;
-    border: none;
-    transition: background-color 0.2s, opacity 0.2s;
-    flex: 1;
+    transition: all 0.2s ease-in-out;
+
+    &:hover:not(:disabled) {
+        background-color: lighten($primary-green, 8%) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
     &:disabled {
         opacity: 0.6;
@@ -78,39 +97,36 @@ button {
     }
 }
 
-.btn-login {
-    background-color: $primary-dark;
-    color: $white;
+.auth-secondary-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
 
-    &:hover:not(:disabled) {
-        background-color: lighten($primary-dark, 5%);
+    .btn-toggle-mode {
+        background: none;
+        border: none;
+        color: $primary-green;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
-}
 
-.btn-signup {
-    background-color: $primary-accent;
-    color: $primary-dark;
+    .btn-forgot-password {
+        background: none;
+        border: none;
+        color: $text-muted;
+        font-size: 0.85rem;
+        cursor: pointer;
 
-    &:hover:not(:disabled) {
-        background-color: darken($primary-accent, 5%);
-    }
-}
-
-.reset-password-container {
-    margin-top: 20px;
-    text-align: right;
-}
-
-.btn-reset-password {
-    background: none;
-    border: none;
-    color: $primary-dark;
-    cursor: pointer;
-    padding: 5px;
-    text-decoration: underline;
-    font-size: 14px;
-
-    &:hover {
-        color: $secondary-accent;
+        &:hover {
+            color: $primary-green;
+        }
     }
 }

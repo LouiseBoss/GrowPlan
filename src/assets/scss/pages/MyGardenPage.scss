@@ -1,7 +1,6 @@
 .garden-page {
     background-color: #F7D6C0;
     padding: 2rem;
-    min-height: 100vh;
 
     .info-section {
         background-color: #ffffff;
@@ -58,6 +57,37 @@
                     color: #3A4A3D;
                 }
             }
+        }
+    }
+}
+.category-tabs {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 10px 5px 25px;
+    scrollbar-width: none; 
+    
+    &::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+        padding: 10px 22px;
+        border-radius: 25px;
+        border: 2px solid #3A4A3D;
+        background: transparent;
+        color: #3A4A3D;
+        font-weight: 700;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &.active {
+            background: #3A4A3D;
+            color: #ffffff;
+        }
+
+        &:hover:not(.active) {
+            background: rgba(58, 74, 61, 0.1);
         }
     }
 }

@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { supabase } from "../lib/supabaseClient";
 import { toast } from "react-toastify";
+import { IoPersonOutline, IoMailOutline, IoCameraOutline, IoLogOutOutline } from "react-icons/io5";
 import "../assets/scss/pages/ProfilePage.scss";
 
-// Importera bilderna så att Vite hittar dem korrekt
 import avatar1 from "../assets/images/avatar1.png";
 import avatar2 from "../assets/images/avatar2.png";
 import avatar3 from "../assets/images/avatar3.png";
@@ -35,112 +35,95 @@ const ProfilePage = () => {
     const handleUpdateProfile = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!user) return;
-
         setIsSaving(true);
 
         try {
-            // 1. Uppdatera Auth Metadata (för att det ska synas i useAuth direkt)
             const { error: authError } = await supabase.auth.updateUser({
-                data: {
-                    full_name: fullName,
-                    avatar_url: selectedAvatar
-                }
+                data: { full_name: fullName, avatar_url: selectedAvatar }
             });
 
-            // 2. Uppdatera profiles-tabellen
             const { error: dbError } = await supabase
                 .from("profiles")
-                .update({
-                    full_name: fullName,
-                    avatar_url: selectedAvatar
-                })
+                .update({ full_name: fullName, avatar_url: selectedAvatar })
                 .eq("id", user.id);
 
-            if (authError || dbError) {
-                toast.error("Kunde inte uppdatera profilen.");
-            } else {
-                toast.success("Profilen är uppdaterad!");
-            }
+            if (authError || dbError) throw new Error();
+            toast.success("Profilen är uppdaterad!");
         } catch (err) {
-            console.error(err);
-            toast.error("Ett oväntat fel uppstod.");
-        }
-        finally {
+            console.error("Fel vid radering:", err);
+            toast.error("Kunde inte uppdatera profilen.");
+        } finally {
             setIsSaving(false);
         }
     };
 
-    if (authLoading) {
-        return <div className="loading-container">Laddar profil...</div>;
-    }
+    if (authLoading) return <div className="loading-state">Laddar profil...</div>;
 
     return (
-        <div className="profile-page-container">
-            <header className="page-header">
-                <h1>Din Profil</h1>
-                <p>Anpassa din närvaro i GrowPlan</p>
-            </header>
+        <div className="profile-page-wrapper">
+            <div className="profile-container">
+                <header className="profile-header">
+                    <h1>Din Profil</h1>
+                    <p>Hantera ditt konto och din trädgårds-persona</p>
+                </header>
 
-            <div className="profile-card">
-                <div className="avatar-section">
-                    <div className="profile-avatar-display">
-                        {selectedAvatar ? (
-                            <img src={selectedAvatar} alt="Profil" />
-                        ) : (
-                            <div className="avatar-placeholder">
-                                {fullName ? fullName.charAt(0).toUpperCase() : "?"}
-                            </div>
-                        )}
-                    </div>
-                    <p className="user-email">{user?.email}</p>
-                </div>
-
-                <form onSubmit={handleUpdateProfile} className="profile-form">
-                    {/* AVATAR PICKER */}
-                    <div className="form-group">
-                        <label>Välj en visningsbild</label>
-                        <div className="avatar-grid">
-                            {avatarOptions.map((avatar) => (
-                                <div
-                                    key={avatar.id}
-                                    className={`avatar-option ${selectedAvatar === avatar.src ? "selected" : ""}`}
-                                    onClick={() => setSelectedAvatar(avatar.src)}
-                                >
-                                    <img src={avatar.src} alt={avatar.id} />
-                                </div>
-                            ))}
+                <div className="profile-main-card">
+                    <div className="avatar-hero">
+                        <div className="current-avatar-circle">
+                            {selectedAvatar ? (
+                                <img src={selectedAvatar} alt="Profil" />
+                            ) : (
+                                <span className="initials">{fullName.charAt(0) || "?"}</span>
+                            )}
+                            <div className="camera-badge"><IoCameraOutline /></div>
                         </div>
+                        <h3>{fullName || "Ditt Namn"}</h3>
+                        <span className="email-tag">{user?.email}</span>
                     </div>
 
-                    <div className="form-group">
-                        <label htmlFor="fullName">Ditt Namn</label>
-                        <input
-                            id="fullName"
-                            type="text"
-                            value={fullName}
-                            onChange={(e) => setFullName(e.target.value)}
-                            placeholder="Skriv ditt namn här..."
-                            disabled={isSaving}
-                            required
-                        />
-                    </div>
+                    <form onSubmit={handleUpdateProfile} className="profile-form">
+                        <div className="form-section">
+                            <label className="section-label">Välj profilbild</label>
+                            <div className="avatar-selection-grid">
+                                {avatarOptions.map((avatar) => (
+                                    <button
+                                        key={avatar.id}
+                                        type="button"
+                                        className={`avatar-btn ${selectedAvatar === avatar.src ? "active" : ""}`}
+                                        onClick={() => setSelectedAvatar(avatar.src)}
+                                    >
+                                        <img src={avatar.src} alt="Välj avatar" />
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
 
-                    <div className="form-group">
-                        <label>E-post</label>
-                        <input type="email" value={user?.email || ""} disabled className="disabled-input" />
-                    </div>
+                        <div className="input-group">
+                            <label><IoPersonOutline /> Fullständigt namn</label>
+                            <input
+                                type="text"
+                                value={fullName}
+                                onChange={(e) => setFullName(e.target.value)}
+                                placeholder="T.ex. Anna Andersson"
+                                required
+                            />
+                        </div>
 
-                    <div className="profile-actions">
-                        <button type="submit" className="btn-save" disabled={isSaving}>
+                        <div className="input-group">
+                            <label><IoMailOutline /> E-post (kan ej ändras)</label>
+                            <input type="email" value={user?.email || ""} disabled className="read-only" />
+                        </div>
+
+                        <button type="submit" className="save-button" disabled={isSaving}>
                             {isSaving ? "Sparar..." : "Spara ändringar"}
                         </button>
-                    </div>
-                </form>
+                    </form>
 
-                <div className="danger-zone">
-                    <button onClick={logout} className="btn-logout">
-                        Logga ut
-                    </button>
+                    <div className="profile-footer">
+                        <button onClick={logout} className="logout-link">
+                            <IoLogOutOutline /> Logga ut från GrowPlan
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
