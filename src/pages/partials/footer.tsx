@@ -1,7 +1,7 @@
 import { PiPlant, PiArrowUpLight } from "react-icons/pi"; // Lagt till en pil
 import { FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "../../assets/scss/pages/footer.scss";
+import "../../assets/scss/pages/Footer.scss";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
