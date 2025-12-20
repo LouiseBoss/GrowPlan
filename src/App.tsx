@@ -18,7 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GardenPage from "./pages/MyGardenPage";
 import WishlistPage from "./pages/WishlistPage";
 import ProfilePage from "./pages/ProfilePage";
-import Footer from "./pages/partials/footer";
+import Footer from "./pages/partials/Footer";
 import "../src/assets/scss/main.scss";
 
 function App() {
