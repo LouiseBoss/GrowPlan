@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../assets/scss/pages/Footer.scss";
 
-const Footer = () => {
+const footer = () => {
     const currentYear = new Date().getFullYear();
 
     const scrollToTop = () => {
@@ -55,4 +55,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default footer;
