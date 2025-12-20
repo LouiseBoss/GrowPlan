@@ -17,9 +17,9 @@ import Navigation from "./pages/partials/navigation";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GardenPage from "./pages/MyGardenPage";
 import WishlistPage from "./pages/WishlistPage";
-import ProfilePage from "./pages/ProfilePage";
+import ProfilePage from "./pages/ProfilePage"; 
+import "./assets/scss/main.scss";
 import Footer from "./pages/partials/footer";
-import "../src/assets/scss/main.scss";
 
 function App() {
   const { loading } = useAuth();
