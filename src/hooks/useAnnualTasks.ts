@@ -3,8 +3,8 @@ import { type User } from "@supabase/supabase-js";
 import { getGardenPlants } from "../services/plantsService";
 import { getCustomTasks } from "../services/taskService";
 import { type Plant } from "../types/Plant";
-import { type MonthlyTask, type CustomTask } from "../types/Task";
-import { getMonthName } from "../utils/dateHelpers"; 
+import { type CustomTask, type CalendarTask } from "../types/Task";
+import { getMonthName } from "../utils/dateHelpers";
 
 const MONTH_NAMES_LOWERCASE = [
     "januari", "februari", "mars", "april", "maj", "juni",
@@ -22,9 +22,8 @@ const getCareDetails = (plant: Plant, actionTitle: string) => {
     }
 };
 
-
-const generateAnnualTasks = (plants: Plant[], customTasks: CustomTask[]): MonthlyTask[] => {
-    const tasks: MonthlyTask[] = [];
+const generateAnnualTasks = (plants: Plant[], customTasks: CustomTask[]): CalendarTask[] => {
+    const tasks: CalendarTask[] = [];
     let taskIdCounter = 0;
 
     for (let monthNumber = 1; monthNumber <= 12; monthNumber++) {
@@ -33,27 +32,25 @@ const generateAnnualTasks = (plants: Plant[], customTasks: CustomTask[]): Monthl
 
         plants.forEach(plant => {
             const careActions = [
-                { months: plant.watering.months, title: "Vattna", category: 'Skötsel' as const },
-                { months: plant.pruning.months, title: "Beskärning", category: 'Skötsel' as const },
-                { months: plant.fertilizing.months, title: "Gödsla", category: 'Skötsel' as const },
-                { months: plant.planting.months, title: "Plantera", category: 'Skötsel' as const },
-                { months: plant.winter.months, title: "Vinterskydd", category: 'Skötsel' as const },
+                { months: plant.watering?.months, title: "Vattna" },
+                { months: plant.pruning?.months, title: "Beskärning" },
+                { months: plant.fertilizing?.months, title: "Gödsla" },
+                { months: plant.planting?.months, title: "Plantera" },
+                { months: plant.winter?.months, title: "Vinterskydd" },
             ];
 
             careActions.forEach(action => {
                 if (action.months && action.months.includes(monthString)) {
-
                     const details = getCareDetails(plant, action.title);
-
                     tasks.push({
-                        id: plant.id + "-" + taskIdCounter++ + "-" + monthNumber,
+                        id: `auto-${plant.id}-${taskIdCounter++}-${monthNumber}`,
                         title: `${action.title} ${plant.name}`,
                         category: 'Skötsel',
                         plantName: plant.name,
                         monthNumber: monthNumber,
-
-                        description: details.notes || `${action.title} behövs för ${plant.name} under denna period.`,
-                        interval: details.interval || monthName, 
+                        description: details.notes || `${action.title} behövs för ${plant.name}.`,
+                        interval: details.interval || monthName,
+                        is_completed: false, 
                     });
                 }
             });
@@ -69,18 +66,19 @@ const generateAnnualTasks = (plants: Plant[], customTasks: CustomTask[]): Monthl
             category: 'Anpassad',
             plantName: undefined,
             monthNumber: task.month,
-
+            user_id: task.user_id, 
             description: task.description || 'Ingen beskrivning angiven.',
             interval: task.interval || monthName,
+            is_completed: task.is_completed, 
+            last_completed_year: task.last_completed_year, 
         });
     });
 
     return tasks;
 };
 
-
 export const useAnnualTasks = (user: User | null) => {
-    const [allTasks, setAllTasks] = useState<MonthlyTask[]>([]);
+    const [allTasks, setAllTasks] = useState<CalendarTask[]>([]);
     const [loading, setLoading] = useState(true);
 
     const fetchTasks = useCallback(async () => {
@@ -99,7 +97,6 @@ export const useAnnualTasks = (user: User | null) => {
 
             const mergedTasks = generateAnnualTasks(gardenPlants || [], customTasks || []);
             setAllTasks(mergedTasks);
-
         } catch (error) {
             console.error("Fel vid hämtning av årsuppgifter:", error);
         } finally {

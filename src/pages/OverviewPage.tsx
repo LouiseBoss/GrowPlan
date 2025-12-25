@@ -118,7 +118,7 @@ const OverviewPage = () => {
         <div className="overview-container">
             <header className="page-header">
                 <h1>Välkommen tillbaka, {displayName}! 🪴</h1>
-                <p>Här är vad som händer i din trädgård idag.</p>
+                <p>Här är vad som händer i din trädgård just nu</p>
             </header>
 
             <section className="dashboard-grid">
