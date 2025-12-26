@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { DotLottiePlayer } from '@dotlottie/react-player';
+import '@dotlottie/react-player/dist/index.css';
 import '../assets/scss/pages/HomePage.scss';
+import plantAnimation from '../assets/animations/plant.lottie';
 
 import { SlCalender } from "react-icons/sl";
 import { GiGreenhouse } from "react-icons/gi";
@@ -33,15 +36,23 @@ const HomePage = () => {
                 <div className="hero-content">
                     <h1>Din personliga trädgårdskamrat</h1>
                     <p>
-                        Planera, följ upp och sköt om dina växter med lätthet – oavsett om de står i trädgården eller i fönstret. Från säsongsbetonade sysslor till personliga önskelistor, allt du behöver för att skapa ditt eget gröna paradis.
+                        Planera, följ upp och sköt om dina växter med lätthet – oavsett om de står i trädgården eller i fönstret.
+                        Från säsongsbetonade sysslor till personliga önskelistor, allt du behöver för att skapa ditt eget gröna paradis.
                     </p>
                     <div className="hero-actions">
                         <Link to="/auth" className="btn btn-primary-hero">Starta din trädgård</Link>
                         <Link to="/plants" className="btn btn-secondary-hero">Utforska växter</Link>
                     </div>
                 </div>
+
                 <div className="hero-image-placeholder">
-                    <div className="flower-graphic">🌸</div>
+                    <div className="lottie-animation-container" style={{ width: '100%', height: '400px' }}>
+                        <DotLottiePlayer
+                            src={plantAnimation}
+                            autoplay
+                            loop
+                        />
+                    </div>
                 </div>
             </section>
 
@@ -104,7 +115,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-
         </div>
     );
 };
