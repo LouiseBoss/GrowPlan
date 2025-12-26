@@ -5,6 +5,7 @@ import { useAnnualTasks } from "../hooks/useAnnualTasks";
 import { type CustomTask, type CalendarTask } from "../types/Task";
 import TaskForm from "../components/TaskForm";
 import { deleteTask, toggleTaskStatus } from "../services/taskService";
+import LoadingScreen from '../components/LoadingScreen';
 
 import { TfiPencilAlt, TfiTrash, TfiCheck } from "react-icons/tfi";
 import { HiOutlineScissors } from "react-icons/hi2";
@@ -136,7 +137,7 @@ const CalendarPage = () => {
         monthRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
     };
 
-    if (userLoading || tasksLoading) return <div className="loading">Laddar kalender…</div>;
+    if (userLoading || tasksLoading) return <LoadingScreen />;
     if (!user) return <Navigate to="/auth" replace />;
 
     return (

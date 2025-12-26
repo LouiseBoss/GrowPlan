@@ -14,7 +14,6 @@ import {
 } from "../services/plantsService";
 import { toast } from 'react-toastify';
 
-// --- Importera Dina Specifika React Icons ---
 import { TfiTrash } from "react-icons/tfi";
 import { HiOutlineScissors } from "react-icons/hi2";
 import { GiWateringCan } from "react-icons/gi";
@@ -24,6 +23,7 @@ import { TbSnowflake } from "react-icons/tb";
 import { TiPinOutline } from "react-icons/ti";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoArrowBack, IoFlowerOutline } from "react-icons/io5";
+import LoadingScreen from '../components/LoadingScreen';
 
 import '../assets/scss/pages/PlantDetailPage.scss';
 
@@ -135,7 +135,8 @@ const PlantDetailPage = () => {
         }
     };
 
-    if (isLoading) return <div className="loading-page">Laddar information...</div>;
+    if (isLoading) return <LoadingScreen />;
+
     if (!plant) return <div className="error-page">Växt hittades inte</div>;
 
     return (
@@ -165,6 +166,7 @@ const PlantDetailPage = () => {
                         <p>{plant.description}</p>
                         <div className="plant-specs">
                             <span><TiPinOutline /> Zon: {plant.zone}</span>
+                            <br></br>
                             <span><LuTrees /> Höjd: {plant.height_cm} cm</span>
                         </div>
                     </div>
@@ -180,7 +182,7 @@ const PlantDetailPage = () => {
                         <div className="stat-pill">
                             <LuSun className="icon sun" />
                             <div className="stat-text">
-                                <small>Läge</small>
+                                <small>Läge: </small>
                                 <span>Zon {plant.zone}</span>
                             </div>
                         </div>

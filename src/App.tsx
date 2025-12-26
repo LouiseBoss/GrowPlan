@@ -1,8 +1,10 @@
 import { Routes, Route } from "react-router";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import { useAuth } from './hooks/useAuth';
+import { useState, useEffect } from 'react';
+import { DotLottiePlayer } from '@dotlottie/react-player';
+import plantAnimation from './assets/animations/loading.lottie';
+import "./assets/scss/main.scss";
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -18,18 +20,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GardenPage from "./pages/MyGardenPage";
 import WishlistPage from "./pages/WishlistPage";
 import ProfilePage from "./pages/ProfilePage";
-import "./assets/scss/main.scss";
 import Footer from "./pages/partials/footer";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
-  const { loading } = useAuth();
-  if (loading) {
-    return <div>Laddar användarstatus...</div>;
-  }
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
+      {isLoading && (
+        <div className="loading-overlay">
+          <div className="loader-content">
+            <div className="lottie-player">
+              <DotLottiePlayer
+                src={plantAnimation}
+                autoplay
+                loop
+              />
+            </div>
+            <p>Grönskan förbereds...</p>
+          </div>
+        </div>
+      )}
       <div className="app-wrapper">
         <Navigation />
 

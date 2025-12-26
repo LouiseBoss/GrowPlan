@@ -1,7 +1,10 @@
-html, body {
+@import "react-toastify/dist/ReactToastify.css";
+
+html,
+body {
   height: 100%;
   margin: 0;
-  background-color:#F7D6C0;
+  background-color: #F7D6C0;
 }
 
 #root {
@@ -24,6 +27,7 @@ html, body {
 @import "components/Pagination";
 @import "components/PlantCard.scss";
 @import "components/PlantList.scss";
+@import "components/LoadingOverlay.scss";
 
 @import "pages/AuthPage.scss";
 @import "pages/CalendarPage.scss";
@@ -35,4 +39,30 @@ html, body {
 @import "pages/PlantDetailPage.scss";
 @import "pages/PlantListPage.scss";
 @import "pages/ProfilePage.scss";
-@import "pages/WishlistPage.scss";
+@import "pages/NotFoundPage.scss";
+
+:root {
+  --toastify-font-family: 'Quicksand', sans-serif;
+  --toastify-toast-bd-radius: 20px;
+
+  --toastify-color-success: #3A4A3D; 
+  --toastify-color-info: #96AD90; 
+  --toastify-color-warning: #F4B9B8; 
+}
+
+.Toastify__toast {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  font-weight: 500;
+
+  font-family: 'Quicksand', sans-serif;
+}
+
+.Toastify__toast-theme--colored {
+
+  &.Toastify__toast--success,
+  &.Toastify__toast--error,
+  &.Toastify__toast--info {
+    color: #ffffff;
+  }
+}

@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'; 
+import { useState, useMemo } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { useUserList } from '../hooks/useUserList';
 import { getWishlistPlantIds, togglePlantWishlist } from '../services/plantsService';
@@ -6,10 +6,11 @@ import PlantCard from '../components/PlantCard';
 import Pagination from '../components/Pagination';
 import { Link } from 'react-router-dom';
 import "../assets/scss/pages/WishlistPage.scss";
+import LoadingScreen from '../components/LoadingScreen';
 
 const WishlistPage = () => {
     const { user } = useAuth();
-    const [activeTab, setActiveTab] = useState('Alla'); 
+    const [activeTab, setActiveTab] = useState('Alla');
 
     const {
         plants,
@@ -57,7 +58,7 @@ const WishlistPage = () => {
                     <div className="info-stats">
                         <div className="stat-item">
                             <span className="stat-label">Visar</span>
-                            <span className="stat-value">{filteredPlants.length}</span>
+                            <span className="stat-value">{loading ? '...' : filteredPlants.length}</span>
                         </div>
                     </div>
                 </div>
@@ -78,7 +79,7 @@ const WishlistPage = () => {
             )}
 
             {loading ? (
-                <p>Laddar din önskelista...</p>
+                <LoadingScreen />
             ) : plants.length === 0 && totalPages === 0 ? (
                 <div className="empty-list-message">
                     <p>Din önskelista är tom. Hitta inspiration i katalogen!</p>

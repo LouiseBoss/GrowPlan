@@ -12,6 +12,7 @@ import { TbSnowflake } from "react-icons/tb";
 import { FaCalendarAlt, FaArrowRight } from 'react-icons/fa';
 import '../assets/scss/pages/OverviewPage.scss';
 import { IoHeartOutline } from "react-icons/io5";
+import LoadingScreen from '../components/LoadingScreen';
 
 
 const getTaskIcon = (category: string, title: string) => {
@@ -28,6 +29,7 @@ const getTaskIcon = (category: string, title: string) => {
 
     return <PiPlant />;
 };
+
 interface TaskListCardProps {
     tasks: MonthlyTask[];
     loading: boolean;
@@ -114,6 +116,10 @@ const OverviewPage = () => {
         );
     }
 
+    if (tasksLoading || statsLoading) {
+        return <LoadingScreen />;
+    }
+
     return (
         <div className="overview-container">
             <header className="page-header">
@@ -134,7 +140,7 @@ const OverviewPage = () => {
                             <PiPlant />
                         </div>
                         <div className="stat-content">
-                            <span className="stat-number">{statsLoading ? '...' : totalPlants}</span>
+                            <span className="stat-number">{totalPlants}</span>
                             <span className="stat-label">Växter i trädgården</span>
                         </div>
                         <FaArrowRight className="stat-arrow" />
@@ -145,7 +151,7 @@ const OverviewPage = () => {
                             <IoHeartOutline />
                         </div>
                         <div className="stat-content">
-                            <span className="stat-number">{statsLoading ? '...' : wishlistItems}</span>
+                            <span className="stat-number">{wishlistItems}</span>
                             <span className="stat-label">På önskelistan</span>
                         </div>
                         <FaArrowRight className="stat-arrow" />

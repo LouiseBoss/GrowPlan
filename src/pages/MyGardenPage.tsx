@@ -6,6 +6,7 @@ import PlantCard from '../components/PlantCard';
 import Pagination from '../components/Pagination';
 import { Link } from 'react-router-dom';
 import "../assets/scss/pages/MyGardenPage.scss";
+import LoadingScreen from '../components/LoadingScreen';
 
 const MyGardenPage = () => {
     const { user } = useAuth();
@@ -66,7 +67,7 @@ const MyGardenPage = () => {
             {!loading && plants.length > 0 && (
                 <div className="category-tabs">
                     {categories.map(cat => (
-                        <button 
+                        <button
                             key={cat}
                             className={`tab-btn ${activeTab === cat ? 'active' : ''}`}
                             onClick={() => setActiveTab(cat)}
@@ -78,7 +79,7 @@ const MyGardenPage = () => {
             )}
 
             {loading ? (
-                <p>Laddar din trädgård...</p>
+                <LoadingScreen />
             ) : plants.length === 0 && totalPages === 0 ? (
                 <div className="empty-list-message">
                     <p>Din trädgård är tom. Dags att plantera något!</p>

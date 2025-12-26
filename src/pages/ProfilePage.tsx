@@ -4,6 +4,7 @@ import { supabase } from "../lib/supabaseClient";
 import { toast } from "react-toastify";
 import { IoPersonOutline, IoMailOutline, IoCameraOutline, IoLogOutOutline } from "react-icons/io5";
 import "../assets/scss/pages/ProfilePage.scss";
+import LoadingScreen from '../components/LoadingScreen';
 
 import avatar1 from "../assets/images/avatar1.png";
 import avatar2 from "../assets/images/avatar2.png";
@@ -56,8 +57,7 @@ const ProfilePage = () => {
             setIsSaving(false);
         }
     };
-
-    if (authLoading) return <div className="loading-state">Laddar profil...</div>;
+    if (authLoading) return <LoadingScreen />;
 
     return (
         <div className="profile-page-wrapper">

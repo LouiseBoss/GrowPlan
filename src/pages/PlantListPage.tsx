@@ -12,13 +12,14 @@ import {
     togglePlantWishlist
 } from "../services/plantsService";
 import { toast } from "react-toastify";
+import LoadingScreen from '../components/LoadingScreen';
 
 const ITEMS_PER_PAGE = 20;
 
 const PlantListPage = () => {
     const { plants, loading, error } = usePlants();
     const { user } = useAuth();
-    
+
     const [search, setSearch] = useState("");
     const [category, setCategory] = useState("");
     const [page, setPage] = useState(0);
@@ -57,7 +58,7 @@ const PlantListPage = () => {
     }, [plants, search, category]);
 
     const pageCount = Math.ceil(filteredPlants.length / ITEMS_PER_PAGE);
-    
+
     const currentPage = page >= pageCount && pageCount > 0 ? pageCount - 1 : page;
 
     const paginatedPlants = useMemo(() => {
@@ -111,7 +112,7 @@ const PlantListPage = () => {
         }
     };
 
-    if (loading) return <div className="page-container"><p>Laddar växter...</p></div>;
+    if (loading) return <LoadingScreen />;
     if (error) return <div className="page-container"><p style={{ color: "red" }}>Kunde inte ladda växter: {error.message}</p></div>;
 
     return (
