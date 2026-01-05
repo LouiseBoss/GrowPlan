@@ -3,6 +3,7 @@ import { supabase } from "../lib/supabaseClient";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import "../assets/scss/pages/AuthPage.scss";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 function AuthPage() {
     const [email, setEmail] = useState("");
@@ -11,6 +12,7 @@ function AuthPage() {
     const [loading, setLoading] = useState(false);
     const [isSignUpMode, setIsSignUpMode] = useState(false);
     const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleAuth = async (isSignUp: boolean, e?: React.FormEvent) => {
         e?.preventDefault();
@@ -36,7 +38,9 @@ function AuthPage() {
                     id: data.user.id,
                     full_name: fullName,
                 });
-                toast.success("Registrering klar! Du kan nu logga in.");
+                toast.success("Ett bekräftelsemejl har skickats! Kolla din inkorg (och skräppost) för att aktivera ditt konto. 🌿", {
+                    autoClose: 10000,
+                });
                 setIsSignUpMode(false);
             }
         } else {
@@ -118,14 +122,37 @@ function AuthPage() {
 
                     <div className="input-group">
                         <label>Lösenord</label>
-                        <input
-                            placeholder="********"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            type="password"
-                            disabled={loading}
-                            required
-                        />
+                        <div className="password-wrapper" style={{ position: 'relative' }}>
+                            <input
+                                placeholder="********"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                type={showPassword ? "text" : "password"}
+                                disabled={loading}
+                                required
+                                style={{ width: '100%', paddingRight: '45px' }} // paddingRight gör att texten inte krockar med ögat
+                            />
+                            <button
+                                type="button"
+                                className="password-toggle"
+                                onClick={() => setShowPassword(!showPassword)}
+                                style={{
+                                    position: 'absolute',
+                                    right: '12px',
+                                    top: '50%',
+                                    transform: 'translateY(-50%)',
+                                    background: 'none',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    color: '#3A4A3D',
+                                    padding: '0',
+                                    display: 'flex',
+                                    alignItems: 'center'
+                                }}
+                            >
+                                {showPassword ? <IoEyeOffOutline size={22} /> : <IoEyeOutline size={22} />}
+                            </button>
+                        </div>
                     </div>
 
                     <div className="auth-main-action">
