@@ -85,7 +85,7 @@ function AuthPage() {
         <div className="auth-page-container">
             <div className="auth-card">
                 <div className="auth-header">
-                    <h2>GreenSpace 🌿</h2>
+                    <h2>GrowPlan 🌿</h2>
                     <p className="auth-quote">
                         {isSignUpMode
                             ? "Börja din gröna resa hos oss idag."
@@ -130,7 +130,7 @@ function AuthPage() {
                                 type={showPassword ? "text" : "password"}
                                 disabled={loading}
                                 required
-                                style={{ width: '100%', paddingRight: '45px' }} // paddingRight gör att texten inte krockar med ögat
+                                style={{ width: '100%', paddingRight: '45px' }}
                             />
                             <button
                                 type="button"
