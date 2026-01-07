@@ -57,6 +57,18 @@ const PlantDetailPage = () => {
     const [gardenActionLoading, setGardenActionLoading] = useState(false);
     const [wishlistActionLoading, setWishlistActionLoading] = useState(false);
 
+    const showLoginToast = (message: string) => {
+        toast.info(message, {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored"
+        });
+    };
+
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
@@ -89,8 +101,7 @@ const PlantDetailPage = () => {
 
     const handleGardenToggle = async () => {
         if (!user) {
-            toast.warn("Du måste logga in för att hantera din trädgård.");
-            navigate('/auth');
+            showLoginToast("Logga in för att spara till trädgården.");
             return;
         }
         if (!plant) return;
@@ -116,8 +127,7 @@ const PlantDetailPage = () => {
 
     const handleWishlistToggle = async () => {
         if (!user) {
-            toast.warn("Du måste logga in.");
-            navigate('/auth');
+            showLoginToast("Logga in för att spara i önskelistan.");
             return;
         }
         if (!plant) return;
@@ -192,14 +202,15 @@ const PlantDetailPage = () => {
                         <button
                             className={`btn-primary-action ${isSaved ? 'saved' : ''}`}
                             onClick={handleGardenToggle}
-                            disabled={!user || gardenActionLoading}
+                            disabled={gardenActionLoading}
                         >
                             {gardenActionLoading ? '...' : (isSaved ? <><TfiTrash /> Ta bort</> : <><PiPlant /> I min trädgård</>)}
                         </button>
+
                         <button
                             className={`btn-wishlist-action ${isOnWishlist ? 'active' : ''}`}
                             onClick={handleWishlistToggle}
-                            disabled={!user || wishlistActionLoading}
+                            disabled={wishlistActionLoading}
                         >
                             {isOnWishlist ? <FaHeart color="#fff" /> : <FaRegHeart />}
                         </button>
