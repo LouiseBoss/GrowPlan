@@ -50,7 +50,6 @@ const PlantListPage = () => {
         fetchData();
     }, [user]);
 
-    // Filtrering
     const filteredPlants = useMemo(() => {
         return plants
             .filter((p) => p.name.toLowerCase().includes(search.toLowerCase()))
@@ -71,7 +70,7 @@ const PlantListPage = () => {
 
     const handleAddToGarden = async (plantId: number) => {
         if (!user) {
-            toast.info("Du måste vara inloggad för att lägga till växter 🌱");
+            toast.info("Du måste vara inloggad för att lägga till växter 🌱", { theme: "colored" });
             return;
         }
         if (gardenIds.includes(plantId)) {
@@ -91,7 +90,7 @@ const PlantListPage = () => {
 
     const handleToggleWishlist = async (plantId: number) => {
         if (!user) {
-            toast.info("Logga in för att använda önskelistan ❤️");
+            toast.info("Logga in för att använda önskelistan ❤️", { theme: "colored" });
             return;
         }
         const isOnList = wishlistIds.includes(plantId);

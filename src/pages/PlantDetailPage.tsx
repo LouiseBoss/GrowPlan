@@ -101,7 +101,7 @@ const PlantDetailPage = () => {
 
     const handleGardenToggle = async () => {
         if (!user) {
-            showLoginToast("Logga in för att spara till trädgården.");
+            showLoginToast("Du måste vara inloggad för att lägga till växter 🌱");
             return;
         }
         if (!plant) return;
@@ -127,7 +127,7 @@ const PlantDetailPage = () => {
 
     const handleWishlistToggle = async () => {
         if (!user) {
-            showLoginToast("Logga in för att spara i önskelistan.");
+            showLoginToast("Logga in för att använda önskelistan ❤️");
             return;
         }
         if (!plant) return;
